@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="14">
+    <Item id="0" Name="AWBPrefix" Caption="AWBPrefix" />
+    <Item id="1" Name="AWBNumber" Caption="AWBNumber" />
+    <Item id="2" Name="Origin" Caption="Origin" />
+    <Item id="3" Name="Destination" Caption="Destination" />
+    <Item id="4" Name="FltNo" Caption="Flt No" />
+    <Item id="5" Name="FltDate" Caption="Flt Date" />
+    <Item id="6" Name="RCVPcs" Caption="RCVPcs" />
+    <Item id="7" Name="DeliveredPcs" Caption="Delivered Pcs" />
+    <Item id="8" Name="RCVWt" Caption="RCVWt" />
+    <Item id="9" Name="DeliveredWt" Caption="Delivered Wt" />
+    <Item id="10" Name="OffloadLoc" Caption="Offload Loc" />
+    <Item id="11" Name="OffloadFlightNo" Caption="Offload Flight No" />
+    <Item id="12" Name="OffloadOn" Caption="Offload On" />
+    <Item id="13" Name="ShipperName" Caption="Shipper Name" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="10">
+        <Item id="0">
+          <Name>AWBPrefix</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBPrefix.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBPrefix.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>AWBNumber</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBNumber.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>Origin</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Origin.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Origin.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>Destination</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Destination.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Destination.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>FltNo</Name>
+          <Caption>Flt No</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FltNo.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FltNo.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>FltDate</Name>
+          <Caption>Flt Date</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FltDate.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FltDate.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>OffloadLoc</Name>
+          <Caption>Offload Loc</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!OffloadLoc.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadLoc.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>OffloadFlightNo</Name>
+          <Caption>Offload Flight No</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!OffloadFlightNo.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadFlightNo.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>OffloadOn</Name>
+          <Caption>Offload On</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!OffloadOn.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadOn.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>ShipperName</Name>
+          <Caption>Shipper Name</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ShipperName.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ShipperName.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AWBPrefix]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="4">
+        <Item id="0">
+          <Name>RCVPcs</Name>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!RCVPcs.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>DeliveredPcs</Name>
+          <Caption>Delivered Pcs</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!DeliveredPcs.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>RCVWt</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!RCVWt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>DeliveredWt</Name>
+          <Caption>Delivered Wt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!DeliveredWt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

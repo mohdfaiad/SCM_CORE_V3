@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="7">
+               <Item id="0" Name="AgentName" Caption="Agent Name" />
+               <Item id="1" Name="ALevel" Caption="ALevel" />
+               <Item id="2" Name="AFrom" Caption="AFrom" />
+               <Item id="3" Name="ATo" Caption="ATo" />
+               <Item id="4" Name="BalanceAWB" Caption="Balance AWB" />
+               <Item id="5" Name="AWBIssued" Caption="AWBIssued" />
+               <Item id="6" Name="AWBUtilized" Caption="AWBUtilized" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="6">
+                               <Item id="0">
+                                       <Name>AgentName</Name>
+                                       <Caption>Agent Name</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AgentName.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AgentName.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>ALevel</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!ALevel.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ALevel.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>AFrom</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!AFrom.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AFrom.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>ATo</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!ATo.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ATo.Value</CaptionExpression>
+                               </Item>
+                               <Item id="3">
+                                       <Name>BalanceAWB</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!BalanceAWB.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!BalanceAWB.Value</CaptionExpression>
+                               </Item>
+                               <Item id="4">
+                                       <Name>AWBIssued</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!AWBIssued.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AWBIssued.Value</CaptionExpression>
+                               </Item>
+                               <Item id="5">
+                                       <Name>AWBUtilized</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!AWBUtilized.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AWBUtilized.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[AgentName]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="5">
+                               <Item id="0">
+                                       <Name>AFrom</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!AFrom.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="1">
+                                       <Name>ATo</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!ATo.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="2">
+                                       <Name>BalanceAWB</Name>
+                                       <Caption>Balance AWB</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!BalanceAWB.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="3">
+                                       <Name>AWBIssued</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!AWBIssued.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="4">
+                                       <Name>AWBUtilized</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!AWBUtilized.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

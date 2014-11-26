@@ -1,0 +1,302 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin:0px auto;
+	font:12px/1.5 Verdana;
+	color:#444444;
+	font-weight:normal;
+}
+a {
+	text-decoration:none;
+	outline:0 solid #fff;
+}
+a:hover {
+	text-decoration:none;
+	outline:0 solid #fff;
+}
+label {
+	vertical-align:top;
+}
+radiobutton {
+	margin:2px 4px 5px 0;
+}
+checklist {
+	margin:0 4px;
+}
+/* Input id CSS*/
+input {
+	border:0;
+	font:11px Verdana, Arial, Helvetica, sans-serif;
+	color:#666666;
+	background:none;
+	cursor:pointer;
+}
+checkbox {
+	border:0;
+	background:none;
+}
+
+textarea{
+	    margin:20px;
+        background-color:#f6f6f6; /* Needed for IEs */
+        -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+        -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+        box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+        /*
+		filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+        */
+        zoom: 1;
+		font:12px Verdana;
+		padding:10px;
+}
+.inputbg {
+	background:url(../images/inputbg.gif) no-repeat top left;
+	width:203px;
+	padding:5px 0 5px 5px;
+	margin-top:7px;
+}
+.inputbg60 {
+	background:url(../images/inputbg60.gif) no-repeat top left;
+	width:60px;
+	padding:5px 0 5px 5px;
+	margin-top:7px;
+}
+
+.inputbg140 {
+	background:url(../images/inputbg140.gif) no-repeat top left;
+	width:140px;
+	padding:5px 0 5px 5px;
+	margin-top:7px;
+}
+
+.inputbgmulti{
+ background:url(../images/inputbgmulti.gif) no-repeat top left;
+	/*background:#ffffff;*/
+	width:140px;
+	margin:0px;
+	padding:1px 0 1px 1px;
+	margin-top:7px;
+                height:45px;
+}
+.inputbgsmall {
+	background:url(../images/inputbgSmall.gif) no-repeat top left;
+	width:100px;
+	padding:5px 0 5px 5px;
+	margin-top:7px;
+}
+
+.radiobg {
+	background:url(../images/radiobg.png) no-repeat top left;
+	width:14px;
+	height:14px;
+	float:left;
+}
+.checkboxbg {
+	background:url(../images/checkboxbg.png) no-repeat top left;
+	width:14px;
+	height:14px;
+	float:left;
+}
+/* End of Input ID CSS */
+
+/* Header CSS*/
+.header {
+	width:980px;
+	margin:0px auto;
+	height:100px;
+}
+.logo {
+	width:385px;
+	margin:0px auto;
+}
+.Newlogo {
+	width:980px;
+	margin:0px auto;
+}
+
+/* End of Header CSS*/
+.marginTop30 {
+	margin-top:30px;
+}
+/* Navigation CSS */
+
+.selected {
+	background:url(../images/menubgover.gif) repeat-x top left;
+	padding:9px 15px 11px 15px;/*height:37px;*/
+}
+/* End of Navigation CSS */
+
+/* Middle container CSS*/
+.container {
+	width:980px;
+	margin:0px auto;
+}
+.mainGraphic {
+	margin:0px auto;
+	width:667px;
+}
+/* End od middle container CSS*/
+
+/* Gray boxes container CSS*/
+.grayBox {
+	width:315px !important;
+	height:auto;
+	float:left;
+	margin:21px 5px 15px 5px;
+	position:relative;
+}
+.grayBoxMiddle {
+	background:#ffffff url(../images/gray_box_bg.gif) repeat-x top left;
+	padding:0px 10px 0 10px;
+	width:293px;
+	height:110px;
+	float:left;
+	border:1px solid #999999;
+}
+.grayBoxMiddle p {
+	color:#333333;
+	font-style:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.grayBoxMiddle h4 {
+	margin:0;
+	color:#CC0000;
+	font:14px Verdana, Arial, Helvetica, sans-serif;
+font-weight:;
+}
+.grayBoxMiddle td {
+	color:#333333;
+	font-style:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+}
+.grayBoxMiddle span {
+	color:#CC0000;
+	font-weight:11px;
+	text-decoration:none;
+	float:right;
+	margin-top:12px;
+}
+.grayBoxMiddle span a {
+	text-decoration:underline;
+}
+.grayBoxMiddle span a:hover {
+	text-decoration:underline;
+}
+.grayBoxBot {
+	background:url(../images/gray_box_bot.gif) no-repeat center bottom;
+	width:315px;
+	height:10px;
+	float:left;
+}
+
+.grayBoxBig {
+	width:auto;
+	height:auto;
+	float:left;
+	margin:25px 5px 20px 5px;
+}
+.grayBoxBigMiddle {
+	background:url(../images/gray_box_bg.gif) repeat-x top left;
+	padding:10px 10px 0 10px;
+	width:auto;
+	height:auto;
+	float:left;
+	border:1px solid #999999;
+}
+
+.grayBoxBigBot {
+	background:url(../images/gray_box_big_bot.gif) no-repeat center bottom;
+	width:auto;
+	height:10px;
+	float:left;
+}
+/* Gray boxes CSS*/
+
+.clearBoth {
+	clear:both;
+}
+/* Footer Css*/
+.footer {
+	width:100%;
+	background:url(../images/footerbg.gif) repeat-x top left;
+	height:auto;
+	text-align:center;
+	padding:20px 0;
+}
+/* End of Footer Css*/
+
+/* CSS for buttons */
+/* do not change */
+.redbutton {
+	cursor: pointer;
+	display: -moz-inline-box;
+	display: inline-block;
+	padding:0px 0px 1px 5px;
+	background-position: lef top;
+	background-repeat: no-repeat;
+	font-family: verdana;
+	font-size: 13px;
+	text-decoration: none;
+	color: #fff;
+	margin:0;
+}
+.redbutton span {
+	cursor: pointer;
+	padding:2px 7px 2px 5px;
+	display: -moz-inline-box;
+	display: inline-block;
+	background-position: right top;
+	background-repeat: no-repeat;
+	color:#ffffff;
+	margin:0;
+}
+/* skin */
+.red {
+	background-image: url(../images/red-left.gif);
+	height:24px;
+	cursor: pointer;
+	margin:0;
+}
+.red span {
+	background-image: url(../images/red-right.gif);
+	height:24px;
+	cursor: pointer;
+	margin:0;
+}
+
+/* Shadow */
+
+.shadowidth270{
+	width:270px;
+	margin:0px auto;
+	}
+
+.shadowidth530{
+	width:530px;
+	margin:0px auto;
+	}
+
+.shadow1 {
+        margin:20px;
+        background-color:#f0f0f0; /* Needed for IEs */
+        -moz-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+        -webkit-box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+        box-shadow: 5px 5px 5px rgba(68,68,68,0.6);
+		filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius=3,MakeShadow=true,ShadowOpacity=0.30)";
+        zoom: 1;
+}
+.shadow1 .content {
+        position: relative; /* This protects the inner element from being blurred */
+        padding: 10px;
+        background-color:#f0f0f0;
+		border:1px solid #cccccc;
+}
+.shadow1 .msg {
+        position: relative; /* This protects the inner element from being blurred */
+        padding: 10px;
+        background-color:#c6290a;
+		border:1px solid #cccccc;
+}

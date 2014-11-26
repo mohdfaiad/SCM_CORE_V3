@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrptOffloadReport" targetNamespace="http://tempuri.org/dsrptOffloadReport.xsd" xmlns:mstns="http://tempuri.org/dsrptOffloadReport.xsd" xmlns="http://tempuri.org/dsrptOffloadReport.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrptOffloadReport" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsrptOffloadReport" msprop:Generator_DataSetName="dsrptOffloadReport" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtrptOffloadReport" msprop:Generator_UserTableName="dtrptOffloadReport" msprop:Generator_RowDeletedName="dtrptOffloadReportRowDeleted" msprop:Generator_RowChangedName="dtrptOffloadReportRowChanged" msprop:Generator_RowClassName="dtrptOffloadReportRow" msprop:Generator_RowChangingName="dtrptOffloadReportRowChanging" msprop:Generator_RowEvArgName="dtrptOffloadReportRowChangeEvent" msprop:Generator_RowEvHandlerName="dtrptOffloadReportRowChangeEventHandler" msprop:Generator_TableClassName="dtrptOffloadReportDataTable" msprop:Generator_TableVarName="tabledtrptOffloadReport" msprop:Generator_RowDeletingName="dtrptOffloadReportRowDeleting" msprop:Generator_TablePropName="dtrptOffloadReport">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookedPCS" msprop:Generator_UserColumnName="BookedPCS" msprop:Generator_ColumnVarNameInTable="columnBookedPCS" msprop:Generator_ColumnPropNameInRow="BookedPCS" msprop:Generator_ColumnPropNameInTable="BookedPCSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNo" msprop:Generator_UserColumnName="AWBNo" msprop:Generator_ColumnVarNameInTable="columnAWBNo" msprop:Generator_ColumnPropNameInRow="AWBNo" msprop:Generator_ColumnPropNameInTable="AWBNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OffloadPCS" msprop:Generator_UserColumnName="OffloadPCS" msprop:Generator_ColumnVarNameInTable="columnOffloadPCS" msprop:Generator_ColumnPropNameInRow="OffloadPCS" msprop:Generator_ColumnPropNameInTable="OffloadPCSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OffloadWgt" msprop:Generator_UserColumnName="OffloadWgt" msprop:Generator_ColumnVarNameInTable="columnOffloadWgt" msprop:Generator_ColumnPropNameInRow="OffloadWgt" msprop:Generator_ColumnPropNameInTable="OffloadWgtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OffloadedFlight" msprop:Generator_UserColumnName="OffloadedFlight" msprop:Generator_ColumnVarNameInTable="columnOffloadedFlight" msprop:Generator_ColumnPropNameInRow="OffloadedFlight" msprop:Generator_ColumnPropNameInTable="OffloadedFlightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NextFlight" msprop:Generator_UserColumnName="NextFlight" msprop:Generator_ColumnVarNameInTable="columnNextFlight" msprop:Generator_ColumnPropNameInRow="NextFlight" msprop:Generator_ColumnPropNameInTable="NextFlightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NextFlightDate" msprop:Generator_UserColumnName="NextFlightDate" msprop:Generator_ColumnVarNameInTable="columnNextFlightDate" msprop:Generator_ColumnPropNameInRow="NextFlightDate" msprop:Generator_ColumnPropNameInTable="NextFlightDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Reason" msprop:Generator_UserColumnName="Reason" msprop:Generator_ColumnVarNameInTable="columnReason" msprop:Generator_ColumnPropNameInRow="Reason" msprop:Generator_ColumnPropNameInTable="ReasonColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OffloadedBy" msprop:Generator_UserColumnName="OffloadedBy" msprop:Generator_ColumnVarNameInTable="columnOffloadedBy" msprop:Generator_ColumnPropNameInRow="OffloadedBy" msprop:Generator_ColumnPropNameInTable="OffloadedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedWgt" msprop:Generator_UserColumnName="BookedWgt" msprop:Generator_ColumnVarNameInTable="columnBookedWgt" msprop:Generator_ColumnPropNameInRow="BookedWgt" msprop:Generator_ColumnPropNameInTable="BookedWgtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OffloadFlight" msprop:Generator_UserColumnName="OffloadFlight" msprop:Generator_ColumnPropNameInRow="OffloadFlight" msprop:Generator_ColumnVarNameInTable="columnOffloadFlight" msprop:Generator_ColumnPropNameInTable="OffloadFlightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="OffloadedOn" msprop:Generator_UserColumnName="OffloadedOn" msprop:Generator_ColumnPropNameInRow="OffloadedOn" msprop:Generator_ColumnVarNameInTable="columnOffloadedOn" msprop:Generator_ColumnPropNameInTable="OffloadedOnColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="OffloadFlightDate" msprop:Generator_UserColumnName="OffloadFlightDate" msprop:Generator_ColumnPropNameInRow="OffloadFlightDate" msprop:Generator_ColumnVarNameInTable="columnOffloadFlightDate" msprop:Generator_ColumnPropNameInTable="OffloadFlightDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ChargeWgt" msprop:Generator_UserColumnName="ChargeWgt" msprop:Generator_ColumnPropNameInRow="ChargeWgt" msprop:Generator_ColumnVarNameInTable="columnChargeWgt" msprop:Generator_ColumnPropNameInTable="ChargeWgtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AgentCode" msprop:Generator_UserColumnName="AgentCode" msprop:Generator_ColumnVarNameInTable="columnAgentCode" msprop:Generator_ColumnPropNameInRow="AgentCode" msprop:Generator_ColumnPropNameInTable="AgentCodeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtrptOffloadReportSUB" msprop:Generator_UserTableName="dtrptOffloadReportSUB" msprop:Generator_RowDeletedName="dtrptOffloadReportSUBRowDeleted" msprop:Generator_RowChangedName="dtrptOffloadReportSUBRowChanged" msprop:Generator_RowClassName="dtrptOffloadReportSUBRow" msprop:Generator_RowChangingName="dtrptOffloadReportSUBRowChanging" msprop:Generator_RowEvArgName="dtrptOffloadReportSUBRowChangeEvent" msprop:Generator_RowEvHandlerName="dtrptOffloadReportSUBRowChangeEventHandler" msprop:Generator_TableClassName="dtrptOffloadReportSUBDataTable" msprop:Generator_TableVarName="tabledtrptOffloadReportSUB" msprop:Generator_RowDeletingName="dtrptOffloadReportSUBRowDeleting" msprop:Generator_TablePropName="dtrptOffloadReportSUB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightNo" msprop:Generator_UserColumnName="FlightNo" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBno" msprop:Generator_UserColumnName="AWBno" msprop:Generator_ColumnVarNameInTable="columnAWBno" msprop:Generator_ColumnPropNameInRow="AWBno" msprop:Generator_ColumnPropNameInTable="AWBnoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FromDate" msprop:Generator_UserColumnName="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDate" msprop:Generator_UserColumnName="ToDate" msprop:Generator_ColumnVarNameInTable="columnToDate" msprop:Generator_ColumnPropNameInRow="ToDate" msprop:Generator_ColumnPropNameInTable="ToDateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

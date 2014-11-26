@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="17">
+    <Item id="0" Name="AWBNo" Caption="AWBNo" />
+    <Item id="1" Name="Origin" Caption="Origin" />
+    <Item id="2" Name="Destination" Caption="Destination" />
+    <Item id="3" Name="OffloadPCS" Caption="Offload PCS" />
+    <Item id="4" Name="OffloadWgt" Caption="Offload Wgt" />
+    <Item id="5" Name="ActFlight" Caption="Act Flight" />
+    <Item id="6" Name="ChargeWgt" Caption="Charge Wgt" />
+    <Item id="7" Name="NextFlight" Caption="Next Flight" />
+    <Item id="8" Name="Location" Caption="Location" />
+    <Item id="9" Name="Reason" Caption="Reason" />
+    <Item id="10" Name="NextFlightDate" Caption="Next Flight Date" />
+    <Item id="11" Name="NextFlightDate1" Caption="Next Flight Date1" />
+    <Item id="12" Name="OffloadFlightDate" Caption="Offload Flight Date" />
+    <Item id="13" Name="OffloadedOn" Caption="Offloaded On" />
+    <Item id="14" Name="OffloadedBy" Caption="Offloaded By" />
+    <Item id="15" Name="Error" Caption="Error" />
+    <Item id="16" Name="AWBPrefix" Caption="AWBPrefix" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="17">
+        <Item id="0">
+          <Name>AWBNo</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBNo.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBNo.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>Origin</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Origin.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Origin.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>Destination</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Destination.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Destination.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>ActFlight</Name>
+          <Caption>Act Flight</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ActFlight.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ActFlight.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>NextFlight</Name>
+          <Caption>Next Flight</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!NextFlight.Value</Expression>
+          <CaptionExpression Type="String">=Fields!NextFlight.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>Location</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Location.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Location.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>Reason</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Reason.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Reason.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>NextFlightDate</Name>
+          <Caption>Next Flight Date</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!NextFlightDate.Value</Expression>
+          <CaptionExpression Type="String">=Fields!NextFlightDate.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>NextFlightDate1</Name>
+          <Caption>Next Flight Date1</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!NextFlightDate1.Value</Expression>
+          <CaptionExpression Type="String">=Fields!NextFlightDate1.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>OffloadFlightDate</Name>
+          <Caption>Offload Flight Date</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!OffloadFlightDate.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadFlightDate.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>OffloadedOn</Name>
+          <Caption>Offloaded On</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!OffloadedOn.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadedOn.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>OffloadedBy</Name>
+          <Caption>Offloaded By</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!OffloadedBy.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadedBy.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>Error</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Error.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Error.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>OffloadPCS</Name>
+          <Caption>Offload PCS</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!OffloadPCS.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadPCS.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>OffloadWgt</Name>
+          <Caption>Offload Wgt</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!OffloadWgt.Value</Expression>
+          <CaptionExpression Type="String">=Fields!OffloadWgt.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>ChargeWgt</Name>
+          <Caption>Charge Wgt</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ChargeWgt.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ChargeWgt.Value</CaptionExpression>
+        </Item>
+        <Item id="16">
+          <Name>AWBPrefix</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBPrefix.Value</Expression>
+          <CaptionExpression>=Fields!AWBPrefix.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AWBNo]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="3">
+        <Item id="0">
+          <Name>OffloadPCS</Name>
+          <Caption>Offload PCS</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!OffloadPCS.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>OffloadWgt</Name>
+          <Caption>Offload Wgt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!OffloadWgt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>ChargeWgt</Name>
+          <Caption>Charge Wgt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!ChargeWgt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

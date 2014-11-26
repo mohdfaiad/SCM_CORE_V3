@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="rptSummaryOfCharges" targetNamespace="http://tempuri.org/rptSummaryOfCharges.xsd" xmlns:mstns="http://tempuri.org/rptSummaryOfCharges.xsd" xmlns="http://tempuri.org/rptSummaryOfCharges.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="rptSummaryOfCharges" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="rptSummaryOfCharges" msprop:Generator_DataSetName="rptSummaryOfCharges" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AWBDate" msprop:Generator_UserColumnName="AWBDate" msprop:Generator_ColumnVarNameInTable="columnAWBDate" msprop:Generator_ColumnPropNameInRow="AWBDate" msprop:Generator_ColumnPropNameInTable="AWBDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumber" msprop:Generator_UserColumnName="AWBNumber" msprop:Generator_ColumnVarNameInTable="columnAWBNumber" msprop:Generator_ColumnPropNameInRow="AWBNumber" msprop:Generator_ColumnPropNameInTable="AWBNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsignmentFrom" msprop:Generator_UserColumnName="ConsignmentFrom" msprop:Generator_ColumnVarNameInTable="columnConsignmentFrom" msprop:Generator_ColumnPropNameInRow="ConsignmentFrom" msprop:Generator_ColumnPropNameInTable="ConsignmentFromColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsignmentTo" msprop:Generator_UserColumnName="ConsignmentTo" msprop:Generator_ColumnVarNameInTable="columnConsignmentTo" msprop:Generator_ColumnPropNameInRow="ConsignmentTo" msprop:Generator_ColumnPropNameInTable="ConsignmentToColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CarriageFrom" msprop:Generator_UserColumnName="CarriageFrom" msprop:Generator_ColumnVarNameInTable="columnCarriageFrom" msprop:Generator_ColumnPropNameInRow="CarriageFrom" msprop:Generator_ColumnPropNameInTable="CarriageFromColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CarriageTo" msprop:Generator_UserColumnName="CarriageTo" msprop:Generator_ColumnVarNameInTable="columnCarriageTo" msprop:Generator_ColumnPropNameInRow="CarriageTo" msprop:Generator_ColumnPropNameInTable="CarriageToColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DateOfTransfer" msprop:Generator_UserColumnName="DateOfTransfer" msprop:Generator_ColumnVarNameInTable="columnDateOfTransfer" msprop:Generator_ColumnPropNameInRow="DateOfTransfer" msprop:Generator_ColumnPropNameInTable="DateOfTransferColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossWt" msprop:Generator_UserColumnName="GrossWt" msprop:Generator_ColumnVarNameInTable="columnGrossWt" msprop:Generator_ColumnPropNameInRow="GrossWt" msprop:Generator_ColumnPropNameInTable="GrossWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ChargedWt" msprop:Generator_UserColumnName="ChargedWt" msprop:Generator_ColumnVarNameInTable="columnChargedWt" msprop:Generator_ColumnPropNameInRow="ChargedWt" msprop:Generator_ColumnPropNameInTable="ChargedWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Rate" msprop:Generator_UserColumnName="Rate" msprop:Generator_ColumnVarNameInTable="columnRate" msprop:Generator_ColumnPropNameInRow="Rate" msprop:Generator_ColumnPropNameInTable="RateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="WeightCharges" msprop:Generator_UserColumnName="WeightCharges" msprop:Generator_ColumnVarNameInTable="columnWeightCharges" msprop:Generator_ColumnPropNameInRow="WeightCharges" msprop:Generator_ColumnPropNameInTable="WeightChargesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

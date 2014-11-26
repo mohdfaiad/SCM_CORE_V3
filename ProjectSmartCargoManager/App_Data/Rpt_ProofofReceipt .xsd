@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Rpt_ProofofReceipt" targetNamespace="http://tempuri.org/Rpt_ProofofReceipt .xsd" xmlns:mstns="http://tempuri.org/Rpt_ProofofReceipt .xsd" xmlns="http://tempuri.org/Rpt_ProofofReceipt .xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Rpt_ProofofReceipt" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Rpt_ProofofReceipt" msprop:Generator_DataSetName="Rpt_ProofofReceipt" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DtProofofReceipt" msprop:Generator_UserTableName="DtProofofReceipt" msprop:Generator_RowDeletedName="DtProofofReceiptRowDeleted" msprop:Generator_RowChangedName="DtProofofReceiptRowChanged" msprop:Generator_RowClassName="DtProofofReceiptRow" msprop:Generator_RowChangingName="DtProofofReceiptRowChanging" msprop:Generator_RowEvArgName="DtProofofReceiptRowChangeEvent" msprop:Generator_RowEvHandlerName="DtProofofReceiptRowChangeEventHandler" msprop:Generator_TableClassName="DtProofofReceiptDataTable" msprop:Generator_TableVarName="tableDtProofofReceipt" msprop:Generator_RowDeletingName="DtProofofReceiptRowDeleting" msprop:Generator_TablePropName="DtProofofReceipt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AWBNo" msprop:Generator_UserColumnName="AWBNo" msprop:Generator_ColumnPropNameInRow="AWBNo" msprop:Generator_ColumnVarNameInTable="columnAWBNo" msprop:Generator_ColumnPropNameInTable="AWBNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ActualPieces" msprop:Generator_UserColumnName="ActualPieces" msprop:Generator_ColumnPropNameInRow="ActualPieces" msprop:Generator_ColumnVarNameInTable="columnActualPieces" msprop:Generator_ColumnPropNameInTable="ActualPiecesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ActualWeight" msprop:Generator_UserColumnName="ActualWeight" msprop:Generator_ColumnPropNameInRow="ActualWeight" msprop:Generator_ColumnVarNameInTable="columnActualWeight" msprop:Generator_ColumnPropNameInTable="ActualWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightNumber" msprop:Generator_UserColumnName="FlightNumber" msprop:Generator_ColumnPropNameInRow="FlightNumber" msprop:Generator_ColumnVarNameInTable="columnFlightNumber" msprop:Generator_ColumnPropNameInTable="FlightNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FltDate" msprop:Generator_UserColumnName="FltDate" msprop:Generator_ColumnPropNameInRow="FltDate" msprop:Generator_ColumnVarNameInTable="columnFltDate" msprop:Generator_ColumnPropNameInTable="FltDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IssueDate" msprop:Generator_UserColumnName="IssueDate" msprop:Generator_ColumnPropNameInRow="IssueDate" msprop:Generator_ColumnVarNameInTable="columnIssueDate" msprop:Generator_ColumnPropNameInTable="IssueDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CommodityDesc" msprop:Generator_UserColumnName="CommodityDesc" msprop:Generator_ColumnPropNameInRow="CommodityDesc" msprop:Generator_ColumnVarNameInTable="columnCommodityDesc" msprop:Generator_ColumnPropNameInTable="CommodityDescColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

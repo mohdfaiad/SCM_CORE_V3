@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LBL_BTN_ACCEPTUCR" xml:space="preserve">
+    <value>Accept UCR</value>
+  </data>
+  <data name="LBL_BTN_ADD" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="LBL_BTN_ADDSCREENING" xml:space="preserve">
+    <value>Add Screening</value>
+  </data>
+  <data name="LBL_BTN_ADDSHIPMENT" xml:space="preserve">
+    <value>Add Shipment</value>
+  </data>
+  <data name="LBL_BTN_ADDTOMANIFEST" xml:space="preserve">
+    <value>Add To Manifest</value>
+  </data>
+  <data name="LBL_BTN_ADDTOULD" xml:space="preserve">
+    <value>Add To ULD</value>
+  </data>
+  <data name="LBL_BTN_ADDULD" xml:space="preserve">
+    <value>Add ULD</value>
+  </data>
+  <data name="LBL_BTN_ADDULDMANIFEST" xml:space="preserve">
+    <value>Add ULD Manifest</value>
+  </data>
+  <data name="LBL_BTN_ASSIGNTOBULK" xml:space="preserve">
+    <value>Assign to Cart</value>
+  </data>
+  <data name="LBL_BTN_ASSIGNTOULD" xml:space="preserve">
+    <value>Assign To ULD</value>
+  </data>
+  <data name="LBL_BTN_AUTOARRIVE" xml:space="preserve">
+    <value>Auto Arrive</value>
+  </data>
+  <data name="LBL_BTN_BREAKFROMULD" xml:space="preserve">
+    <value>Break From ULD</value>
+  </data>
+  <data name="LBL_BTN_CANCEL" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="LBL_BTN_CAPACITY" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="LBL_BTN_CARGORECEIPT" xml:space="preserve">
+    <value>Cargo Receipt</value>
+  </data>
+  <data name="LBL_BTN_CASS-BILLING PARTICIPANTEXPORT" xml:space="preserve">
+    <value>CASS-Billing Participant Export</value>
+  </data>
+  <data name="LBL_BTN_CASS-HANDOFFEXPORT" xml:space="preserve">
+    <value>CASS-Hand Off Export</value>
+  </data>
+  <data name="LBL_BTN_CLEAR" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="LBL_BTN_CLOSE" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="LBL_BTN_CLOSEFLIGHT" xml:space="preserve">
+    <value>Close Flight</value>
+  </data>
+  <data name="LBL_BTN_COLLECTAMOUNT" xml:space="preserve">
+    <value>Collect Amount</value>
+  </data>
+  <data name="LBL_BTN_COMMMANIFEST" xml:space="preserve">
+    <value>Comm Manifest</value>
+  </data>
+  <data name="LBL_BTN_CONFIRM" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="LBL_BTN_CTM" xml:space="preserve">
+    <value>CTM</value>
+  </data>
+  <data name="LBL_BTN_DELETE" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="LBL_BTN_DELETECART" xml:space="preserve">
+    <value>Delete Cart</value>
+  </data>
+  <data name="LBL_BTN_DELETEULD" xml:space="preserve">
+    <value>Delete ULD</value>
+  </data>
+  <data name="LBL_BTN_DELIVERYRECEIPT" xml:space="preserve">
+    <value>Delivery Receipt</value>
+  </data>
+  <data name="LBL_BTN_DEPARTFLT" xml:space="preserve">
+    <value>Depart Flt</value>
+  </data>
+  <data name="LBL_BTN_DGR" xml:space="preserve">
+    <value>Dgr</value>
+  </data>
+  <data name="LBL_BTN_DGRLABEL" xml:space="preserve">
+    <value>DGR Label</value>
+  </data>
+  <data name="LBL_BTN_DIM_SAVE" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="LBL_BTN_DISRCEPANCY" xml:space="preserve">
+    <value>Disrcepancy</value>
+  </data>
+  <data name="LBL_BTN_EAWB" xml:space="preserve">
+    <value>eAWB</value>
+  </data>
+  <data name="LBL_BTN_EPOUCH" xml:space="preserve">
+    <value>ePouch</value>
+  </data>
+  <data name="LBL_BTN_EXECUTE" xml:space="preserve">
+    <value>Execute</value>
+  </data>
+  <data name="LBL_BTN_EXPORT" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="LBL_BTN_EXPORTTOMANIFEST" xml:space="preserve">
+    <value>Export To Manifest</value>
+  </data>
+  <data name="LBL_BTN_FINALIZE" xml:space="preserve">
+    <value>Finalize</value>
+  </data>
+  <data name="LBL_BTN_FINALIZEFLT" xml:space="preserve">
+    <value>Finalize Flt</value>
+  </data>
+  <data name="LBL_BTN_FINALIZEULD" xml:space="preserve">
+    <value>Finalize ULD</value>
+  </data>
+  <data name="LBL_BTN_FTPUPLOAD" xml:space="preserve">
+    <value>FTP Upload</value>
+  </data>
+  <data name="LBL_BTN_GEN.TRACER" xml:space="preserve">
+    <value>Gen. Tracer</value>
+  </data>
+  <data name="LBL_BTN_GENERATEDCM" xml:space="preserve">
+    <value>Generate DCM</value>
+  </data>
+  <data name="LBL_BTN_GENERATEINVOICE" xml:space="preserve">
+    <value>Generate Invoice</value>
+  </data>
+  <data name="LBL_BTN_GENERATEPROPFORMA" xml:space="preserve">
+    <value>Generate Proforma</value>
+  </data>
+  <data name="LBL_BTN_GENERATESUPP.INVOICE" xml:space="preserve">
+    <value>Generate Supp. Invoice</value>
+  </data>
+  <data name="LBL_BTN_GETMOVEMENTHISTORY" xml:space="preserve">
+    <value>Get Movement History</value>
+  </data>
+  <data name="LBL_BTN_HAWB" xml:space="preserve">
+    <value>HAWB</value>
+  </data>
+  <data name="LBL_BTN_INVOICESUMMARY" xml:space="preserve">
+    <value>Invoice Summary</value>
+  </data>
+  <data name="LBL_BTN_LIST" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="LBL_BTN_LISTUCRS" xml:space="preserve">
+    <value>List UCRs</value>
+  </data>
+  <data name="LBL_BTN_MAILMANIFEST" xml:space="preserve">
+    <value>Mail Manifest</value>
+  </data>
+  <data name="LBL_BTN_MANIFEST" xml:space="preserve">
+    <value>Manifest</value>
+  </data>
+  <data name="LBL_BTN_MANIFESTFLIGHT" xml:space="preserve">
+    <value>Manifest Flight</value>
+  </data>
+  <data name="LBL_BTN_MARKSCREENED" xml:space="preserve">
+    <value>Mark Screened</value>
+  </data>
+  <data name="LBL_BTN_MATCHINVOICE" xml:space="preserve">
+    <value>Match Invoice</value>
+  </data>
+  <data name="LBL_BTN_MODIFY" xml:space="preserve">
+    <value>Modify</value>
+  </data>
+  <data name="LBL_BTN_NEWCART" xml:space="preserve">
+    <value>Add Cart</value>
+  </data>
+  <data name="LBL_BTN_NEWULD" xml:space="preserve">
+    <value>Add ULD</value>
+  </data>
+  <data name="LBL_BTN_NOTIFY" xml:space="preserve">
+    <value>Notify</value>
+  </data>
+  <data name="LBL_BTN_NOTOC" xml:space="preserve">
+    <value>NOTOC</value>
+  </data>
+  <data name="LBL_BTN_OFFLOAD" xml:space="preserve">
+    <value>Offload</value>
+  </data>
+  <data name="LBL_BTN_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="LBL_BTN_PICKLIST" xml:space="preserve">
+    <value>Pick List</value>
+  </data>
+  <data name="LBL_BTN_PRINT" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="LBL_BTN_PRINTACCEPTDETAILS" xml:space="preserve">
+    <value>Print Accept Details</value>
+  </data>
+  <data name="LBL_BTN_PRINTDO" xml:space="preserve">
+    <value>Print DO</value>
+  </data>
+  <data name="LBL_BTN_PRINTGATEPASS" xml:space="preserve">
+    <value>Print GatePass</value>
+  </data>
+  <data name="LBL_BTN_PRINTINVOICE(EXCEL)" xml:space="preserve">
+    <value>Print Invoice (Excel)</value>
+  </data>
+  <data name="LBL_BTN_PRINTINVOICE(PDF)" xml:space="preserve">
+    <value>Print Invoice (PDF)</value>
+  </data>
+  <data name="LBL_BTN_PRINTLABELS" xml:space="preserve">
+    <value>Print Labels</value>
+  </data>
+  <data name="LBL_BTN_PRINTLABLES" xml:space="preserve">
+    <value>Print Labels</value>
+  </data>
+  <data name="LBL_BTN_PRINTLISTING" xml:space="preserve">
+    <value>Print Listing</value>
+  </data>
+  <data name="LBL_BTN_PRINTLOADPLAN" xml:space="preserve">
+    <value>Print Load Plan</value>
+  </data>
+  <data name="LBL_BTN_PRINTMANIFEST" xml:space="preserve">
+    <value>Print Manifest</value>
+  </data>
+  <data name="LBL_BTN_PRINTMFT" xml:space="preserve">
+    <value>Print MFT</value>
+  </data>
+  <data name="LBL_BTN_PRINTSCRRPT" xml:space="preserve">
+    <value>Print Scr Rpt</value>
+  </data>
+  <data name="LBL_BTN_PRINTTOKEN" xml:space="preserve">
+    <value>Print Token</value>
+  </data>
+  <data name="LBL_BTN_PRINTUCR" xml:space="preserve">
+    <value>Print UCR</value>
+  </data>
+  <data name="LBL_BTN_PRINTULDPLAN" xml:space="preserve">
+    <value>Print ULD Plan</value>
+  </data>
+  <data name="LBL_BTN_PRINTWTSTMT" xml:space="preserve">
+    <value>Print Wt Stmt</value>
+  </data>
+  <data name="LBL_BTN_PROCESSRATES" xml:space="preserve">
+    <value>Process Rates</value>
+  </data>
+  <data name="LBL_BTN_RATEDETAILS" xml:space="preserve">
+    <value>Rate Details</value>
+  </data>
+  <data name="LBL_BTN_REASSIGN" xml:space="preserve">
+    <value>Reassign</value>
+  </data>
+  <data name="LBL_BTN_REJECT" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="LBL_BTN_REOPEN" xml:space="preserve">
+    <value>Reopen</value>
+  </data>
+  <data name="LBL_BTN_REOPENFLIGHT" xml:space="preserve">
+    <value>Reopen Flt</value>
+  </data>
+  <data name="LBL_BTN_REOPENULD" xml:space="preserve">
+    <value>ReOpen ULD</value>
+  </data>
+  <data name="LBL_BTN_RETURN" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="LBL_BTN_RETURNTOSHIPPER" xml:space="preserve">
+    <value>Return To Shipper</value>
+  </data>
+  <data name="LBL_BTN_SAVE" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="LBL_BTN_SAVEASTEMPLATE" xml:space="preserve">
+    <value>Save as Template</value>
+  </data>
+  <data name="LBL_BTN_SAVEBULKAWB" xml:space="preserve">
+    <value>Save Bulk AWB</value>
+  </data>
+  <data name="LBL_BTN_SAVECART" xml:space="preserve">
+    <value>Save Cart</value>
+  </data>
+  <data name="LBL_BTN_SAVEULD" xml:space="preserve">
+    <value>Save ULD</value>
+  </data>
+  <data name="LBL_BTN_SEARCH" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="LBL_BTN_SENDEMAIL" xml:space="preserve">
+    <value>Send Via Email</value>
+  </data>
+  <data name="LBL_BTN_SENDFBL" xml:space="preserve">
+    <value>Send FBL</value>
+  </data>
+  <data name="LBL_BTN_SENDFDM" xml:space="preserve">
+    <value>Send FDM</value>
+  </data>
+  <data name="LBL_BTN_SENDFFM" xml:space="preserve">
+    <value>Send FFM</value>
+  </data>
+  <data name="LBL_BTN_SENDFRI" xml:space="preserve">
+    <value>Send FRI</value>
+  </data>
+  <data name="LBL_BTN_SENDFSA/ARR" xml:space="preserve">
+    <value>Send FSA/ARR</value>
+  </data>
+  <data name="LBL_BTN_SENDFSN" xml:space="preserve">
+    <value>Send FSN</value>
+  </data>
+  <data name="LBL_BTN_SENDFSU" xml:space="preserve">
+    <value>Send FSU</value>
+  </data>
+  <data name="LBL_BTN_SENDVIA_SITA" xml:space="preserve">
+    <value>Send via SITA</value>
+  </data>
+  <data name="LBL_BTN_SHOW" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="LBL_BTN_SHOWFLIGHT" xml:space="preserve">
+    <value>Show Flights</value>
+  </data>
+  <data name="LBL_BTN_SKIP_SCREENING" xml:space="preserve">
+    <value>Skip Screening</value>
+  </data>
+  <data name="LBL_BTN_SPLIT&amp;ASSIGN" xml:space="preserve">
+    <value>Split &amp; Assign</value>
+  </data>
+  <data name="LBL_BTN_SPLIT&amp;UNASSIGN" xml:space="preserve">
+    <value>Split &amp; Unassign</value>
+  </data>
+  <data name="LBL_BTN_ULDCHANGE" xml:space="preserve">
+    <value>ULD Change</value>
+  </data>
+  <data name="LBL_BTN_ULDPLAN" xml:space="preserve">
+    <value>Print ULD Plan</value>
+  </data>
+  <data name="LBL_BTN_UNASSIGN" xml:space="preserve">
+    <value>Unassign</value>
+  </data>
+  <data name="LBL_BTN_UNASSIGNBULK" xml:space="preserve">
+    <value>Un Assign Bulk</value>
+  </data>
+  <data name="LBL_BTN_UNSCRND" xml:space="preserve">
+    <value>Unscrnd</value>
+  </data>
+  <data name="LBL_BTN_UPLOAD" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="LBL_BTN_UPLOADIMAGE" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="LBL_BTN_VIABILITY" xml:space="preserve">
+    <value>Viability</value>
+  </data>
+  <data name="LBL_FLTP_BULKLOAD" xml:space="preserve">
+    <value>Accepted Freight</value>
+  </data>
+  <data name="LBL_QB_BTN_EAWB" xml:space="preserve">
+    <value>Print AWB</value>
+  </data>
+  <data name="LBL_QB_BTN_FINALIZE" xml:space="preserve">
+    <value>Check In</value>
+  </data>
+  <data name="LBL_QB_BTN_LIST" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="LBL_QB_BTN_PRINTLABELS" xml:space="preserve">
+    <value>Print Lot-Labels</value>
+  </data>
+</root>

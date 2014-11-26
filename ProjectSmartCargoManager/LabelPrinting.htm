@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+<title>Label Printing</title>
+<script language="javascript" type="text/javascript">
+    
+    //Label Printing...
+    function PrintLabels() {
+        var query = location.search;
+        var aValue = query.substring(query.indexOf("param=") + 6, query.length);
+        //alert(aValue);
+        
+        var result = aValue.split(';');
+        //alert(result.length);
+        if (result.length < 6)
+            return;
+        var wsh = new ActiveXObject('WScript.Shell');
+        //alert(wsh);
+
+        var Source = result[0];
+        var Dest = result[1];
+        var PcsCount = result[2];
+        var AWBP1 = result[3];
+        var FromPcs = result[4];
+        var ToPcs = result[5];
+
+        var PrintingType = result[6];
+        var PieceInfo = result[7];       
+        var Loc = result[8];
+        var Shipper = result[9];
+        var Consignee = result[10];
+
+        wsh.Run('C:\\DesktopPrinter\\Print\\PrintAWBLabels.exe ' + Source + ' ' + Dest + ' ' + PcsCount + ' ' + AWBP1 + ' ' + FromPcs + ' ' + ToPcs + ' ' + PrintingType + ' ' + Loc + ' ' + Shipper + ' ' + Consignee + ' ' + PieceInfo + '');
+        //alert('Ok');
+        window.close();
+    }
+</script>
+</head>
+<body onload="javascript:PrintLabels()">
+</body>
+</html>

@@ -1,0 +1,1828 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SmartCargoMaster.master.cs"
+    Inherits="ProjectSmartCargoManager.SmartCargoMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Welcome To SmartKargo</title>
+    <link href="style/style.css" rel="stylesheet" type="text/css" />
+    <link href="style/jetGridView.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript">
+        function allowSubmission() {
+            return !(window.event && window.event.keyCode == 13);
+        }
+
+        window.history.forward();
+        function noBack() { window.history.forward(); }
+        function disableBackButton() {
+            window.history.forward();
+        }
+        setTimeout("disableBackButton()", 0);        
+    </script>
+
+    <script type="text/javascript">
+        function OnReadAWBOnTop(objCntl) {
+
+            var AWBNo = objCntl.value;
+            var AWBPrefix = document.getElementById('ctl00_txtprefix').value;
+            var hdBookingURL = document.getElementById('ctl00_hdBookingPageFlag').value;
+
+            if (AWBNo.length == 0)
+                return false;
+
+            if (AWBNo.length < 8) {
+                alert('Please enter valid AWB Number.', 'Error');
+                objCntl.focus();
+                return false;
+            }
+            if (hdBookingURL == "") {
+                hdBookingURL = "GHA_ConBooking.aspx";
+            }
+            window.location = hdBookingURL + "?command=Edit&AWBNumber=" + AWBNo + "&AWBPrefix=" + AWBPrefix;
+        }
+    </script>
+
+    <script type="text/javascript">
+        function logout() {
+            window.location.href = "Login.aspx";
+        }
+
+        function openPopUp() {
+            window.open('FrmAWBTracking.aspx', null, 'height=600, width=1024,status= no, resizable= no, scrollbars=no, toolbar=no,location=no,menubar=no ');
+        }
+    </script>
+
+    <script language="javascript" type="text/javascript">
+        function TopImageClicked() {
+            __doPostBack('ButtonTopImage', ' ');
+
+        } </script>
+
+    <script type="text/javascript">
+        function ViewPanelSplitTWO() {
+            alert("Inside Javascript");
+            document.getElementById('master_Lightsplit').style.display = 'block';
+            alert("Inside Javascript 1");
+            document.getElementById('master_fadesplit').style.display = 'block';
+            return false;
+        }
+        function HidePanelSplit() {
+
+
+            document.getElementById('master_Lightsplit').style.display = 'none';
+            document.getElementById('master_fadesplit').style.display = 'none';
+
+        }
+
+        function OpenNotes() {
+            var AWBPrefix = document.getElementById('ctl00_txtprefix').value;
+            var AWBNo = document.getElementById('ctl00_txtAWBGlobalNo').value;
+
+            if ((AWBPrefix == "Prefix" || AWBPrefix == "") && AWBNo == "AWB Number") {
+                window.open("Notes.aspx", "", "status=0,toolbar=0, menubar=0, width=810, height=500");
+                return false;
+            }
+            if (AWBNo == "AWB Number" && (AWBPrefix != "Prefix" && AWBPrefix != "")) {
+                window.open("Notes.aspx?Prefix=" + AWBPrefix, "", "status=0,toolbar=0, menubar=0, width=810, height=500");
+                return false;
+            }
+            if (AWBNo != "AWB Number" && (AWBPrefix == "Prefix" || AWBPrefix == "")) {
+                window.open("Notes.aspx?No=" + AWBNo, "", "status=0,toolbar=0, menubar=0, width=810, height=500");
+                return false;
+            }
+
+            if (AWBNo != "AWB Number" && (AWBPrefix != "Prefix" && AWBPrefix != "")) {
+                window.open("Notes.aspx?Prefix=" + AWBPrefix + '&No=' + AWBNo, "", "status=0,toolbar=0, menubar=0, width=810, height=500");
+                return false;
+            }
+            return false;
+        }
+    </script>
+
+    <%--<script type="text/javascript">
+    (function() {
+        var done = false;
+        var script = document.createElement("script");
+        script.async = true;
+        script.type = "text/javascript";
+        script.src = "https://www.purechat.com/VisitorWidget/WidgetScript";
+        document.getElementsByTagName('HEAD').item(0).appendChild(script);
+        script.onreadystatechange = script.onload = function(e) { if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) { var w = new PCWidget({ c: 'da2b7a7e-367c-416e-a0e7-0b41ce637395', f: true }); done = true; } };
+    })();
+    </script>--%>
+
+    <script type="text/javascript">
+
+        function DashboardPopup() {
+            var url = 'https://online.tableausoftware.com/auth';
+            params = 'width=' + screen.width;
+            params += ', height=' + screen.height;
+            params += ', top=0, left=0'
+            params += ', fullscreen=yes';
+
+            newwin = window.open(url, 'Tableau Reports', params);
+            if (window.focus) { newwin.focus() }
+            return false;
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        function onPagePrefixPopulated() {
+            //        var chs = ['\n', ';'];
+            //        $find('txtSearchLink_AutoCompleteExtender')._delimiterCharacters = chs;
+            var completionList = $find("txtSearchLink_AutoCompleteExtender").get_completionList();
+            completionList.style.width = 'auto';
+
+
+        }
+
+
+    </script>
+
+    <script type="text/javascript">
+        function myFunction() {
+
+            alert('Plz show in new tab', 'Error');
+            window.open("Help.aspx", "_blank", "width=200, height=100");
+        }
+ 
+    </script>
+
+    <style type="text/css">
+        #main ul.AutoComplete
+        {
+            /*visibility : hidden;*/
+            background-color: #fff;
+            color: purple;
+            margin: 0px 0 0 0;
+            padding: 0px 0px 0 0;
+            border: 1px solid #000;
+            cursor: 'default';
+            overflow: auto;
+            height: 300px;
+            text-align: left;
+        }
+        .CompletionListCssClass
+        {
+            color: #000;
+            padding: 3px 1px;
+            border: 1px solid #999;
+            background: #fff;
+            font-family: Verdana;
+            font-size: 12px !important;
+            float: left;
+            z-index: 1;
+            position: absolute;
+            margin-left: 0px;
+            height: 300px !important;
+            width: 230px !important; +width:200px!important;
+        *+width:200px!important;
+        width:200px!important\9;
+        -moz-min-content:210px!important;
+        -moz-min-width:210px!important;overflow:auto;overflow-x:hidden!important;text-align:left;overflow-y:scroll;-moz-overflow-x:hidden!important;cursor:pointer;display:block;
+        -webkit-list-style-type:none;
+        }
+        .Compl
+        {
+            display: block;
+            float: left;
+            width: 100%;
+            line-height: 16px !important;
+        }
+        .Compl:hover
+        {
+            display: block;
+            float: left;
+            width: 100%;
+            line-height: 16px !important;
+            background: #89c3fe;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <style>
+        .HyperlinkClass
+        {
+            cursor: pointer;
+        }
+    </style>
+    <form id="form1" runat="server">
+    <div id="main">
+        <div id="header_wapper">
+            <div id="header_content">
+                <%--<div style="position: absolute; right: 290px; top: 7px; z-index: 1000">
+            <asp:Label id="lblAWBNumber" Text="AWB Number" runat="server"/>
+            </div>--%>
+                <div id="Patnerlogo">
+                    <!--img src="Images/goair1.png" alt="visiblecargo" /-->
+                </div>
+                <div id="logo">
+                    <img src="Images/Client_logo.png" />
+                </div>
+                <!--header logo-->
+                <div id="mainmenu">
+                    <div style="position: absolute; right: 8px; top: -27px; z-index: 1000">
+                        <span style="margin-right: 30px;">
+                            <%=Session["UserName"].ToString()%>
+                            [<%=Session["RoleName"].ToString()%>]/<%=Session["Station"].ToString()%>
+                            From
+                            <%=Session["IpAddress"].ToString()%>
+                        </span>
+                        <asp:HiddenField ID="hdBookingPageFlag" runat="server" />
+                        <asp:TextBox ID="txtprefix" runat="server" Width="26px" ToolTip="prefix" MaxLength="3"></asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender2" runat="server" TargetControlID="txtprefix"
+                            WatermarkText="Prefix">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:TextBox ID="txtAWBGlobalNo" runat="server" AutoPostBack="true" Width="70px"
+                            Wrap="true" ToolTip="Search AWB Details" MaxLength="8" BackColor="White" onChange="javascript:return OnReadAWBOnTop(this);">
+                        </asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" runat="server" TargetControlID="txtAWBGlobalNo"
+                            WatermarkText="AWB Number">
+                        </asp:TextBoxWatermarkExtender>
+                        &nbsp;
+                        <asp:ImageButton ID="imgNotebtn" ImageAlign="AbsMiddle" runat="server" OnClientClick="javascript:return OpenNotes();"
+                            ImageUrl="~/Images/noteicon.png" ToolTip="Notes" Height="20px" Width="34px" Style="padding-bottom: 2px;" />
+                    </div>
+                    <ul>
+                        <li><a href="Home.aspx">Home</a><span><img alt="" src="images/menulefline.png" style="vertical-align: middle;" />
+                        </span></li>
+                        <%--<li><a href="frmChatTest.aspx">User Chat</a><span><img alt="" src="images/menulefline.png"
+                            style="vertical-align: middle;" /></span></li>--%>
+                        <li>
+                            <%-- <a href="#">Contact Us</a> --%>
+                            <span>
+                                <%-- <img alt="" src="images/menulefline.png" style="vertical-align: middle;" />
+                            <asp:Label
+                                ID="lblUserName" runat="server" Font-Bold="True" ForeColor="White" Text="QID"></asp:Label>--%>
+                                <asp:DropDownList ID="ddlStation" runat="server" Height="20px" Width="50px">
+                                </asp:DropDownList>
+                                <asp:Button ID="btnCahngeStation" runat="server" Text="Set" CssClass="button" OnClick="btnCahngeStation_Click"
+                                    Width="30px" CausesValidation="false" />
+                                <asp:Button ID="btnLogout1" runat="server" Style="visibility: hidden" OnClientClick="return false;" />
+                                <asp:ImageButton ID="btnLogout" ImageUrl="images/logout.png" ImageAlign="AbsMiddle"
+                                    runat="server" OnClick="Logout" OnClientClick="return confirm('Do you want to Logout ?')"
+                                    Text="Sure to Logout." />
+                            </span></li>
+                    </ul>
+                    <div style="position: absolute; right: 7px; top: 8px; z-index: 1000">
+                        <asp:TextBox ID="txtSearchLink" runat="server" AutoPostBack="true" Width="103px"
+                            Wrap="true" ToolTip="Search for Link" OnTextChanged="txtSearchLink_TextChanged"
+                            MaxLength="8" BackColor="White">
+                        </asp:TextBox>
+                        <asp:TextBoxWatermarkExtender ID="txtSearchLink_TextBoxWatermarkExtender" runat="server"
+                            TargetControlID="txtSearchLink" WatermarkText="Search your page">
+                        </asp:TextBoxWatermarkExtender>
+                        <asp:AutoCompleteExtender ID="txtSearchLink_AutoCompleteExtender" CompletionInterval="0"
+                            BehaviorID="txtSearchLink_AutoCompleteExtender" CompletionSetCount="10" runat="server"
+                            DelimiterCharacters=";,:" Enabled="True" CompletionListCssClass="CompletionListCssClass"
+                            CompletionListItemCssClass="Compl" EnableCaching="true" ServicePath="~/GHAHome.aspx"
+                            ServiceMethod="GetMenu" MinimumPrefixLength="1" FirstRowSelected="true" TargetControlID="txtSearchLink"
+                            UseContextKey="true" ContextKey="NA" OnClientPopulated="onPagePrefixPopulated">
+                        </asp:AutoCompleteExtender>
+                    </div>
+                </div>
+                <!--main menu-->
+            </div>
+            <!--header content-->
+            <div id="menu">
+                <ul>
+                    <li style="background: url(images/arrow.png) no-repeat 47px 18px;" class="liwidthsale">
+                        <%-- <a
+                        href="#">Sales</a>--%>
+                        <asp:HyperLink ID="hlnkSales" runat="server" Visible="false" CssClass="HyperlinkClass">Sales</asp:HyperLink>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnkAWBStockAllocation" Visible="false" runat="server" NavigateUrl="OPSURL/StockAllocation.aspx">AWB Stock Allocation</asp:HyperLink>
+                            </li>
+                            <%--<li>
+                                <asp:HyperLink ID="hlnkAWBStockAudit" Visible="false" runat="server" NavigateUrl="#"> AWB Stock Audit</asp:HyperLink>
+                            </li>--%>
+                            <li>
+                                <asp:HyperLink ID="hlnAgentCapacityList" Visible="false" runat="server" NavigateUrl="OPSURL/frmAgentCapacityList.aspx">List Agent Capacity</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnAgentCapacityNew" Visible="false" runat="server" NavigateUrl="OPSURL/frmAgentCapacityNew.aspx">New Agent Capacity</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnAgentQuoteList" Visible="false" runat="server" NavigateUrl="OPSURL/frmAgentQuoteListNew.aspx">List Agent Quote</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnAgentQuoteNew" Visible="false" runat="server" NavigateUrl="OPSURL/frmReverseBidding.aspx">New Agent Quote</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 65px 18px;" class="liwidth">
+                        <%--  <a
+                        href="#">Booking</a>--%>
+                        <asp:HyperLink ID="hlnkBooking" runat="server" Visible="false" CssClass="HyperlinkClass">Booking</asp:HyperLink>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnBookingTemplate" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_ListTemplate.aspx">Templates </asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkBookingNew" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_ConBooking.aspx?GHA=false">New </asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkBookingListGHA" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_ListBooking.aspx">List </asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkBookingNewGHA" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_ConBooking.aspx?GHA=true">Partner</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnQuickBooking" Visible="false" runat="server" NavigateUrl="OPSURL/gha_quickbooking.aspx?GHA=false">Quick Booking </asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkePouch" Visible="false" runat="server" NavigateUrl="OPSURL/ePouchNew.aspx">ePouch</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnConfirmBooking" Visible="false" runat="server" NavigateUrl="OPSURL/frmFlightCapacityPlanning.aspx?command=ConfirmBooking">Confirm</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkMailList" Visible="false" runat="server" NavigateUrl="OPSURL/MailBookingSummary.aspx">List Mail Booking</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkMailNew" Visible="false" runat="server" NavigateUrl="OPSURL/MailBookingNew.aspx">New Mail Booking</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 84px 18px;" class="liwidth">
+                        <%--  <a
+                        href="#">Operations</a>--%>
+                        <asp:HyperLink ID="hlnkOperations" runat="server" Visible="false" CssClass="HyperlinkClass">Operations</asp:HyperLink>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnkCapacityPlanningNew" Visible="false" runat="server" NavigateUrl="OPSURL/frmFlightCapacityPlanning.aspx?command=Capacity">Capacity Planning</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkCapacityPlanning" Visible="false" runat="server" NavigateUrl="OPSURL/frmFlightCapacityPlanning.aspx?command=Revenue">Revenue Management</asp:HyperLink>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnAcceptance" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4">Accept</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnProcessDriver" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_DriverDetails.aspx">Cargo Handover</asp:HyperLink>
+                                        </li>
+                                        <%--<li>
+                                            <asp:HyperLink ID="hlnDockAcceptance" Visible="false" runat="server" NavigateUrl="~/GHA_DockAcceptance.aspx">Dock Acceptance</asp:HyperLink>
+                                        </li>--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnCargoAcceptance" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_Acceptance.aspx">Cargo Acceptance</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnXrayScreening" Visible="false" runat="server" NavigateUrl="OPSURL/frmScreeningDashboard.aspx">Cargo Screening</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkBuild" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Build</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnAssignULD" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_FlightPlanning.aspx">Flight Planning</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkListULD" Visible="false" runat="server" NavigateUrl="OPSURL/FrmULDList.aspx">List ULD</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkULDMaster" Visible="false" runat="server" NavigateUrl="OPSURL/frmULDMaster.aspx">New ULD</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnBuildULD" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_BuildULD_New.aspx">Build ULD</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkUCRList" Visible="false" runat="server" NavigateUrl="OPSURL/UCR.aspx?type=List">List UCR</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkUCRNew" Visible="false" runat="server" NavigateUrl="OPSURL/UCR.aspx?type=New">New UCR</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkExport" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Export</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkExportManifestGHA" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_frmExportManifest.aspx">Export Manifest</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkePouchFlights" Visible="false" runat="server" NavigateUrl="OPSURL/ePouchFlights.aspx">ePouch Flights</asp:HyperLink>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkCTMMain" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Cargo Transfer Manifest</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnCTM" Visible="false" runat="server" NavigateUrl="OPSURL/CTMNew.aspx">New</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkList" Visible="false" runat="server" NavigateUrl="OPSURL/CTMList.aspx">List</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkExportSummary" Visible="false" runat="server" NavigateUrl="OPSURL/ExportSummary.aspx">Export Summary </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkExportInv" Visible="false" runat="server" NavigateUrl="OPSURL/rptExportWareHouseInv.aspx">Export Inventory </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkImport" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Import</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkArrival" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_Imp_Arrival.aspx">Arrive</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkImportSummary" Visible="false" runat="server" NavigateUrl="OPSURL/ImportSummary.aspx">Import Summary </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkImportInv" Visible="false" runat="server" NavigateUrl="OPSURL/rptImportWareHouseInv.aspx">Import Inventory </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkBreakULD" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_Imp_BreakULD.aspx">Break ULD</asp:HyperLink>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkDeliver" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Deliver</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDelivery" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_Imp_Delivery.aspx">Deliver Cargo</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnProcessDriverdel" Visible="false" runat="server" NavigateUrl="OPSURL/GHA_DriverDetails.aspx?del=1">Cargo Pickup</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkUploadOps" Visible="false" runat="server" NavigateUrl="OPSURL/frmUploadData.aspx">Upload OPS Data</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 47px 18px;" class="liwidthsale">
+                        <%--  <a
+                        href="#">ULD</a>--%>
+                        <asp:HyperLink ID="hlnULDNew" runat="server" Visible="false" CssClass="HyperlinkClass">ULD</asp:HyperLink>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnListULD" Visible="false" runat="server" NavigateUrl="OPSURL/FrmULDList.aspx">List ULD</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnULDMaster" Visible="false" runat="server" NavigateUrl="OPSURL/frmULDMaster.aspx">New ULD</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnUCRList" Visible="false" runat="server" NavigateUrl="OPSURL/UCR.aspx?type=List">List UCR</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnUCRNew" Visible="false" runat="server" NavigateUrl="OPSURL/UCR.aspx?type=New">New UCR</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkStockConfig" Visible="false" runat="server" NavigateUrl="CONFIGURL/StockConfigurationNew.aspx">ULD Stock</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnAccountingULD" runat="server" Visible="false" NavigateUrl="#"
+                                    CssClass="submenupointer4"> ULD Accounting </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnPurchaseOrder" Visible="false" runat="server" NavigateUrl="#"
+                                                CssClass="submenupointer4"> Purchase Order </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnListPurchaseOrder" Visible="false" runat="server" NavigateUrl="OPSURL/frmListPOs.aspx"> List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnNewPurchaseOrder" Visible="false" runat="server" NavigateUrl="OPSURL/frmPurchaseOrder.aspx?op=Create"> New </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnUpdatePurchaseOrder" Visible="false" runat="server" NavigateUrl="OPSURL/frmPOStatusChange.aspx"> Update </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnRepairOrder" Visible="false" runat="server" NavigateUrl="OPSURL/frmRepairOrder.aspx"> Repair Order </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnDemurrage" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> Demurrage </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <%--  <li>
+                                                        <asp:HyperLink ID="hlnDemConfig" Visible="false" runat="server" NavigateUrl="OPSURL/frmDemurrage.aspx"> Charges </asp:HyperLink> </li>   --%>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnDemConfig" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> Configure </asp:HyperLink>
+                                                        <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                            <ul>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlnDemConfigList" Visible="false" runat="server" NavigateUrl="OPSURL/frmListDemCharges.aspx"> List </asp:HyperLink>
+                                                                </li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlnDemConfigNew" Visible="false" runat="server" NavigateUrl="OPSURL/frmDemCharges.aspx"> New </asp:HyperLink>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <li>
+                                                            <asp:HyperLink ID="hlnDemCost" Visible="false" runat="server" NavigateUrl="OPSURL/frmDemCost.aspx"> Cost </asp:HyperLink></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnTrackULD" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Track ULD</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkULDMovement" Visible="false" runat="server" NavigateUrl="OPSURL/frmULDMovement.aspx">ULD Movement</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkULDMovementHistory" Visible="false" runat="server" NavigateUrl="OPSURL/frmULDMovementHistory.aspx">ULD Movement History</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnULDLocation" Visible="false" runat="server" NavigateUrl="OPSURL/MultipleMarker.aspx">ULD Locations</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 89px 18px;" class="liwdtrack">
+                        <%-- <a
+                        href="#" >Track/Audit</a>--%>
+                        <asp:HyperLink ID="hlnkTrackAudit" runat="server" Visible="false" CssClass="HyperlinkClass">Track/Audit</asp:HyperLink>
+                        <ul>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkQuality" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Quality</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBStatus" runat="server" Visible="false" NavigateUrl="OPSURL/frmAWBLDetails.aspx">C2K Tracking</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkEmission" Visible="false" runat="server" NavigateUrl="OPSURL/rptEmission.aspx">Emission Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkSLAPerformance" Visible="false" runat="server" NavigateUrl="OPSURL/rptSLAPerformance.aspx">SLA Performance Rpt</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkTrack" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Track AWB</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBTracking" runat="server" Visible="false" NavigateUrl="OPSURL/frmAWBTrackingMaster.aspx">Track AWB</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkUpdateFSA" runat="server" Visible="false" NavigateUrl="OPSURL/frmUpdateAWBLDetails.aspx">Update AWB Status</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnGenerateTracer" runat="server" Visible="false" NavigateUrl="OPSURL/FrmTracerGeneration.aspx">Generate Tracer</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkTrackULD" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Track ULD</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnULDMovement" Visible="false" runat="server" NavigateUrl="OPSURL/frmULDMovement.aspx">ULD Movement</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnULDMovementHistory" Visible="false" runat="server" NavigateUrl="OPSURL/frmULDMovementHistory.aspx">ULD Movement History</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkULDLocation" Visible="false" runat="server" NavigateUrl="OPSURL/MultipleMarker.aspx">ULD Locations</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkMessaging" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4">Messaging</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkIATAMessageConsole" runat="server" Visible="false" NavigateUrl="OPSURL/rptMessaging.aspx">Monitor Messages</asp:HyperLink>
+                                        </li>
+                                        <%--<li>
+                                            <asp:HyperLink ID="hlnkMessageCenter" runat="server" Visible="false" NavigateUrl="~/msgOverview.aspx">Message Center</asp:HyperLink>
+                                        </li>--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCutomsMessaging" runat="server" Visible="false" NavigateUrl="OPSURL/Customsimports.aspx">Customs</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkAudit" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Audit Trail</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <%-- <li>
+                                            <asp:HyperLink ID="lnkAuditTrail" runat="server" Visible="false" NavigateUrl="OPSURL/FrmAuditTrail.aspx">AWB Audit Trail</asp:HyperLink>
+                                        </li>--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkOpsAuditLog" runat="server" Visible="false" NavigateUrl="OPSURL/OperationAWBAuditLog.aspx">AWB Audit Log</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkBillingAuditLog" runat="server" Visible="false" NavigateUrl="OPSURL/BillingAWBAuditLog.aspx">Billing Audit Log</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkULDTracking" runat="server" Visible="false" NavigateUrl="OPSURL/ULDTrack.aspx">ULD Audit Trail</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCustomsAuditTrail" runat="server" Visible="false" NavigateUrl="OPSURL/frmCustomsAuditTrail.aspx">Customs Audit Trail</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkReportLog" runat="server" Visible="false" NavigateUrl="OPSURL/ReportLog.aspx">Report Log</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="lnkUserActivityLog" runat="server" Visible="false" NavigateUrl="OPSURL/FrmUserActivityLog.aspx">User Login Log</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkMasterAuditLog" runat="server" Visible="false" NavigateUrl="OPSURL/MasterAuditLog.aspx">Master Audit Log</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkVehicleTracking" Visible="false" runat="server" NavigateUrl="OPSURL/DriverMaps.aspx">Track Vehicle</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 84px 18px;" class="liwidth">
+                        <%--<a href="#">Accounting</a>--%>
+                        <asp:HyperLink ID="hlnkAccounting" runat="server" Visible="false" CssClass="HyperlinkClass">Accounting</asp:HyperLink>
+                        <ul style="width: 100px;">
+                            <li>
+                                <asp:HyperLink ID="hlnkBilling" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingInvoiceMatching.aspx"> Billing </asp:HyperLink>
+                            </li>
+                          
+                               <li class="top">
+                                <asp:HyperLink ID="hlnkInvoiceList" Visible="false" runat="server" NavigateUrl="CONFIGURL/FrmInvoiceListing.aspx"
+                                    CssClass="submenupointer4">Invoice</asp:HyperLink>
+                               
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptStationWiseInvoiceSummary" Visible="false" runat="server" NavigateUrl="CONFIGURL/rptStationWiseInvoiceSummary.aspx"> StationWise Invoice Summary </asp:HyperLink>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnJournalAccount" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4">Journal Entries</asp:HyperLink>
+                                <%--  <li class="top">
+                                <asp:HyperLink ID="hnlJournalAccount" runat="server" Visible="false" NavigateUrl="#"
+                                    CssClass="submenupointer4"> Journal Accounting </asp:HyperLink>--%>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkJournalAccount" Visible="false" runat="server" NavigateUrl="CONFIGURL/JournalAccountMaster.aspx"> Journal Entries </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkJournalSummary" Visible="false" runat="server" NavigateUrl="CONFIGURL/JournalEntrySummary.aspx"> Journal Summary </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkInterlineBilling" runat="server" Visible="false" NavigateUrl="#"
+                                    CssClass="submenupointer4"> Interline </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkInterlineInvoiceList" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmInterlineInvoiceListing.aspx"> Invoice Listing </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkInterlineInvoice" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingInterlineInvoice.aspx?id=0"> Invoice </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkInterlineCreditNote" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingInterlineInvoice.aspx?id=1"> Credit Note  </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkCCA" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4"> CCA </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCCANew" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmCCAProcessing.aspx">Generate </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCCAList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListCCA.aspx">List </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkDCM" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4"> DCM </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDCMNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/DCMGenerate.aspx">Generate </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDCMList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListDCMAWBDeals.aspx">List </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkRMList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListRM.aspx"> Rejection Memo </asp:HyperLink>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkCollection" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4"> Collection </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCollectionDetails" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingCollectionMaster.aspx">Invoice Collection</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDestCollectionDetails" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingDestAgentCollection.aspx">Dest Invoice Collection</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkWalkInCollectionDetails" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingWalkInAgentCollection.aspx">WalkIn Invoice Collection</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkBillingInvoiceCollection" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingInvoiceCollection.aspx">Collection</asp:HyperLink>
+                                        </li>
+                                        <%--<li>
+                                            <asp:HyperLink ID="hlnCollectionHandOver" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmWalkinAgentCollection.aspx">Collection Handover</asp:HyperLink>
+                                        </li>--%>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnHandover" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> Collection Handover </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnCollectionHandOver" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmWalkinAgentCollection.aspx">New </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnCollectionHandOverList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListHandoverDetails.aspx">List </asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnClaims" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> Claims </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnClaimNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmClaimApplication.aspx">New</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnClaimList" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmClaimList.aspx">List</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkAccountingULD" runat="server" Visible="false" NavigateUrl="#"
+                                    CssClass="submenupointer4"> ULD </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkPurchaseOrder" Visible="false" runat="server" NavigateUrl="#"
+                                                CssClass="submenupointer4"> Purchase Order </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkListPurchaseOrder" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmListPOs.aspx"> List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkNewPurchaseOrder" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmPurchaseOrder.aspx?op=Create"> New </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkUpdatePurchaseOrder" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmPOStatusChange.aspx"> Update </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkRepairOrder" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmRepairOrder.aspx"> Repair Order </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDemurrage" Visible="false" runat="server" NavigateUrl="#"
+                                                CssClass="submenupointer4"> Demurrage </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkDemCharges" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmDemurrage.aspx"> Charges </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkDemConfig" Visible="false" runat="server" NavigateUrl="#"
+                                                            CssClass="submenupointer4"> Configure </asp:HyperLink>
+                                                        <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                            <ul>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlnkDemConfigList" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmListDemCharges.aspx"> List </asp:HyperLink>
+                                                                </li>
+                                                                <li>
+                                                                    <asp:HyperLink ID="hlnkDemConfigNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmDemCharges.aspx"> New </asp:HyperLink>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkDemCost" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmDemCost.aspx"> Cost </asp:HyperLink></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkUploadFile" Visible="false" runat="server" NavigateUrl="CONFIGURL/BillingAWBFileUpload.aspx"> Upload File </asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 65px 18px;" class="liwidth">
+                        <%--<a
+                        href="#">Reports</a>--%>
+                        <asp:HyperLink ID="hlnkReportsMenu" Visible="false" runat="server" CssClass="HyperlinkClass">Reports</asp:HyperLink>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnkAutoReportsConfig" Visible="false" runat="server" NavigateUrl="BIURL/AutoReportsConfig.aspx">Auto Reports Config</asp:HyperLink>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnReports" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Pre Configured</asp:HyperLink>
+                                <div class="active">
+                                    <ul class="report">
+                                        <%--Tonnage Reports--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDailySalesReport" Visible="false" runat="server" NavigateUrl="BIURL/rptDailySalesReport.aspx">Daily Sales</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCargoLoadFactor" Visible="false" runat="server" NavigateUrl="BIURL/rptCargoLoadFactor.aspx">Cargo Load Factor</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkEndOfShift" Visible="false" runat="server" NavigateUrl="BIURL/rptEndOfShift.aspx">End Of Shift</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkDailyCollectionRpt" Visible="false" runat="server" NavigateUrl="BIURL/rptDailyCollectionReport.aspx">Daily Collection</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkRevenueTrackingRpt" Visible="false" runat="server" NavigateUrl="BIURL/rptSectorWiseRevenueReport.aspx">Cargo Revenue Tracking</asp:HyperLink>
+                                        </li>
+                                        <%--Modified according to Mohan sir--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkProofOfReceipt" Visible="false" runat="server" NavigateUrl="BIURL/RptProofOfReceipt.aspx">Proof Of Receipt Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkORRegister" Visible="false" runat="server" NavigateUrl="BIURL/rptORRegister.aspx">Register OR Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkORCancellation" Visible="false" runat="server" NavigateUrl="BIURL/ORCancellation.aspx">Cancelled OR Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkORNotPrinted" Visible="false" runat="server" NavigateUrl="BIURL/rptORNotPrinted.aspx">Non Printed OR Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkORTransaction" Visible="false" runat="server" NavigateUrl="BIURL/rptORTransation.aspx">OR Transation</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkStatementOfAcc" Visible="false" runat="server" NavigateUrl="BIURL/rptStatementOfAccountReport.aspx">Statement Of Account</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkARAging" Visible="false" runat="server" NavigateUrl="BIURL/rptAccountRecievableAging.aspx">A/R Aging Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkComparative" Visible="false" runat="server" NavigateUrl="BIURL/rptComparative.aspx">Cargo Performance Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkTAXOUT" Visible="false" runat="server" NavigateUrl="BIURL/TAXOUT.aspx">TAX-Out Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkStorageChargeRpt" Visible="false" runat="server" NavigateUrl="BIURL/rptStorageChargeReport.aspx">Storage Charge Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkUnpainRpt" Visible="false" runat="server" NavigateUrl="BIURL/rptUnPaidAWBNumber.aspx">Collect AWB Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkGSAIntlrpt" Visible="false" runat="server" NavigateUrl="BIURL/rptGSAInterlineRevenue.aspx">GSA Revenue Share</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkSummaryOfCharges" Visible="false" runat="server" NavigateUrl="BIURL/rptSummaryOfCharges.aspx">Summary Of Charges</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkGSAProductionrpt" Visible="false" runat="server" NavigateUrl="BIURL/rptGSADetail.aspx">GSA Production</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkSplitShipmentrpt" Visible="false" runat="server" NavigateUrl="BIURL/rptSplitShipment.aspx">Split Shipment</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCarriageDGRGoods" Visible="false" runat="server" NavigateUrl="BIURL/rptCarriageDGRGoods.aspx">Carriage Of DGR Goods</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkShippersTracking" Visible="false" runat="server" NavigateUrl="BIURL/rptShippersTracking.aspx">Shipper's Tracking</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAveragePayingHabit" Visible="false" runat="server" NavigateUrl="BIURL/rptAveragePayingHabit.aspx">Average Paying Habit</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCreditLimit" Visible="false" runat="server" NavigateUrl="BIURL/rptCreditLimt.aspx">Credit Limit</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkARDeposit" Visible="false" runat="server" NavigateUrl="BIURL/rptARDeposit.aspx">A/R Deposit</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkClaimrpt" Visible="false" runat="server" NavigateUrl="BIURL/rptClaim.aspx">Claims Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkComatFOC" Visible="false" runat="server" NavigateUrl="BIURL/rptComatFOC.aspx">Comat/FOC Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkOverpayment" Visible="false" runat="server" NavigateUrl="BIURL/rptOverpayment.aspx">Overpayment Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkMasterData" Visible="false" runat="server" NavigateUrl="BIURL/rptMasterData.aspx">Master Data Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkRevenueCollectionSales" Visible="false" runat="server" NavigateUrl="BIURL/rptHigestCollectionsAndVolSales.aspx">Revenue Report Collections/Sales</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkStationPerformanceReport" Visible="false" runat="server" NavigateUrl="BIURL/rptStationWisePerformanceMonthly.aspx">Station Performance Monthly Rpt</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptARPaymentSummary" Visible="false" runat="server" NavigateUrl="BIURL/rptARPaymentSummary.aspx">A/R Payment Summary</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptARTransaction" Visible="false" runat="server" NavigateUrl="BIURL/rptARTransaction.aspx">A/R Transaction</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptWareImpDisposal" Visible="false" runat="server" NavigateUrl="BIURL/rptWareImpDisposal.aspx">Disposal Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptCreditDebitMemo" Visible="false" runat="server" NavigateUrl="BIURL/rptCreditDebitMemo.aspx">Credit/Debit Memo</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptCollectedCRSalesMonth" Visible="false" runat="server" NavigateUrl="BIURL/rptCollectedCRSalesMonth.aspx">Collected Credit Sales</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkrptOperationsPerformance" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBAnalysis.aspx">Operations Performance</asp:HyperLink>
+                                        </li>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnWareHouseInv" Visible="false" runat="server" NavigateUrl="BIURL/rptExportWareHouseInv.aspx">Warehouse Inventory Export</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnImpWareHouseInv" Visible="false" runat="server" NavigateUrl="BIURL/rptImportWareHouseInv.aspx">Warehouse Inventory Import</asp:HyperLink>
+                                        </li>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkAWBTonnage" runat="server" Visible="false" NavigateUrl="BIURL/rptMISAWBBooking.aspx">AWB Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBStationWise" runat="server" Visible="false" NavigateUrl="BIURL/rptStationwiseReport.aspx">Station Wise Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBSectorWise" runat="server" Visible="false" NavigateUrl="BIURL/rptSectorWiseReport.aspx">Sector Wise Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnLegwiseReport" Visible="false" runat="server" NavigateUrl="BIURL/rptLegWiseReport.aspx">Route Wise Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnDailyAWBsales" Visible="false" runat="server" NavigateUrl="BIURL/rptDailyAWBSalesReport.aspx">Daily AWB Sales</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnMonthlyStats" Visible="false" runat="server" NavigateUrl="BIURL/rptMonthlyStats.aspx">Monthly Statistics</asp:HyperLink>
+                                        </li>
+                                        <%--Vs Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkNoShow" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBNoShow.aspx">No-Show Report</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkFlightUtilization" Visible="false" runat="server" NavigateUrl="BIURL/rptFlightUtilization.aspx">Capacity vs Utilized</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnBudget" Visible="false" runat="server" NavigateUrl="BIURL/FlightBudget.aspx">Budget Vs Actual</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnFLABforOpr" Visible="false" runat="server" NavigateUrl="BIURL/ExceptionMonitoring.aspx">Booked Vs Flown</asp:HyperLink>
+                                        </li>
+                                        <%--Performance Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkAWBAgentWise" runat="server" Visible="false" NavigateUrl="BIURL/rptAgentWiseReport.aspx">Agent Performance</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBFlightWise" runat="server" Visible="false" NavigateUrl="BIURL/rptFlightWiseTonnageReport.aspx">Flight Performance</asp:HyperLink>
+                                        </li>
+                                        <%--Inventory Reports--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnDwellReport" Visible="false" runat="server" NavigateUrl="BIURL/rptDwellTimeConfig.aspx">Warehouse Dwell Report</asp:HyperLink>
+                                        </li>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnAgeing" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Ageing</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnAWBNotDeparted" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBNotDeparted.aspx">Accepted Not Departed</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnAWBNotDelivered" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBNotDelivered.aspx">Arrived Not Delivered</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <%--AWB Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnAWBStock" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBStockControlReport.aspx">AWB Stock</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBMovement" runat="server" Visible="false" NavigateUrl="BIURL/rptAWBMovement.aspx">AWB Movement</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkOffload" runat="server" Visible="false" NavigateUrl="BIURL/rptOffloadReport.aspx">Offload</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnVoidAWBReport" Visible="false" runat="server" NavigateUrl="BIURL/Report_Void.aspx">Void AWB</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAWBDetails" Visible="false" runat="server" NavigateUrl="BIURL/rptMISAWBBillingDetails.aspx">AWB Detail Report</asp:HyperLink>
+                                        </li>
+                                        <%--Flight Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkDailyFlightSchedule" Visible="false" runat="server" NavigateUrl="BIURL/rptDailyFlightSchedule.aspx">Active Flight</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkFlightManifested" runat="server" Visible="false" NavigateUrl="BIURL/rptFlightDepartedReport.aspx">Flight Manifested</asp:HyperLink>
+                                        </li>
+                                        <%--Billing Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkBillingDCM" Visible="false" runat="server" NavigateUrl="BIURL/rptBillingDCMDetails.aspx">Billing DCM</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkUnbilledAWBs" Visible="false" runat="server" NavigateUrl="BIURL/rptUnbilledAWBs.aspx">Unbilled AWBs</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnCUTChargeReport" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBOtherCharges.aspx">AWB CUT Charge</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnBankGaurantee" Visible="false" runat="server" NavigateUrl="BIURL/rptBankGuaranteeReport.aspx">Bank Guarantee</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnBGDetail" Visible="false" runat="server" NavigateUrl="BIURL/rptCreditMasterDetails.aspx">BG Detail</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnTransaction" Visible="false" runat="server" NavigateUrl="BIURL/rptBGCollection.aspx">BG Collection</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkPendingInvoice" Visible="false" runat="server" NavigateUrl="BIURL/RptPendingInvoiceCollection.aspx">Aging Report</asp:HyperLink>
+                                        </li>
+                                        <%--<li>
+                                            <asp:HyperLink ID="hlnkDashboard" Visible="false" runat="server" NavigateUrl="BIURL/Dashboard.aspx">Dashboard</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCargoAnalysis" Visible="false" runat="server" NavigateUrl="#">Cargo Analysis</asp:HyperLink>
+                                        </li>--%>
+                                        <%--  <li>
+                                            <asp:HyperLink ID="hlnkComparisonRpt" Visible="false" runat="server" NavigateUrl="#">Comparison Report</asp:HyperLink>
+                                        </li>--%>
+                                        <%--    
+                                        
+                                        <li>
+                                            <asp:HyperLink ID="hlnkBankGuranteeRpt" runat="server" Visible="false" NavigateUrl="#">Bank Gurantee Report</asp:HyperLink>
+                                        </li>--%>
+                                        <%-- <li>
+                                            <asp:HyperLink ID="hlnOverviewAWB" Visible="false" runat="server" NavigateUrl="~/rptOverviewAWB.aspx">AWB Movement Overview</asp:HyperLink>
+                                        </li>--%>
+                                        <%--<li>
+                                            <asp:HyperLink ID="hlnFLABException" Visible="false" runat="server" NavigateUrl="~/ExceptionMonitoring.aspx">FLAB Exception</asp:HyperLink>
+                                        </li>--%>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnAAReports" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Active Analysis</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <%--Tonnage Reports--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnAWBtonnageAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptMISAWBBooking_AAR.aspx">AWB Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnrptComparativeTonnageAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptComparativeTonnage.aspx">Comparative Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnrptOperationAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptOperation_AAR.aspx">Operation</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnrptULDAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptULD_AAR.aspx">ULD</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnrptWarehouseAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptWarehouse_AAR.aspx">Warehouse</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnrptInvoiceAAR" runat="server" Visible="false" NavigateUrl="BIURL/RptInvoice_AAR.aspx">Invoice</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnrptClaimsAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptClaims.aspx">Claims</asp:HyperLink>
+                                        </li>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnstationwiseAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptStationwiseReport_AAR.aspx">Station Wise Tonnage</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnsectorAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptSectorWiseReport_AAR.aspx">Sector wise Tonnage 
+                                            </asp:HyperLink>
+                                        </li>
+                                        <%--Performance Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnagentwiseAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptAgentwiseReport_AAR.aspx">Agent Performance</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnflightwisetonnageAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptFlightWiseTonnageReport_AAR.aspx">Flight Performance</asp:HyperLink>
+                                        </li>
+                                        <%--Vs Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnFlghtUtilizeAAR" Visible="false" runat="server" NavigateUrl="BIURL/rptFlightUtilization_AAR.aspx">Capacity vs Utilised</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnBudgetActual" Visible="false" runat="server" NavigateUrl="BIURL/FlightBudget_AAR.aspx">Budget Vs Actual</asp:HyperLink>
+                                        </li>
+                                        <%--AWB Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnmAWBstockAAR" Visible="false" runat="server" NavigateUrl="BIURL/rptAWBStockControlReport_AAR.aspx">AWB Stock</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnAWBmovmntAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptAWBMovement_AAR.aspx">AWB Movement</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnoffloadAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptOffloadReport_AAR.aspx">Offload</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnreprtvoidAAR" Visible="false" runat="server" NavigateUrl="BIURL/Report_Void_AAR.aspx">Void AWB</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkMISAAWBBillingDetails_AAR" Visible="false" runat="server"
+                                                NavigateUrl="BIURL/rptMISAAWBBillingDetails_AAR.aspx">AWB Detail Report</asp:HyperLink>
+                                        </li>
+                                        <%--Flight Reports--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnDailyFlightAAR" Visible="false" runat="server" NavigateUrl="BIURL/rptDailyFlightSchedule_AAR.aspx">Active Flight</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnFlightDeprtedAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptFlightDepartedReport_AAR.aspx">Flight Manifested</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkBillingDCMAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptBillingDCMDetils_AAR.aspx">Billing DCM</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCollectionAAR" runat="server" Visible="false" NavigateUrl="BIURL/rptAllCollectionsDetails_AAR.aspx">Collection</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hinkStockAllocation_AAR" runat="server" Visible="false" NavigateUrl="BIURL/StockAllocation_AAR.aspx">Stock Allocation</asp:HyperLink>
+                                        </li>
+                                        <%--  <li>
+                                            <asp:HyperLink ID="hlnoverviewAAR" Visible="false" runat="server" NavigateUrl="~/rptOverviewAWB_AAR.aspx">AWB Movement Overview</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnAWBOtherchrgAAR" Visible="false" runat="server" NavigateUrl="~/rptAWBOtherCharges_AAR.aspx">AWB CUT Charge Report</asp:HyperLink>
+                                        </li>--%>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkBIASR" Visible="false" runat="server" NavigateUrl="BIURL/BI.aspx">BI</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkBIAdminASR" Visible="false" runat="server" NavigateUrl="BIURL/BI_Admin.aspx">BI Admin</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnTableauReport" Visible="false" runat="server" NavigateUrl="#"
+                                    onclick="DashboardPopup()">Dashboards</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 99px 18px;" class="liwdcon">
+                        <%--        <a
+                        href="#">Configuration </a>--%>
+                        <asp:HyperLink ID="hlnkConfiguration" Visible="false" runat="server" CssClass="HyperlinkClass">Configuration</asp:HyperLink>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnkInstanceConfiguration" Visible="false" runat="server" NavigateUrl="CONFIGURL/FrmInstanceConfiguration.aspx">Instance</asp:HyperLink>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkSystemConfiguration" Visible="false" runat="server" NavigateUrl="CONFIGURL/FrmSystemConfiguration.aspx">System</asp:HyperLink>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkAdmin" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Users</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkUser" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">User / Login </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkUserList" Visible="false" runat="server" NavigateUrl="CONFIGURL/UserListing.aspx">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkUserNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/UserCreation.aspx">New </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnChangePassword" runat="server" Visible="false" NavigateUrl="CONFIGURL/ChangePassword.aspx">Change Password</asp:HyperLink>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkMainRole" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Role Master</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnRoleMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/RoleMaster.aspx">New</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkRoleMasterList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListRoleMaster.aspx">List</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkUserException" runat="server" Visible="false" NavigateUrl="CONFIGURL/UserAccessException.aspx">User Access Exception</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkMasters" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Masters</asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <%--Region Masters--%>
+                                        <li>
+                                            <asp:HyperLink ID="hlnAWBDesignator" Visible="false" runat="server" NavigateUrl="CONFIGURL/Config.aspx">AWB Designator</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCountryMaster" runat="server" Visible="false" NavigateUrl="CONFIGURL/CountryMaster.aspx">Country</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkRegionMaster" runat="server" Visible="false" NavigateUrl="CONFIGURL/RegionMaster.aspx">Region</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCurrencyMaster" runat="server" Visible="false" NavigateUrl="CONFIGURL/frmCurrencyMaster.aspx">Currency</asp:HyperLink>
+                                        </li>
+                                        <%--Airline Masters--%>
+                                        <li class="top topseparator">
+                                            <asp:HyperLink ID="hlnExpectedRoute" runat="server" Visible="false" NavigateUrl="#"
+                                                CssClass="submenupointer4">Airline Route</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnExpectedRouteList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListRoute.aspx">List</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnExpectedRouteNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/BuildRoute.aspx">New</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAirportMaster" runat="server" Visible="false" NavigateUrl="CONFIGURL/AirportMaster.aspx">Airport</asp:HyperLink>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkAircraft" Visible="false" runat="server" NavigateUrl="" CssClass="submenupointer4">AirCraft</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkAircraftList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListAircraftEquipment.aspx">List AirCraft </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkAircraftNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/AircraftEquipment.aspx">New AirCraft</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnAircraftLoadability" Visible="false" runat="server" NavigateUrl="CONFIGURL/AirCraftLoadability.aspx">Aircraft Loadability</asp:HyperLink>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkULD" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> ULD </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkULDList" Visible="false" runat="server" NavigateUrl="CONFIGURL/FrmULDList.aspx">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkULDNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/FrmULDMaster.aspx">New </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkCartMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CartMaster.aspx">Cart</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkVehMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/VehicleMaster.aspx">Vehicle</asp:HyperLink>
+                                        </li>
+                                        <%--Commodity Masters--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnkCommodity" runat="server" Visible="false" CssClass="submenupointer4"
+                                                NavigateUrl="#">Commodity</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkCategoryMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CategoryMaster.aspx">Category Master</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkCommodityMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CommodityMaster.aspx">Commodity Master</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkDwellTimeConfig" Visible="false" runat="server" NavigateUrl="CONFIGURL/DwellTimeConfig.aspx">Dwell Time Config</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkDGR" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4"> DGR </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkMaintainUNID" Visible="false" runat="server" NavigateUrl="CONFIGURL/UNIDDetails.aspx">Maintain UNID</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkEmbargoMain" runat="server" Visible="false" NavigateUrl="#"
+                                                CssClass="submenupointer4"> Embargo</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <%-- <li>
+                                            <asp:HyperLink ID="hlnkEmbargoRes" Visible="false" runat="server" NavigateUrl="#">Restriction</asp:HyperLink>
+                                        </li>--%>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkEmbargo" Visible="false" runat="server" NavigateUrl="CONFIGURL/MaintainEmbargo.aspx">New</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkEmbargoList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListEmbargoDetails.aspx">List</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnSHC" Visible="false" runat="server" NavigateUrl="CONFIGURL/SpecialHandlingCodeMaster.aspx">Special Handling Codes </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnProductType" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmProductTypeMaster.aspx">Product Type </asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnIrregCode" Visible="false" runat="server" NavigateUrl="CONFIGURL/IRCodes.aspx">Irregularity Codes</asp:HyperLink>
+                                        </li>
+                                        <%--Partner Masters--%>
+                                        <%-- <li class="top topseparator">
+                                <asp:HyperLink ID="hlnkPartner" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4"> Partner</asp:HyperLink>
+                                <div class="active" style="position:absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkPartnerMaster" runat="server" Visible="false" NavigateUrl="CONFIGURL/AirlineMaster.aspx">New</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkPartnerList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListPartner.aspx">List</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>--%>
+                                        <%--  <li>
+                                <asp:HyperLink ID="hlnkAgent" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Agent </asp:HyperLink>
+                                <div class="active" style="position:absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAgentList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListAgentMaster.aspx">List Agent</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAgentNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/AgentMaster.aspx">New Agent</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>--%>
+                                        <%--Rates Masters--%>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkAccount" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Accounting</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnAccountCategoryMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/AccountCategoryMaster.aspx">Account Category</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnAccountTypeMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/AccountTypeMaster.aspx">Account Type</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkChartAccount" Visible="false" runat="server" NavigateUrl="CONFIGURL/ChartAccountMaster.aspx">Chart Account</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnCostCenterMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CostCenterMaster.aspx">Cost Center</asp:HyperLink>
+                                                    </li>
+                                                    <%-- <li>
+                                            <asp:HyperLink ID="hlnkJournalAccount" Visible="false" runat="server" NavigateUrl="CONFIGURL/JournalAccountMaster.aspx">Journal Account</asp:HyperLink>
+                                        </li>--%>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnGLAccountConfig" Visible="false" runat="server" NavigateUrl="CONFIGURL/GLAccountList.aspx">GL Accounts</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnRateExchange" Visible="false" runat="server" NavigateUrl="CONFIGURL/ExchRateMaster.aspx">Exchange Rate</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnOCMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/OCMaster.aspx">Other Charges</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnHoliday" Visible="false" runat="server" NavigateUrl="CONFIGURL/HolidayMaster.aspx">Holiday</asp:HyperLink>
+                                        </li>
+                                        <%--<li>
+                                <asp:HyperLink ID="hlnCostCenterMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CostCenterMaster.aspx">Cost Center</asp:HyperLink>
+                            </li>--%>
+                                        <%--<li>
+                                <asp:HyperLink ID="hlnIACMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/IACMaster.aspx">IAC Master</asp:HyperLink>
+                            </li>
+                            
+                               <li>
+                                <asp:HyperLink ID="hlnCCSFMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CCSFMaster.aspx">CCSF Master</asp:HyperLink>
+                            </li>--%>
+                                        <%--                          <li>
+                                <asp:HyperLink ID="hlnAirlineMaster" Visible="false" runat="server" NavigateUrl="~/AirlineMaster.aspx">Airline Master</asp:HyperLink>
+                            </li>--%>
+                                        <%--Upload Masters--%>
+                                        <li class="topseparator">
+                                            <asp:HyperLink ID="hlnUploadRate" Visible="false" runat="server" NavigateUrl="CONFIGURL/UploadRates.aspx">Upload Masters</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkAirlineSchedule" runat="server" Visible="false" NavigateUrl="#"
+                                    CssClass="submenupointer4">Flight Schedule </asp:HyperLink>
+                                <div class="active">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAirlineScheduleList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListAirlineSchedule.aspx">Flight Master</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkActiveSchedule" Visible="false" runat="server" NavigateUrl="CONFIGURL/ActiveSchedule.aspx">Active Flights</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAirlineScheduleNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/AirlineSchedule.aspx">New Flight</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkFlightMovement" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmDailySchedule.aspx">Flight Movement</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnPartnerScheList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListPartnerSchedule.aspx">Partner Flights</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnPartnerScheNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/PartnerSchedule.aspx">New Partner Flight</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <%--  <li class="top">
+                                <asp:HyperLink ID="hlnPatner" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Partner Schedule </asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                       
+                                    </ul>
+                                </div>
+                            </li>--%>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnCapacitSubModule" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4">Capacity</asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnHistoricCapacity" Visible="false" runat="server" NavigateUrl="CONFIGURL/HistoryCapacity.aspx">Historic</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnProdTypeConfig" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmProductTypeConfig.aspx">Configure</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAircraftConfiguration" runat="server" Visible="false" NavigateUrl="CONFIGURL/AirCraftTonnageMaster.aspx">Sectorwise</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnUploadFax" Visible="false" runat="server" NavigateUrl="CONFIGURL/UploadPaxLoad.aspx">Passenger(PAX)</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkTarrif" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Rates</asp:HyperLink>
+                                <div>
+                                    <ul>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkRateCard" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> Ratecard </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkRateCardList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListRateCard.aspx">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkRateCardNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/RateCardMaster.aspx">New </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkRateLine" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4"> Rate Line </asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkRateLineList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListRateLine.aspx">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkRateLineNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/MaintainRates.aspx">New </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkOtherCharges" runat="server" Visible="false" NavigateUrl="#"
+                                                CssClass="submenupointer4"> Other Charges</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <%-- <asp:HyperLink ID="HyperLink17" runat="server" NavigateUrl="#">List </asp:HyperLink>--%>
+                                                        <asp:HyperLink ID="hlnkOtherChargesList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListOtherCharges.aspx">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkOtherChargesNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/OtherCharges.aspx">New </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkSpotRate" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4"> Spot Rates</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkSpotRateList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListSpotRateApproval.aspx?id=1">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkSpotRateNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/SpotRateMaster.aspx">New </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkSpotRateApproval" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListSpotRateApproval.aspx?id=0">Approval </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkTaxLine" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4">Tax Line</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkTaxList" Visible="false" runat="server" NavigateUrl="CONFIGURL/TaxLineList.aspx">List</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkTaxNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/TaxLine.aspx">New</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnconfigline" runat="server" Visible="false" NavigateUrl="#"
+                                                CssClass="submenupointer4">Config Line</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="HlnkSCMConfigLine" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListConfig.aspx">List</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="HlnkSCMConfigLineNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/SCMConfigLine.aspx">New</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <%-- <li>
+                                            <asp:HyperLink ID="HlnkSCMConfigLine" runat="server" Visible="false" NavigateUrl="CONFIGURL/SCMConfigLine.aspx"> Config Line </asp:HyperLink>
+                                        </li>--%>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkPLI" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Agent Deals</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkPLINew" Visible="false" runat="server" NavigateUrl="CONFIGURL/DealMasterNew.aspx">Generate </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkApplyPLI" Visible="false" runat="server" NavigateUrl="CONFIGURL/DCMApplyDeals.aspx">Apply Deals </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnkDeal" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Agent PLI</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkDealNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmPLIMaster.aspx">Generate </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnkApplyDeal" Visible="false" runat="server" NavigateUrl="CONFIGURL/frmApplyPLI.aspx">Apply PLI </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnProration" runat="server" Visible="false" NavigateUrl="CONFIGURL/ProRateMaster.aspx"> Airline Proration </asp:HyperLink>
+                                        </li>
+                                        <li class="top">
+                                            <asp:HyperLink ID="hlnVolumetricExemp" Visible="false" runat="server" NavigateUrl="#"
+                                                CssClass="submenupointer4">Vol. Exemption</asp:HyperLink>
+                                            <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnVolumetricExempList" Visible="false" runat="server" NavigateUrl="CONFIGURL/VolumetricExepList.aspx">List </asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink ID="hlnVolumetricExempNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/VolumetricException.aspx">Create </asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkPartner" runat="server" Visible="false" NavigateUrl="#" CssClass="submenupointer4"> Partner</asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkPartnerMaster" runat="server" Visible="false" NavigateUrl="CONFIGURL/AirlineMaster.aspx">New</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkPartnerList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListPartner.aspx">List</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkAgent" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Agent </asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAgentList" Visible="false" runat="server" NavigateUrl="CONFIGURL/ListAgentMaster.aspx">List Agent</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkAgentNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/AgentMaster.aspx">New Agent</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkVendor" Visible="false" runat="server" NavigateUrl="#" CssClass="submenupointer4">Vendor</asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkVendorNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/VendorMaster.aspx">New Vendor</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkVendorList" Visible="false" runat="server" NavigateUrl="CONFIGURL/VendorList.aspx">List Vendor</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <%--<li>
+                                <asp:HyperLink ID="hlnShipperMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/ShipperMaster.aspx">Shipper Consignee</asp:HyperLink>
+                            </li>--%>
+                            <li>
+                                <asp:HyperLink ID="hlnShipperMaster" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4">Shipper Consignee</asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnShipperMasterNew" Visible="false" runat="server" NavigateUrl="CONFIGURL/ShipperMaster.aspx">Shipper Consignee</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnIACMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/IACMaster.aspx">IAC Master</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnCCSFMaster" Visible="false" runat="server" NavigateUrl="CONFIGURL/CCSFMaster.aspx">CCSF Master</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnStockConfig" Visible="false" runat="server" NavigateUrl="CONFIGURL/StockConfigurationNew.aspx">ULD Stock</asp:HyperLink>
+                            </li>
+                            <%--<li>
+                                <asp:HyperLink ID="hlnGLAccountConfig" Visible="false" runat="server" NavigateUrl="CONFIGURL/GLAccountList.aspx">GL Accounts</asp:HyperLink>
+                            </li>--%>
+                            <li class="top">
+                                <asp:HyperLink ID="hlnkMessageConfiguration" Visible="false" runat="server" NavigateUrl="#"
+                                    CssClass="submenupointer4">Messages</asp:HyperLink>
+                                <div class="active" style="position: absolute; top: 0px; margin-top: 0px;">
+                                    <ul>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkMessageConfig" runat="server" Visible="false" NavigateUrl="OPSURL/FrmMessageConfiguration.aspx">New Configuration</asp:HyperLink>
+                                        </li>
+                                        <li>
+                                            <asp:HyperLink ID="hlnkListConfiguration" runat="server" Visible="false" NavigateUrl="OPSURL/ListFrmMessageConfiguration.aspx">List Configuration</asp:HyperLink>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <asp:HyperLink ID="hlnkNotifications" runat="server" Visible="false" NavigateUrl="OPSURL/FrmNotifications.aspx">Notifications</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 50px 18px;" class="liwidth">
+                        <asp:HyperLink ID="hlnkHelp" runat="server" Visible="false" NavigateUrl="~/Help.aspx">Help</asp:HyperLink>
+                        <%-- <a
+                        href="Help.aspx">Help </a>--%>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" />
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                    <li style="background: url(images/arrow.png) no-repeat 99px 18px;" class="liwdcon">
+                        <asp:HyperLink ID="hlnkMaintenance" runat="server" Visible="false" NavigateUrl="~/AdminSupportTasks.aspx">Maintenance</asp:HyperLink>
+                        <%--<a
+                        href="AdminSupportTasks.aspx">Maintenance </a>--%>
+                        <ul>
+                            <li>
+                                <asp:HyperLink ID="hlnkMaintainAWB" Visible="false" runat="server" NavigateUrl="OPSURL/MaintainAWB.aspx">Maintain AWB</asp:HyperLink>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="padding: 0px 1px;">
+                        <img alt="" src="images/line.png" /></li>
+                </ul>
+                <!--menu-->
+            </div>
+            <!--header_wapper-->
+            <div style="height: 50px">
+                <%--<img alt="" src="images/banner.png" />--%>
+            </div>
+        </div>
+        <!--main -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <div id="fotter" style="width: 100%">
+                <table width="100%">
+                    <tr>
+                        <td align="left" width="25%">
+                            <%--<span>Home | About Us | Contact Us</span>--%>
+                        </td>
+                        <td align="center" width="50%">
+                            <span class="rightallign">
+                                <img src="Images/footersmartcargo_logo.png" />v1.8.0 © Copyright Quantum ID Technologies
+                            </span>
+                        </td>
+                        <td align="right" width="25%">
+                            <span>
+                                <%=Session["UserName"].ToString()%>
+                                [<%=Session["RoleName"].ToString()%>]/<%=Session["Station"].ToString()%>
+                                From
+                                <%=Session["IpAddress"].ToString()%>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

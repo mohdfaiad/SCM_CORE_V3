@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="15">
+    <Item id="0" Name="FlightID" Caption="FlightID" />
+    <Item id="1" Name="Source" Caption="Source" />
+    <Item id="2" Name="Dest" Caption="Dest" />
+    <Item id="3" Name="SchDeptDay" Caption="SchDeptDay" />
+    <Item id="4" Name="SchDeptTime" Caption="SchDeptTime" />
+    <Item id="5" Name="SchArrDay" Caption="SchArrDay" />
+    <Item id="6" Name="SchArrTime" Caption="SchArrTime" />
+    <Item id="7" Name="Frequency" Caption="Frequency" />
+    <Item id="8" Name="FromtDt" Caption="FromtDt" />
+    <Item id="9" Name="ToDt" Caption="ToDt" />
+    <Item id="10" Name="Status" Caption="Status" />
+    <Item id="11" Name="CargoCapacity" Caption="CargoCapacity" />
+    <Item id="12" Name="EquipmentNo" Caption="EquipmentNo" />
+    <Item id="13" Name="AirCraftType" Caption="AirCraftType" />
+    <Item id="14" Name="ScheduleID" Caption="ScheduleID" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attribute</Name>
+      <Fields listcount="17">
+        <Item id="0">
+          <Name>AirCraftType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AirCraftType.Value</Expression>
+          <CaptionExpression>=Fields!AirCraftType.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>CargoCapacity</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CargoCapacity.Value</Expression>
+          <CaptionExpression>=Fields!CargoCapacity.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>Dest</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Dest.Value</Expression>
+          <CaptionExpression>=Fields!Dest.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>EquipmentNo</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!EquipmentNo.Value</Expression>
+          <CaptionExpression>=Fields!EquipmentNo.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>FlightID</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FlightID.Value</Expression>
+          <CaptionExpression>=Fields!FlightID.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>Frequency</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Frequency.Value</Expression>
+          <CaptionExpression>=Fields!Frequency.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>FromtDt</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FromtDt.Value</Expression>
+          <CaptionExpression>=Fields!FromtDt.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>SchArrDay</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!SchArrDay.Value</Expression>
+          <CaptionExpression>=Fields!SchArrDay.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>SchArrTime</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!SchArrTime.Value</Expression>
+          <CaptionExpression>=Fields!SchArrTime.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>ScheduleID</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ScheduleID.Value</Expression>
+          <CaptionExpression>=Fields!ScheduleID.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>Source</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Source.Value</Expression>
+          <CaptionExpression>=Fields!Source.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>SchDeptDay</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!SchDeptDay.Value</Expression>
+          <CaptionExpression>=Fields!SchDeptDay.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>SchDeptTime</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!SchDeptTime.Value</Expression>
+          <CaptionExpression>=Fields!SchDeptTime.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>ToDt</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ToDt.Value</Expression>
+          <CaptionExpression>=Fields!ToDt.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>Status</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Status.Value</Expression>
+          <CaptionExpression>=Fields!Status.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>Frequency</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Frequency.Value</Expression>
+          <CaptionExpression>=Fields!Frequency.Value</CaptionExpression>
+        </Item>
+        <Item id="16">
+          <Name>CargoCapacity</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CargoCapacity.Value</Expression>
+          <CaptionExpression>=Fields!CargoCapacity.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attribute].[AirCraftType]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="2">
+        <Item id="0">
+          <Name>Frequency</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Frequency.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>CargoCapacity</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!CargoCapacity.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrptSLAPerformance" targetNamespace="http://tempuri.org/dsrptSLAPerformance.xsd" xmlns:mstns="http://tempuri.org/dsrptSLAPerformance.xsd" xmlns="http://tempuri.org/dsrptSLAPerformance.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrptSLAPerformance" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsrptSLAPerformance" msprop:Generator_UserDSName="dsrptSLAPerformance" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsrptSLAPerformance" msprop:Generator_UserTableName="dsrptSLAPerformance" msprop:Generator_RowDeletedName="dsrptSLAPerformanceRowDeleted" msprop:Generator_TableClassName="dsrptSLAPerformanceDataTable" msprop:Generator_RowChangedName="dsrptSLAPerformanceRowChanged" msprop:Generator_RowClassName="dsrptSLAPerformanceRow" msprop:Generator_RowChangingName="dsrptSLAPerformanceRowChanging" msprop:Generator_RowEvArgName="dsrptSLAPerformanceRowChangeEvent" msprop:Generator_RowEvHandlerName="dsrptSLAPerformanceRowChangeEventHandler" msprop:Generator_TablePropName="_dsrptSLAPerformance" msprop:Generator_TableVarName="tabledsrptSLAPerformance" msprop:Generator_RowDeletingName="dsrptSLAPerformanceRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumber" msprop:Generator_UserColumnName="AWBNumber" msprop:Generator_ColumnPropNameInRow="AWBNumber" msprop:Generator_ColumnVarNameInTable="columnAWBNumber" msprop:Generator_ColumnPropNameInTable="AWBNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightNo" msprop:Generator_UserColumnName="FlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightDt" msprop:Generator_UserColumnName="FlightDt" msprop:Generator_ColumnPropNameInRow="FlightDt" msprop:Generator_ColumnVarNameInTable="columnFlightDt" msprop:Generator_ColumnPropNameInTable="FlightDtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AccepDate" msprop:Generator_UserColumnName="AccepDate" msprop:Generator_ColumnPropNameInRow="AccepDate" msprop:Generator_ColumnVarNameInTable="columnAccepDate" msprop:Generator_ColumnPropNameInTable="AccepDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DepDate" msprop:Generator_UserColumnName="DepDate" msprop:Generator_ColumnPropNameInRow="DepDate" msprop:Generator_ColumnVarNameInTable="columnDepDate" msprop:Generator_ColumnPropNameInTable="DepDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="InExpWarehouse" msprop:Generator_UserColumnName="InExpWarehouse" msprop:Generator_ColumnPropNameInRow="InExpWarehouse" msprop:Generator_ColumnVarNameInTable="columnInExpWarehouse" msprop:Generator_ColumnPropNameInTable="InExpWarehouseColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ArrDate" msprop:Generator_UserColumnName="ArrDate" msprop:Generator_ColumnPropNameInRow="ArrDate" msprop:Generator_ColumnVarNameInTable="columnArrDate" msprop:Generator_ColumnPropNameInTable="ArrDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DlvDate" msprop:Generator_UserColumnName="DlvDate" msprop:Generator_ColumnPropNameInRow="DlvDate" msprop:Generator_ColumnVarNameInTable="columnDlvDate" msprop:Generator_ColumnPropNameInTable="DlvDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="InImpWarehouse" msprop:Generator_UserColumnName="InImpWarehouse" msprop:Generator_ColumnPropNameInRow="InImpWarehouse" msprop:Generator_ColumnVarNameInTable="columnInImpWarehouse" msprop:Generator_ColumnPropNameInTable="InImpWarehouseColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

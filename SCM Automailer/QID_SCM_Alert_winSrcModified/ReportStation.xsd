@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReportStation" targetNamespace="http://tempuri.org/ReportStation.xsd" xmlns:mstns="http://tempuri.org/ReportStation.xsd" xmlns="http://tempuri.org/ReportStation.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReportStation" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="ReportStation" msprop:Generator_DataSetName="ReportStation" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Station" msprop:Generator_UserColumnName="Station" msprop:Generator_ColumnVarNameInTable="columnStation" msprop:Generator_ColumnPropNameInRow="Station" msprop:Generator_ColumnPropNameInTable="StationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CTonnage" msprop:Generator_UserColumnName="CTonnage" msprop:Generator_ColumnVarNameInTable="columnCTonnage" msprop:Generator_ColumnPropNameInRow="CTonnage" msprop:Generator_ColumnPropNameInTable="CTonnageColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CGrossRevenue" msprop:Generator_UserColumnName="CGrossRevenue" msprop:Generator_ColumnVarNameInTable="columnCGrossRevenue" msprop:Generator_ColumnPropNameInRow="CGrossRevenue" msprop:Generator_ColumnPropNameInTable="CGrossRevenueColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TTonnage" msprop:Generator_UserColumnName="TTonnage" msprop:Generator_ColumnVarNameInTable="columnTTonnage" msprop:Generator_ColumnPropNameInRow="TTonnage" msprop:Generator_ColumnPropNameInTable="TTonnageColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TGrossRevenue" msprop:Generator_UserColumnName="TGrossRevenue" msprop:Generator_ColumnVarNameInTable="columnTGrossRevenue" msprop:Generator_ColumnPropNameInRow="TGrossRevenue" msprop:Generator_ColumnPropNameInTable="TGrossRevenueColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Tonnage" msprop:Generator_UserColumnName="Tonnage" msprop:Generator_ColumnVarNameInTable="columnTonnage" msprop:Generator_ColumnPropNameInRow="Tonnage" msprop:Generator_ColumnPropNameInTable="TonnageColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CGrossYield" msprop:Generator_UserColumnName="CGrossYield" msprop:Generator_ColumnVarNameInTable="columnCGrossYield" msprop:Generator_ColumnPropNameInRow="CGrossYield" msprop:Generator_ColumnPropNameInTable="CGrossYieldColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CNetRevenue" msprop:Generator_UserColumnName="CNetRevenue" msprop:Generator_ColumnVarNameInTable="columnCNetRevenue" msprop:Generator_ColumnPropNameInRow="CNetRevenue" msprop:Generator_ColumnPropNameInTable="CNetRevenueColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CNetYield" msprop:Generator_UserColumnName="CNetYield" msprop:Generator_ColumnVarNameInTable="columnCNetYield" msprop:Generator_ColumnPropNameInRow="CNetYield" msprop:Generator_ColumnPropNameInTable="CNetYieldColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_TablePropName="DataTable2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromDate" msprop:Generator_UserColumnName="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Todate" msprop:Generator_UserColumnName="Todate" msprop:Generator_ColumnVarNameInTable="columnTodate" msprop:Generator_ColumnPropNameInRow="Todate" msprop:Generator_ColumnPropNameInTable="TodateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

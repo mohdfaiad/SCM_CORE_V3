@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+	<QueryFields listcount="4">
+		<Item id="0" Name="FltNo" Caption="Flt No" />
+		<Item id="1" Name="FltOrigin" Caption="Flt Origin" />
+		<Item id="2" Name="FlightStatus" Caption="Flight Status" />
+		<Item id="3" Name="FltDate" Caption="Flt Date" />
+	</QueryFields>
+	<Dimensions listcount="1">
+		<Item id="0">
+			<Name>Attributes</Name>
+			<Fields listcount="4">
+				<Item id="0">
+					<Name>FltNo</Name>
+					<Caption>Flt No</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!FltNo.Value</Expression>
+					<CaptionExpression Type="String">=Fields!FltNo.Value</CaptionExpression>
+				</Item>
+				<Item id="1">
+					<Name>FltOrigin</Name>
+					<Caption>Flt Origin</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!FltOrigin.Value</Expression>
+					<CaptionExpression Type="String">=Fields!FltOrigin.Value</CaptionExpression>
+				</Item>
+				<Item id="2">
+					<Name>FlightStatus</Name>
+					<Caption>Flight Status</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!FlightStatus.Value</Expression>
+					<CaptionExpression Type="String">=Fields!FlightStatus.Value</CaptionExpression>
+				</Item>
+				<Item id="3">
+					<Name>FltDate</Name>
+					<Caption>Flt Date</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!FltDate.Value</Expression>
+					<CaptionExpression Type="String">=Fields!FltDate.Value</CaptionExpression>
+				</Item>
+			</Fields>
+			<Type>Attributes</Type>
+			<DefField>[Attributes].[FltNo]</DefField>
+		</Item>
+	</Dimensions>
+	<Fields listcount="2">
+		<Item id="0">[Measure Names]</Item>
+		<Item id="1">[Measure Values]</Item>
+	</Fields>
+</relationalSchema>

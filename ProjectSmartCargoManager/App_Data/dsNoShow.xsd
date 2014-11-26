@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsNoShow" targetNamespace="http://tempuri.org/dsNoShow.xsd" xmlns:mstns="http://tempuri.org/dsNoShow.xsd" xmlns="http://tempuri.org/dsNoShow.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsNoShow" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsNoShow" msprop:Generator_UserDSName="dsNoShow" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtNoShow" msprop:Generator_UserTableName="dtNoShow" msprop:Generator_RowDeletedName="dtNoShowRowDeleted" msprop:Generator_TableClassName="dtNoShowDataTable" msprop:Generator_RowChangedName="dtNoShowRowChanged" msprop:Generator_RowClassName="dtNoShowRow" msprop:Generator_RowChangingName="dtNoShowRowChanging" msprop:Generator_RowEvArgName="dtNoShowRowChangeEvent" msprop:Generator_RowEvHandlerName="dtNoShowRowChangeEventHandler" msprop:Generator_TablePropName="dtNoShow" msprop:Generator_TableVarName="tabledtNoShow" msprop:Generator_RowDeletingName="dtNoShowRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumber" msprop:Generator_UserColumnName="AWBNumber" msprop:Generator_ColumnPropNameInRow="AWBNumber" msprop:Generator_ColumnVarNameInTable="columnAWBNumber" msprop:Generator_ColumnPropNameInTable="AWBNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBDate" msprop:Generator_UserColumnName="AWBDate" msprop:Generator_ColumnPropNameInRow="AWBDate" msprop:Generator_ColumnVarNameInTable="columnAWBDate" msprop:Generator_ColumnPropNameInTable="AWBDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedPcs" msprop:Generator_UserColumnName="BookedPcs" msprop:Generator_ColumnPropNameInRow="BookedPcs" msprop:Generator_ColumnVarNameInTable="columnBookedPcs" msprop:Generator_ColumnPropNameInTable="BookedPcsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedWgt" msprop:Generator_UserColumnName="BookedWgt" msprop:Generator_ColumnPropNameInRow="BookedWgt" msprop:Generator_ColumnVarNameInTable="columnBookedWgt" msprop:Generator_ColumnPropNameInTable="BookedWgtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

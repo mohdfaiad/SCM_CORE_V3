@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://5japptest.cebupacificair.com/paxmanifestservice/PaxManifestServ.asmx?wsdl" filename="PaxManifestServ.wsdl" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.DiscoveryDocumentReference" url="https://5japptest.cebupacificair.com/paxmanifestservice/PaxManifestServ.asmx?disco" filename="PaxManifestServ.disco" />
+  </Results>
+</DiscoveryClientResultsFile>

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsArrival" targetNamespace="http://tempuri.org/dsArrival.xsd" xmlns:mstns="http://tempuri.org/dsArrival.xsd" xmlns="http://tempuri.org/dsArrival.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsArrival" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsArrival" msprop:Generator_DataSetName="dsArrival" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtAWBDetails" msprop:Generator_UserTableName="dtAWBDetails" msprop:Generator_RowDeletedName="dtAWBDetailsRowDeleted" msprop:Generator_RowChangedName="dtAWBDetailsRowChanged" msprop:Generator_RowClassName="dtAWBDetailsRow" msprop:Generator_RowChangingName="dtAWBDetailsRowChanging" msprop:Generator_RowEvArgName="dtAWBDetailsRowChangeEvent" msprop:Generator_RowEvHandlerName="dtAWBDetailsRowChangeEventHandler" msprop:Generator_TableClassName="dtAWBDetailsDataTable" msprop:Generator_TableVarName="tabledtAWBDetails" msprop:Generator_RowDeletingName="dtAWBDetailsRowDeleting" msprop:Generator_TablePropName="dtAWBDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AWBNo" msprop:Generator_UserColumnName="AWBNo" msprop:Generator_ColumnVarNameInTable="columnAWBNo" msprop:Generator_ColumnPropNameInRow="AWBNo" msprop:Generator_ColumnPropNameInTable="AWBNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NoOfPcs" msprop:Generator_UserColumnName="NoOfPcs" msprop:Generator_ColumnVarNameInTable="columnNoOfPcs" msprop:Generator_ColumnPropNameInRow="NoOfPcs" msprop:Generator_ColumnPropNameInTable="NoOfPcsColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight" msprop:Generator_UserColumnName="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnPropNameInTable="WeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedPCS" msprop:Generator_UserColumnName="BookedPCS" msprop:Generator_ColumnVarNameInTable="columnBookedPCS" msprop:Generator_ColumnPropNameInRow="BookedPCS" msprop:Generator_ColumnPropNameInTable="BookedPCSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedWt" msprop:Generator_UserColumnName="BookedWt" msprop:Generator_ColumnVarNameInTable="columnBookedWt" msprop:Generator_ColumnPropNameInRow="BookedWt" msprop:Generator_ColumnPropNameInTable="BookedWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Org" msprop:Generator_UserColumnName="Org" msprop:Generator_ColumnVarNameInTable="columnOrg" msprop:Generator_ColumnPropNameInRow="Org" msprop:Generator_ColumnPropNameInTable="OrgColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Dest" msprop:Generator_UserColumnName="Dest" msprop:Generator_ColumnVarNameInTable="columnDest" msprop:Generator_ColumnPropNameInRow="Dest" msprop:Generator_ColumnPropNameInTable="DestColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NextFlight" msprop:Generator_UserColumnName="NextFlight" msprop:Generator_ColumnVarNameInTable="columnNextFlight" msprop:Generator_ColumnPropNameInRow="NextFlight" msprop:Generator_ColumnPropNameInTable="NextFlightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SCC" msprop:Generator_UserColumnName="SCC" msprop:Generator_ColumnVarNameInTable="columnSCC" msprop:Generator_ColumnPropNameInRow="SCC" msprop:Generator_ColumnPropNameInTable="SCCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalPCS" msprop:Generator_UserColumnName="TotalPCS" msprop:Generator_ColumnVarNameInTable="columnTotalPCS" msprop:Generator_ColumnPropNameInRow="TotalPCS" msprop:Generator_ColumnPropNameInTable="TotalPCSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalWeight" msprop:Generator_UserColumnName="TotalWeight" msprop:Generator_ColumnVarNameInTable="columnTotalWeight" msprop:Generator_ColumnPropNameInRow="TotalWeight" msprop:Generator_ColumnPropNameInTable="TotalWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedTotalPcs" msprop:Generator_UserColumnName="BookedTotalPcs" msprop:Generator_ColumnPropNameInRow="BookedTotalPcs" msprop:Generator_ColumnVarNameInTable="columnBookedTotalPcs" msprop:Generator_ColumnPropNameInTable="BookedTotalPcsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedTotalWt" msprop:Generator_UserColumnName="BookedTotalWt" msprop:Generator_ColumnPropNameInRow="BookedTotalWt" msprop:Generator_ColumnVarNameInTable="columnBookedTotalWt" msprop:Generator_ColumnPropNameInTable="BookedTotalWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Consignee" msprop:Generator_UserColumnName="Consignee" msprop:Generator_ColumnVarNameInTable="columnConsignee" msprop:Generator_ColumnPropNameInRow="Consignee" msprop:Generator_ColumnPropNameInTable="ConsigneeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInTable="LocationColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtManifest" msprop:Generator_UserTableName="dtManifest" msprop:Generator_RowDeletedName="dtManifestRowDeleted" msprop:Generator_RowChangedName="dtManifestRowChanged" msprop:Generator_RowClassName="dtManifestRow" msprop:Generator_RowChangingName="dtManifestRowChanging" msprop:Generator_RowEvArgName="dtManifestRowChangeEvent" msprop:Generator_RowEvHandlerName="dtManifestRowChangeEventHandler" msprop:Generator_TableClassName="dtManifestDataTable" msprop:Generator_TableVarName="tabledtManifest" msprop:Generator_RowDeletingName="dtManifestRowDeleting" msprop:Generator_TablePropName="dtManifest">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Owner" msprop:Generator_UserColumnName="Owner" msprop:Generator_ColumnPropNameInRow="Owner" msprop:Generator_ColumnVarNameInTable="columnOwner" msprop:Generator_ColumnPropNameInTable="OwnerColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Nationality" msprop:Generator_UserColumnName="Nationality" msprop:Generator_ColumnPropNameInRow="Nationality" msprop:Generator_ColumnVarNameInTable="columnNationality" msprop:Generator_ColumnPropNameInTable="NationalityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightNo" msprop:Generator_UserColumnName="FlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="LoadingPt" msprop:Generator_UserColumnName="LoadingPt" msprop:Generator_ColumnPropNameInRow="LoadingPt" msprop:Generator_ColumnVarNameInTable="columnLoadingPt" msprop:Generator_ColumnPropNameInTable="LoadingPtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UnloadingPt" msprop:Generator_UserColumnName="UnloadingPt" msprop:Generator_ColumnPropNameInRow="UnloadingPt" msprop:Generator_ColumnVarNameInTable="columnUnloadingPt" msprop:Generator_ColumnPropNameInTable="UnloadingPtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalWeight" msprop:Generator_UserColumnName="TotalWeight" msprop:Generator_ColumnPropNameInRow="TotalWeight" msprop:Generator_ColumnVarNameInTable="columnTotalWeight" msprop:Generator_ColumnPropNameInTable="TotalWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PreparedBy" msprop:Generator_UserColumnName="PreparedBy" msprop:Generator_ColumnPropNameInRow="PreparedBy" msprop:Generator_ColumnVarNameInTable="columnPreparedBy" msprop:Generator_ColumnPropNameInTable="PreparedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Total" msprop:Generator_UserColumnName="Total" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInTable="TotalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UnloadAt" msprop:Generator_UserColumnName="UnloadAt" msprop:Generator_ColumnPropNameInRow="UnloadAt" msprop:Generator_ColumnVarNameInTable="columnUnloadAt" msprop:Generator_ColumnPropNameInTable="UnloadAtColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtULDDetails" msprop:Generator_UserTableName="dtULDDetails" msprop:Generator_RowDeletedName="dtULDDetailsRowDeleted" msprop:Generator_RowChangedName="dtULDDetailsRowChanged" msprop:Generator_RowClassName="dtULDDetailsRow" msprop:Generator_RowChangingName="dtULDDetailsRowChanging" msprop:Generator_RowEvArgName="dtULDDetailsRowChangeEvent" msprop:Generator_RowEvHandlerName="dtULDDetailsRowChangeEventHandler" msprop:Generator_TableClassName="dtULDDetailsDataTable" msprop:Generator_TableVarName="tabledtULDDetails" msprop:Generator_RowDeletingName="dtULDDetailsRowDeleting" msprop:Generator_TablePropName="dtULDDetails">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ULDNo" msdata:Caption="AWBNo" msprop:Generator_UserColumnName="ULDNo" msprop:Generator_ColumnPropNameInRow="ULDNo" msprop:Generator_ColumnVarNameInTable="columnULDNo" msprop:Generator_ColumnPropNameInTable="ULDNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NoOfPcs" msprop:Generator_UserColumnName="NoOfPcs" msprop:Generator_ColumnPropNameInRow="NoOfPcs" msprop:Generator_ColumnVarNameInTable="columnNoOfPcs" msprop:Generator_ColumnPropNameInTable="NoOfPcsColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="Weight" msprop:Generator_UserColumnName="Weight" msprop:Generator_ColumnPropNameInRow="Weight" msprop:Generator_ColumnVarNameInTable="columnWeight" msprop:Generator_ColumnPropNameInTable="WeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedPCS" msprop:Generator_UserColumnName="BookedPCS" msprop:Generator_ColumnPropNameInRow="BookedPCS" msprop:Generator_ColumnVarNameInTable="columnBookedPCS" msprop:Generator_ColumnPropNameInTable="BookedPCSColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="BookedWt" msprop:Generator_UserColumnName="BookedWt" msprop:Generator_ColumnPropNameInRow="BookedWt" msprop:Generator_ColumnVarNameInTable="columnBookedWt" msprop:Generator_ColumnPropNameInTable="BookedWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Org" msprop:Generator_UserColumnName="Org" msprop:Generator_ColumnPropNameInRow="Org" msprop:Generator_ColumnVarNameInTable="columnOrg" msprop:Generator_ColumnPropNameInTable="OrgColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Dest" msprop:Generator_UserColumnName="Dest" msprop:Generator_ColumnPropNameInRow="Dest" msprop:Generator_ColumnVarNameInTable="columnDest" msprop:Generator_ColumnPropNameInTable="DestColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NextFlight" msprop:Generator_UserColumnName="NextFlight" msprop:Generator_ColumnPropNameInRow="NextFlight" msprop:Generator_ColumnVarNameInTable="columnNextFlight" msprop:Generator_ColumnPropNameInTable="NextFlightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="SCC" msprop:Generator_UserColumnName="SCC" msprop:Generator_ColumnPropNameInRow="SCC" msprop:Generator_ColumnVarNameInTable="columnSCC" msprop:Generator_ColumnPropNameInTable="SCCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_UserColumnName="Remark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Consignee" msprop:Generator_UserColumnName="Consignee" msprop:Generator_ColumnPropNameInRow="Consignee" msprop:Generator_ColumnVarNameInTable="columnConsignee" msprop:Generator_ColumnPropNameInTable="ConsigneeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalPCS" msprop:Generator_UserColumnName="TotalPCS" msprop:Generator_ColumnVarNameInTable="columnTotalPCS" msprop:Generator_ColumnPropNameInRow="TotalPCS" msprop:Generator_ColumnPropNameInTable="TotalPCSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TotalWt" msprop:Generator_UserColumnName="TotalWt" msprop:Generator_ColumnVarNameInTable="columnTotalWt" msprop:Generator_ColumnPropNameInRow="TotalWt" msprop:Generator_ColumnPropNameInTable="TotalWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInTable="LocationColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

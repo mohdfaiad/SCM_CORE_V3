@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsWtStatement" targetNamespace="http://tempuri.org/dsWtStatement.xsd" xmlns:mstns="http://tempuri.org/dsWtStatement.xsd" xmlns="http://tempuri.org/dsWtStatement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsWtStatement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsWtStatement" msprop:Generator_DataSetName="dsWtStatement" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_TablePropName="DataTable1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightNo" msprop:Generator_UserColumnName="FlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GrWt" msprop:Generator_UserColumnName="GrWt" msprop:Generator_ColumnPropNameInRow="GrWt" msprop:Generator_ColumnVarNameInTable="columnGrWt" msprop:Generator_ColumnPropNameInTable="GrWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ContainerType" msprop:Generator_UserColumnName="ContainerType" msprop:Generator_ColumnPropNameInRow="ContainerType" msprop:Generator_ColumnVarNameInTable="columnContainerType" msprop:Generator_ColumnPropNameInTable="ContainerTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ULDNo" msprop:Generator_UserColumnName="ULDNo" msprop:Generator_ColumnPropNameInRow="ULDNo" msprop:Generator_ColumnVarNameInTable="columnULDNo" msprop:Generator_ColumnPropNameInTable="ULDNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_UserColumnName="Location" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInTable="LocationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ScaleWeight" msprop:Generator_UserColumnName="ScaleWeight" msprop:Generator_ColumnVarNameInTable="columnScaleWeight" msprop:Generator_ColumnPropNameInRow="ScaleWeight" msprop:Generator_ColumnPropNameInTable="ScaleWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FltDt" msprop:Generator_UserColumnName="FltDt" msprop:Generator_ColumnVarNameInTable="columnFltDt" msprop:Generator_ColumnPropNameInRow="FltDt" msprop:Generator_ColumnPropNameInTable="FltDtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="NetWt" msprop:Generator_UserColumnName="NetWt" msprop:Generator_ColumnVarNameInTable="columnNetWt" msprop:Generator_ColumnPropNameInRow="NetWt" msprop:Generator_ColumnPropNameInTable="NetWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DollyWt" msprop:Generator_UserColumnName="DollyWt" msprop:Generator_ColumnPropNameInRow="DollyWt" msprop:Generator_ColumnVarNameInTable="columnDollyWt" msprop:Generator_ColumnPropNameInTable="DollyWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TIME" msprop:Generator_UserColumnName="TIME" msprop:Generator_ColumnVarNameInTable="columnTIME" msprop:Generator_ColumnPropNameInRow="TIME" msprop:Generator_ColumnPropNameInTable="TIMEColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsOfficialReceipt" targetNamespace="http://tempuri.org/dsOfficialReceipt.xsd" xmlns:mstns="http://tempuri.org/dsOfficialReceipt.xsd" xmlns="http://tempuri.org/dsOfficialReceipt.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsOfficialReceipt" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsOfficialReceipt" msprop:Generator_DataSetName="dsOfficialReceipt" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtOfficialReceipt" msprop:Generator_UserTableName="dtOfficialReceipt" msprop:Generator_RowDeletedName="dtOfficialReceiptRowDeleted" msprop:Generator_RowChangedName="dtOfficialReceiptRowChanged" msprop:Generator_RowClassName="dtOfficialReceiptRow" msprop:Generator_RowChangingName="dtOfficialReceiptRowChanging" msprop:Generator_RowEvArgName="dtOfficialReceiptRowChangeEvent" msprop:Generator_RowEvHandlerName="dtOfficialReceiptRowChangeEventHandler" msprop:Generator_TableClassName="dtOfficialReceiptDataTable" msprop:Generator_TableVarName="tabledtOfficialReceipt" msprop:Generator_RowDeletingName="dtOfficialReceiptRowDeleting" msprop:Generator_TablePropName="dtOfficialReceipt">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="VATRegTIN" msprop:Generator_UserColumnName="VATRegTIN" msprop:Generator_ColumnPropNameInRow="VATRegTIN" msprop:Generator_ColumnVarNameInTable="columnVATRegTIN" msprop:Generator_ColumnPropNameInTable="VATRegTINColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORRecieptNo" msprop:Generator_UserColumnName="ORRecieptNo" msprop:Generator_ColumnPropNameInRow="ORRecieptNo" msprop:Generator_ColumnVarNameInTable="columnORRecieptNo" msprop:Generator_ColumnPropNameInTable="ORRecieptNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ADDRESS" msprop:Generator_UserColumnName="ADDRESS" msprop:Generator_ColumnPropNameInRow="ADDRESS" msprop:Generator_ColumnVarNameInTable="columnADDRESS" msprop:Generator_ColumnPropNameInTable="ADDRESSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PermitNo" msprop:Generator_UserColumnName="PermitNo" msprop:Generator_ColumnPropNameInRow="PermitNo" msprop:Generator_ColumnVarNameInTable="columnPermitNo" msprop:Generator_ColumnPropNameInTable="PermitNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ApprovedNo" msprop:Generator_UserColumnName="ApprovedNo" msprop:Generator_ColumnPropNameInRow="ApprovedNo" msprop:Generator_ColumnVarNameInTable="columnApprovedNo" msprop:Generator_ColumnPropNameInTable="ApprovedNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DateIssued" msprop:Generator_UserColumnName="DateIssued" msprop:Generator_ColumnPropNameInRow="DateIssued" msprop:Generator_ColumnVarNameInTable="columnDateIssued" msprop:Generator_ColumnPropNameInTable="DateIssuedColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DomesticAWBNotation" msprop:Generator_UserColumnName="DomesticAWBNotation" msprop:Generator_ColumnPropNameInRow="DomesticAWBNotation" msprop:Generator_ColumnVarNameInTable="columnDomesticAWBNotation" msprop:Generator_ColumnPropNameInTable="DomesticAWBNotationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumberAttachment" msprop:Generator_UserColumnName="AWBNumberAttachment" msprop:Generator_ColumnVarNameInTable="columnAWBNumberAttachment" msprop:Generator_ColumnPropNameInRow="AWBNumberAttachment" msprop:Generator_ColumnPropNameInTable="AWBNumberAttachmentColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtOfficialReceipt_Sub" msprop:Generator_UserTableName="dtOfficialReceipt_Sub" msprop:Generator_RowDeletedName="dtOfficialReceipt_SubRowDeleted" msprop:Generator_RowChangedName="dtOfficialReceipt_SubRowChanged" msprop:Generator_RowClassName="dtOfficialReceipt_SubRow" msprop:Generator_RowChangingName="dtOfficialReceipt_SubRowChanging" msprop:Generator_RowEvArgName="dtOfficialReceipt_SubRowChangeEvent" msprop:Generator_RowEvHandlerName="dtOfficialReceipt_SubRowChangeEventHandler" msprop:Generator_TableClassName="dtOfficialReceipt_SubDataTable" msprop:Generator_TableVarName="tabledtOfficialReceipt_Sub" msprop:Generator_RowDeletingName="dtOfficialReceipt_SubRowDeleting" msprop:Generator_TablePropName="dtOfficialReceipt_Sub">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Txt" msprop:Generator_UserColumnName="Txt" msprop:Generator_ColumnPropNameInRow="Txt" msprop:Generator_ColumnVarNameInTable="columnTxt" msprop:Generator_ColumnPropNameInTable="TxtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Value" msprop:Generator_UserColumnName="Value" msprop:Generator_ColumnPropNameInRow="Value" msprop:Generator_ColumnVarNameInTable="columnValue" msprop:Generator_ColumnPropNameInTable="ValueColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

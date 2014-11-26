@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsARDeposit" targetNamespace="http://tempuri.org/dsARDeposit.xsd" xmlns:mstns="http://tempuri.org/dsARDeposit.xsd" xmlns="http://tempuri.org/dsARDeposit.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsARDeposit" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsARDeposit" msprop:Generator_UserDSName="dsARDeposit" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtARDeposit" msprop:Generator_UserTableName="dtARDeposit" msprop:Generator_RowDeletedName="dtARDepositRowDeleted" msprop:Generator_TableClassName="dtARDepositDataTable" msprop:Generator_RowChangedName="dtARDepositRowChanged" msprop:Generator_RowClassName="dtARDepositRow" msprop:Generator_RowChangingName="dtARDepositRowChanging" msprop:Generator_RowEvArgName="dtARDepositRowChangeEvent" msprop:Generator_RowEvHandlerName="dtARDepositRowChangeEventHandler" msprop:Generator_TablePropName="dtARDeposit" msprop:Generator_TableVarName="tabledtARDeposit" msprop:Generator_RowDeletingName="dtARDepositRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BankName" msprop:Generator_UserColumnName="BankName" msprop:Generator_ColumnPropNameInRow="BankName" msprop:Generator_ColumnVarNameInTable="columnBankName" msprop:Generator_ColumnPropNameInTable="BankNameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ChequeDdNumber" msprop:Generator_UserColumnName="ChequeDdNumber" msprop:Generator_ColumnPropNameInRow="ChequeDdNumber" msprop:Generator_ColumnVarNameInTable="columnChequeDdNumber" msprop:Generator_ColumnPropNameInTable="ChequeDdNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CollectedAmount" msprop:Generator_UserColumnName="CollectedAmount" msprop:Generator_ColumnPropNameInRow="CollectedAmount" msprop:Generator_ColumnVarNameInTable="columnCollectedAmount" msprop:Generator_ColumnPropNameInTable="CollectedAmountColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FromDate" msprop:Generator_UserColumnName="FromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDate" msprop:Generator_UserColumnName="ToDate" msprop:Generator_ColumnPropNameInRow="ToDate" msprop:Generator_ColumnVarNameInTable="columnToDate" msprop:Generator_ColumnPropNameInTable="ToDateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

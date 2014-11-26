@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="13">
+    <Item id="0" Name="AWBNumber" Caption="AWBNumber" />
+    <Item id="1" Name="Date" Caption="Date" />
+    <Item id="2" Name="Pieces" Caption="Pieces" />
+    <Item id="3" Name="GrossWeight" Caption="Gross Weight" />
+    <Item id="4" Name="ChargedWeight" Caption="Charged Weight" />
+    <Item id="5" Name="FltOrigin" Caption="Flt Origin" />
+    <Item id="6" Name="FltDestination" Caption="Flt Destination" />
+    <Item id="7" Name="AgentName" Caption="Agent Name" />
+    <Item id="8" Name="FlightDetails" Caption="Flight Details" />
+    <Item id="9" Name="FlightDate" Caption="Flight Date" />
+    <Item id="10" Name="ManifestedPCS" Caption="Manifested PCS" />
+    <Item id="11" Name="ManifestedWgt" Caption="Manifested Wgt" />
+    <Item id="12" Name="AWBPrefix" Caption="AWBPrefix" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="13">
+        <Item id="0">
+          <Name>AWBNumber</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBNumber.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Date.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Date.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>FltOrigin</Name>
+          <Caption>Flt Origin</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FltOrigin.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FltOrigin.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>FltDestination</Name>
+          <Caption>Flt Destination</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FltDestination.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FltDestination.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>AgentName</Name>
+          <Caption>Agent Name</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AgentName.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AgentName.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>FlightDetails</Name>
+          <Caption>Flight Details</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FlightDetails.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FlightDetails.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>FlightDate</Name>
+          <Caption>Flight Date</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FlightDate.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FlightDate.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>Pieces</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Pieces.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Pieces.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>GrossWeight</Name>
+          <Caption>Gross Weight</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!GrossWeight.Value</Expression>
+          <CaptionExpression Type="String">=Fields!GrossWeight.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>ChargedWeight</Name>
+          <Caption>Charged Weight</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ChargedWeight.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ChargedWeight.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>ManifestedPCS</Name>
+          <Caption>Manifested PCS</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ManifestedPCS.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ManifestedPCS.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>ManifestedWgt</Name>
+          <Caption>Manifested Wgt</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ManifestedWgt.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ManifestedWgt.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>AWBPrefix</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBPrefix.Value</Expression>
+          <CaptionExpression>=Fields!AWBPrefix.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AWBNumber]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="5">
+        <Item id="0">
+          <Name>Pieces</Name>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!Pieces.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>GrossWeight</Name>
+          <Caption>Gross Weight</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!GrossWeight.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>ChargedWeight</Name>
+          <Caption>Charged Weight</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!ChargedWeight.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>ManifestedPCS</Name>
+          <Caption>Manifested PCS</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!ManifestedPCS.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>ManifestedWgt</Name>
+          <Caption>Manifested Wgt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!ManifestedWgt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

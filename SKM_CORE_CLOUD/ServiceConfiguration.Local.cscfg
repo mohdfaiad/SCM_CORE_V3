@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="SKM_CORE_CLOUD" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="3" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="ProjectSmartCargoManager">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.Enabled" value="true" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountUsername" value="scmqid" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountEncryptedPassword" value="MIIBnQYJKoZIhvcNAQcDoIIBjjCCAYoCAQAxggFOMIIBSgIBADAyMB4xHDAaBgNVBAMME1dpbmRvd3MgQXp1cmUgVG9vbHMCEBgY9el3/j65RS+5u3Vq24YwDQYJKoZIhvcNAQEBBQAEggEAC0so0q5qJUVz7aS+LOgJhbkpqWrjMH5RTPieshxZS41gfwYuP5xXYkoIs5reDuKo2pd1FGXSB1RvAbposqhg7vJ498Dr5B10APH3FXRDFg916Sp5niXI8TAMU2Z8BYDVdN7VBsIYxGAoDlaMwr36lPo+keISI3ouYxW9OXkXHfDn4qhwcFs3m8y5MFgsescxMkRXRiYukLRAozRk/agE9aEz9jo+Ng3ynVI0va+2nLP4QJVwbDLd+m00ldAOIZ0LlFtvSS5xRoW9eEkgqY2Br+A5hPAsB8/Knfyk29UKvIgggUqpMnYpVKuf1TdN2TUwUOPKdBfT6UHiiwB2hgPQrjAzBgkqhkiG9w0BBwEwFAYIKoZIhvcNAwcECLQ76+gVyk4MgBBRCtGifZMiTa9h+JcuqnzR" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteAccess.AccountExpiration" value="2015-04-04T23:59:59.0000000+05:30" />
+      <Setting name="Microsoft.WindowsAzure.Plugins.RemoteForwarder.Enabled" value="true" />
+    </ConfigurationSettings>
+    <Certificates>
+      <Certificate name="Microsoft.WindowsAzure.Plugins.RemoteAccess.PasswordEncryption" thumbprint="09B6447D0FE867C98979BBA6BC3FB6B83FEE435F" thumbprintAlgorithm="sha1" />
+    </Certificates>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Comparative" targetNamespace="http://tempuri.org/Comparative.xsd" xmlns:mstns="http://tempuri.org/Comparative.xsd" xmlns="http://tempuri.org/Comparative.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Comparative" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="Comparative" msprop:Generator_DataSetName="Comparative" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtComparative" msprop:Generator_UserTableName="dtComparative" msprop:Generator_RowDeletedName="dtComparativeRowDeleted" msprop:Generator_RowChangedName="dtComparativeRowChanged" msprop:Generator_RowClassName="dtComparativeRow" msprop:Generator_RowChangingName="dtComparativeRowChanging" msprop:Generator_RowEvArgName="dtComparativeRowChangeEvent" msprop:Generator_RowEvHandlerName="dtComparativeRowChangeEventHandler" msprop:Generator_TableClassName="dtComparativeDataTable" msprop:Generator_TableVarName="tabledtComparative" msprop:Generator_RowDeletingName="dtComparativeRowDeleting" msprop:Generator_TablePropName="dtComparative">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Sector" msprop:Generator_UserColumnName="Sector" msprop:Generator_ColumnPropNameInRow="Sector" msprop:Generator_ColumnVarNameInTable="columnSector" msprop:Generator_ColumnPropNameInTable="SectorColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ChargableWeight" msprop:Generator_UserColumnName="ChargableWeight" msprop:Generator_ColumnPropNameInRow="ChargableWeight" msprop:Generator_ColumnVarNameInTable="columnChargableWeight" msprop:Generator_ColumnPropNameInTable="ChargableWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossRevenue" msprop:Generator_UserColumnName="GrossRevenue" msprop:Generator_ColumnPropNameInRow="GrossRevenue" msprop:Generator_ColumnVarNameInTable="columnGrossRevenue" msprop:Generator_ColumnPropNameInTable="GrossRevenueColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentWeekChargableWeight" msprop:Generator_UserColumnName="CurrentWeekChargableWeight" msprop:Generator_ColumnPropNameInRow="CurrentWeekChargableWeight" msprop:Generator_ColumnVarNameInTable="columnCurrentWeekChargableWeight" msprop:Generator_ColumnPropNameInTable="CurrentWeekChargableWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentWeekGrossRevenue" msprop:Generator_UserColumnName="CurrentWeekGrossRevenue" msprop:Generator_ColumnPropNameInRow="CurrentWeekGrossRevenue" msprop:Generator_ColumnVarNameInTable="columnCurrentWeekGrossRevenue" msprop:Generator_ColumnPropNameInTable="CurrentWeekGrossRevenueColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentWeekGrossYeild" msprop:Generator_UserColumnName="CurrentWeekGrossYeild" msprop:Generator_ColumnPropNameInRow="CurrentWeekGrossYeild" msprop:Generator_ColumnVarNameInTable="columnCurrentWeekGrossYeild" msprop:Generator_ColumnPropNameInTable="CurrentWeekGrossYeildColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="GrossYeild" msprop:Generator_UserColumnName="GrossYeild" msprop:Generator_ColumnPropNameInRow="GrossYeild" msprop:Generator_ColumnVarNameInTable="columnGrossYeild" msprop:Generator_ColumnPropNameInTable="GrossYeildColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DiffKilo" msprop:Generator_UserColumnName="DiffKilo" msprop:Generator_ColumnVarNameInTable="columnDiffKilo" msprop:Generator_ColumnPropNameInRow="DiffKilo" msprop:Generator_ColumnPropNameInTable="DiffKiloColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Kilo_x0025_" msprop:Generator_UserColumnName="Kilo%" msprop:Generator_ColumnVarNameInTable="_columnKilo_" msprop:Generator_ColumnPropNameInRow="_Kilo_" msprop:Generator_ColumnPropNameInTable="_Kilo_Column" type="xs:string" minOccurs="0" />
+              <xs:element name="DiffGross" msprop:Generator_UserColumnName="DiffGross" msprop:Generator_ColumnPropNameInRow="DiffGross" msprop:Generator_ColumnVarNameInTable="columnDiffGross" msprop:Generator_ColumnPropNameInTable="DiffGrossColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Gross_x0025_" msprop:Generator_UserColumnName="Gross%" msprop:Generator_ColumnPropNameInRow="_Gross_" msprop:Generator_ColumnVarNameInTable="_columnGross_" msprop:Generator_ColumnPropNameInTable="_Gross_Column" type="xs:string" minOccurs="0" />
+              <xs:element name="DiffYield" msprop:Generator_UserColumnName="DiffYield" msprop:Generator_ColumnPropNameInRow="DiffYield" msprop:Generator_ColumnVarNameInTable="columnDiffYield" msprop:Generator_ColumnPropNameInTable="DiffYieldColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Yield_x0025_" msprop:Generator_UserColumnName="Yield%" msprop:Generator_ColumnPropNameInRow="_Yield_" msprop:Generator_ColumnVarNameInTable="_columnYield_" msprop:Generator_ColumnPropNameInTable="_Yield_Column" type="xs:string" minOccurs="0" />
+              <xs:element name="DiffWeightCharged" msprop:Generator_UserColumnName="DiffWeightCharged" msprop:Generator_ColumnPropNameInRow="DiffWeightCharged" msprop:Generator_ColumnVarNameInTable="columnDiffWeightCharged" msprop:Generator_ColumnPropNameInTable="DiffWeightChargedColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="WeightCharged_x0025_" msprop:Generator_UserColumnName="WeightCharged%" msprop:Generator_ColumnPropNameInRow="_WeightCharged_" msprop:Generator_ColumnVarNameInTable="_columnWeightCharged_" msprop:Generator_ColumnPropNameInTable="_WeightCharged_Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

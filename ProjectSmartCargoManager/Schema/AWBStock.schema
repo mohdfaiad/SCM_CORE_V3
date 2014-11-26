@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="13">
+    <Item id="0" Name="ALevel" Caption="ALevel" />
+    <Item id="1" Name="AWB" Caption="AWB" />
+    <Item id="2" Name="AFrom" Caption="AWBFrom" />
+    <Item id="3" Name="ATo" Caption="AWBTo" />
+    <Item id="4" Name="Status" Caption="Status" />
+    <Item id="5" Name="ParName" Caption="ParName" />
+    <Item id="6" Name="ParType" Caption="ParType" />
+    <Item id="7" Name="AUser" Caption="User" />
+    <Item id="8" Name="Atime" Caption="Atime" />
+    <Item id="9" Name="Available" Caption="Available" />
+    <Item id="10" Name="AWBType" Caption="AWBType" />
+    <Item id="11" Name="CNType" Caption="CNType" />
+    <Item id="12" Name="AWBstockType" Caption="AWBstockType" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="10">
+        <Item id="0">
+          <Name>ALevel</Name>
+          <Caption>Level</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ALevel.Value</Expression>
+          <CaptionExpression>=Fields!ALevel.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>AWB</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWB.Value</Expression>
+          <CaptionExpression>=Fields!AWB.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>Status</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Status.Value</Expression>
+          <CaptionExpression>=Fields!Status.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>ParName</Name>
+          <Caption>Name</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ParName.Value</Expression>
+          <CaptionExpression>=Fields!ParName.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>ParType</Name>
+          <Caption>Type</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ParType.Value</Expression>
+          <CaptionExpression>=Fields!ParType.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>AUser</Name>
+          <Caption>User</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AUser.Value</Expression>
+          <CaptionExpression>=Fields!AUser.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>Atime</Name>
+          <Caption>Time</Caption>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Atime.Value</Expression>
+          <CaptionExpression>=Fields!Atime.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>AWBType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBType.Value</Expression>
+          <CaptionExpression>=Fields!AWBType.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>CNType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CNType.Value</Expression>
+          <CaptionExpression>=Fields!CNType.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>AWBstockType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBstockType.Value</Expression>
+          <CaptionExpression>=Fields!AWBstockType.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[ALevel]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="3">
+        <Item id="0">
+          <Name>AFrom</Name>
+          <Caption>AWBFrom</Caption>
+          <Type>Measure</Type>
+          <Expression>=Fields!AFrom.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>ATo</Name>
+          <Caption>AWBTo</Caption>
+          <Type>Measure</Type>
+          <Expression>=Fields!ATo.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>Available</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Available.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

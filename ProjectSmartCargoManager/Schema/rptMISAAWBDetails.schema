@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="29">
+    <Item id="0" Name="OriginCode" Caption="OriginCode" />
+    <Item id="1" Name="DestinationCode" Caption="DestinationCode" />
+    <Item id="2" Name="AgentCode" Caption="AgentCode" />
+    <Item id="3" Name="AWBNumber" Caption="AWBNumber" />
+    <Item id="4" Name="ExecutionDate" Caption="ExecutionDate" />
+    <Item id="5" Name="FlightDetails" Caption="FlightDetails" />
+    <Item id="6" Name="Pieces" Caption="Pieces" />
+    <Item id="7" Name="GrossWeight" Caption="GrossWeight" />
+    <Item id="8" Name="CommodityCode" Caption="CommodityCode" />
+    <Item id="9" Name="CommodityDesc" Caption="CommodityDesc" />
+    <Item id="10" Name="FrtIATA" Caption="FrtIATA" />
+    <Item id="11" Name="OCDueCar" Caption="OCDueCar" />
+    <Item id="12" Name="OCDueAgent" Caption="OCDueAgent" />
+    <Item id="13" Name="ServTax" Caption="ServTax" />
+    <Item id="14" Name="ATT" Caption="ATT" />
+    <Item id="15" Name="Surcharge" Caption="Surcharge" />
+    <Item id="16" Name="AWBCharges" Caption="AWBCharges" />
+    <Item id="17" Name="DOCharges" Caption="DOCharges" />
+    <Item id="18" Name="DUnitisation" Caption="DUnitisation" />
+    <Item id="19" Name="FuelSurcharge" Caption="FuelSurcharge" />
+    <Item id="20" Name="TSPI" Caption="TSPI" />
+    <Item id="21" Name="TSPO" Caption="TSPO" />
+    <Item id="22" Name="Unitisation" Caption="Unitisation" />
+    <Item id="23" Name="XRAY" Caption="XRAY" />
+    <Item id="24" Name="XRAYC" Caption="XRAYC" />
+    <Item id="25" Name="OtherOCDCForBooking" Caption="OtherOCDCForBooking" />
+    <Item id="26" Name="Total" Caption="Total" />
+    <Item id="27" Name="BookingStatus" Caption="BookingStatus" />
+    <Item id="28" Name="BillingStatus" Caption="BillingStatus" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="29">
+        <Item id="0">
+          <Name>AgentCode</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AgentCode.Value</Expression>
+          <CaptionExpression>=Fields!AgentCode.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>ATT</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ATT.Value</Expression>
+          <CaptionExpression>=Fields!ATT.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>AWBCharges</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBCharges.Value</Expression>
+          <CaptionExpression>=Fields!AWBCharges.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>AWBNumber</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBNumber.Value</Expression>
+          <CaptionExpression>=Fields!AWBNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>BillingStatus</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!BillingStatus.Value</Expression>
+          <CaptionExpression>=Fields!BillingStatus.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>BookingStatus</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!BookingStatus.Value</Expression>
+          <CaptionExpression>=Fields!BookingStatus.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>CommodityCode</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CommodityCode.Value</Expression>
+          <CaptionExpression>=Fields!CommodityCode.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>CommodityDesc</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CommodityDesc.Value</Expression>
+          <CaptionExpression>=Fields!CommodityDesc.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>DestinationCode</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DestinationCode.Value</Expression>
+          <CaptionExpression>=Fields!DestinationCode.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>DOCharges</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DOCharges.Value</Expression>
+          <CaptionExpression>=Fields!DOCharges.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>DUnitisation</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DUnitisation.Value</Expression>
+          <CaptionExpression>=Fields!DUnitisation.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>ExecutionDate</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ExecutionDate.Value</Expression>
+          <CaptionExpression>=Fields!ExecutionDate.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>FlightDetails</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FlightDetails.Value</Expression>
+          <CaptionExpression>=Fields!FlightDetails.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>FrtIATA</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FrtIATA.Value</Expression>
+          <CaptionExpression>=Fields!FrtIATA.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>FuelSurcharges</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FuelSurcharges.Value</Expression>
+          <CaptionExpression>=Fields!FuelSurcharges.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>GrossWeight</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!GrossWeight.Value</Expression>
+          <CaptionExpression>=Fields!GrossWeight.Value</CaptionExpression>
+        </Item>
+        <Item id="16">
+          <Name>OCDueAgent</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!OCDueAgent.Value</Expression>
+          <CaptionExpression>=Fields!OCDueAgent.Value</CaptionExpression>
+        </Item>
+        <Item id="17">
+          <Name>OCDueCar</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!OCDueCar.Value</Expression>
+          <CaptionExpression>=Fields!OCDueCar.Value</CaptionExpression>
+        </Item>
+        <Item id="18">
+          <Name>OriginCode</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!OriginCode.Value</Expression>
+          <CaptionExpression>=Fields!OriginCode.Value</CaptionExpression>
+        </Item>
+        <Item id="19">
+          <Name>OtherOCDCForBooking</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!OtherOCDCForBooking.Value</Expression>
+          <CaptionExpression>=Fields!OtherOCDCForBooking.Value</CaptionExpression>
+        </Item>
+        <Item id="20">
+          <Name>Pieces</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Pieces.Value</Expression>
+          <CaptionExpression>=Fields!Pieces.Value</CaptionExpression>
+        </Item>
+        <Item id="21">
+          <Name>ServTax</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ServTax.Value</Expression>
+          <CaptionExpression>=Fields!ServTax.Value</CaptionExpression>
+        </Item>
+        <Item id="22">
+          <Name>Surcharge</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Surcharge.Value</Expression>
+          <CaptionExpression>=Fields!Surcharge.Value</CaptionExpression>
+        </Item>
+        <Item id="23">
+          <Name>Total</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Total.Value</Expression>
+          <CaptionExpression>=Fields!Total.Value</CaptionExpression>
+        </Item>
+        <Item id="24">
+          <Name>TSPI</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!TSPI.Value</Expression>
+          <CaptionExpression>=Fields!TSPI.Value</CaptionExpression>
+        </Item>
+        <Item id="25">
+          <Name>TSPO</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!TSPO.Value</Expression>
+          <CaptionExpression>=Fields!TSPO.Value</CaptionExpression>
+        </Item>
+        <Item id="26">
+          <Name>Unitisation</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Unitisation.Value</Expression>
+          <CaptionExpression>=Fields!Unitisation.Value</CaptionExpression>
+        </Item>
+        <Item id="27">
+          <Name>XRAY</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!XRAY.Value</Expression>
+          <CaptionExpression>=Fields!XRAY.Value</CaptionExpression>
+        </Item>
+        <Item id="28">
+          <Name>XRAYC</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!XRAYC.Value</Expression>
+          <CaptionExpression>=Fields!XRAYC.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AgentCode]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="19">
+        <Item id="0">
+          <Name>ATT</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!ATT.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>AWBCharges</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!AWBCharges.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>DOCharges</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!DOCharges.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>DUnitisation</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!DUnitisation.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>FrtIATA</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!FrtIATA.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="5">
+          <Name>FuelSurcharges</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!FuelSurcharges.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="6">
+          <Name>GrossWeight</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!GrossWeight.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="7">
+          <Name>OCDueAgent</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!OCDueAgent.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="8">
+          <Name>OCDueCar</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!OCDueCar.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="9">
+          <Name>OtherOCDCForBooking</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!OtherOCDCForBooking.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="10">
+          <Name>Pieces</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Pieces.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="11">
+          <Name>ServTax</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!ServTax.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="12">
+          <Name>Surcharges</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Surcharges.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="13">
+          <Name>Total</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Total.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="14">
+          <Name>TSPI</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!TSPI.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="15">
+          <Name>TSPO</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!TSPO.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="16">
+          <Name>Unitisation</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Unitisation.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="17">
+          <Name>XRAY</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!XRAY.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="18">
+          <Name>XRAYC</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!XRAYC.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

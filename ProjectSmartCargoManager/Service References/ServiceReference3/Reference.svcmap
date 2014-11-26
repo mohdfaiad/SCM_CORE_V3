@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2f8ec0a0-416c-4333-adfd-676848d7021b" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="basic.xsd" MetadataType="Schema" ID="0936cabf-0c91-44bf-bd77-c0719fecd32b" SourceId="1" SourceUrl="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic?xsd=xsd1" />
+    <MetadataFile FileName="CargoControlService.wsdl" MetadataType="Wsdl" ID="749d9456-aed5-4e37-ac50-bb0baa014bd6" SourceId="1" SourceUrl="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic?wsdl" />
+    <MetadataFile FileName="basic.wsdl" MetadataType="Wsdl" ID="1ecab85e-06fe-4a78-b2fd-74ca6ab69377" SourceId="1" SourceUrl="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic?wsdl=wsdl0" />
+    <MetadataFile FileName="basic1.xsd" MetadataType="Schema" ID="5be1e9d1-c25f-4e20-a674-c8813f585343" SourceId="1" SourceUrl="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic?xsd=xsd0" />
+    <MetadataFile FileName="basic2.xsd" MetadataType="Schema" ID="64118197-aa1f-4efc-b6e7-07f1d5521802" SourceId="1" SourceUrl="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

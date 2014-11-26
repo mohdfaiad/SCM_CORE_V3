@@ -1,0 +1,1 @@
+﻿<%@ WebService Language="C#" CodeBehind="IAMCEBInterface.asmx.cs" Class="IAMCEBInterface.asmx.Service1" %>

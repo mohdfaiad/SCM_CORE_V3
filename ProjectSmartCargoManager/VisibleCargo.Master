@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="VisibleCargo.master.cs" Inherits="Visible_Cargo.VisibleCargo" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SmartKargo-Index</title>
+<link href="style/visiblec.css" rel="stylesheet" type="text/css" media="screen" />
+<link type="text/css" href="style/menu.css" rel="stylesheet" />
+
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+         #form1
+         {
+             margin-bottom: 19px;
+         }
+     </style>
+     
+     <script type="text/javascript">
+
+     function openNewTab(url) {
+        window.open(url, 'Contact', '');
+     }
+     
+     </script>
+</head>
+<body>
+
+<%--<div class="header">
+--%> <%-- <div class="logo"><a href="#"><img src="images/logo.gif" alt="Visible Cargo" title="Visible cargo" border="0" class="marginTop30" align="middle" /></a></div>--%>
+<%--  <div class="Newlogo"><a href="#"><img src="images/visiblecargo_logo.png" alt="Visible Cargo" title="Visible cargo" border="0" class="marginTop30" align="right" /></a></div>
+--%>  
+<%--</div>
+--%>
+<table width="83%">
+
+<tr>
+<td style="width:200px"> &nbsp;</td>
+<td><img src="Images/Client_logo.png" alt="Smart Cargo" title="Smart Kargo" border="0" class="marginTop30" align="left" /> <a href="#"><img src="Images/Client_logo1.png" alt="Smart Cargo" title="Smart cargo" border="0" class="marginTop30" align="right" /></a></td>
+</tr>
+</table>
+<br />
+
+<div id="menu">
+    <ul class="menu">
+      <li class="selected"><a href="Home.aspx"><img src="images/home.png" alt="Home" title="Home" border="0" />Home</a></li>
+     <%-- <li><a href="http://www.qidtech.com/?page_id=719"><img src="images/about.png" alt="About VC" title="About VC" border="0" />About 
+          VC</a></li>--%>
+      <li>
+          <asp:HyperLink ID="hlnkContactUs" Visible="true" runat="server" NavigateUrl="http://www.qidtech.com/?page_id=84" 
+           OnClick="javascript:openNewTab(this.href);return(false);" Width="70px" >
+           <img src="images/contacts.png" alt="Contacts" title="Contacts" border="0" /> Contact 
+           </asp:HyperLink>
+      </li>
+    </ul>
+</div>
+<div class="clearBoth"></div>
+<div style="margin:0 auto; padding:0px; width:1023px;  " >
+<img src="Images/banner_Client.jpg"
+</div>
+    <form id="form1" runat="server">
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+    </form>
+    <div class="footer">Rights reserved @ Quantum ID Technologies 2014.</div>
+    
+</body>
+</html>

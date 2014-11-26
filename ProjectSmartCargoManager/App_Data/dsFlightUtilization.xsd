@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFlightUtilization" targetNamespace="http://tempuri.org/dsFlightUtilization.xsd" xmlns:mstns="http://tempuri.org/dsFlightUtilization.xsd" xmlns="http://tempuri.org/dsFlightUtilization.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFlightUtilization" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsFlightUtilization" msprop:Generator_DataSetName="dsFlightUtilization" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtFlightUtilization" msprop:Generator_UserTableName="dtFlightUtilization" msprop:Generator_RowDeletedName="dtFlightUtilizationRowDeleted" msprop:Generator_RowChangedName="dtFlightUtilizationRowChanged" msprop:Generator_RowClassName="dtFlightUtilizationRow" msprop:Generator_RowChangingName="dtFlightUtilizationRowChanging" msprop:Generator_RowEvArgName="dtFlightUtilizationRowChangeEvent" msprop:Generator_RowEvHandlerName="dtFlightUtilizationRowChangeEventHandler" msprop:Generator_TableClassName="dtFlightUtilizationDataTable" msprop:Generator_TableVarName="tabledtFlightUtilization" msprop:Generator_RowDeletingName="dtFlightUtilizationRowDeleting" msprop:Generator_TablePropName="dtFlightUtilization">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AircraftType" msprop:Generator_UserColumnName="AircraftType" msprop:Generator_ColumnVarNameInTable="columnAircraftType" msprop:Generator_ColumnPropNameInRow="AircraftType" msprop:Generator_ColumnPropNameInTable="AircraftTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FltNo" msprop:Generator_UserColumnName="FltNo" msprop:Generator_ColumnVarNameInTable="columnFltNo" msprop:Generator_ColumnPropNameInRow="FltNo" msprop:Generator_ColumnPropNameInTable="FltNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Createdon" msprop:Generator_UserColumnName="Createdon" msprop:Generator_ColumnVarNameInTable="columnCreatedon" msprop:Generator_ColumnPropNameInRow="Createdon" msprop:Generator_ColumnPropNameInTable="CreatedonColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Org" msprop:Generator_UserColumnName="Org" msprop:Generator_ColumnVarNameInTable="columnOrg" msprop:Generator_ColumnPropNameInRow="Org" msprop:Generator_ColumnPropNameInTable="OrgColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Dest" msprop:Generator_UserColumnName="Dest" msprop:Generator_ColumnVarNameInTable="columnDest" msprop:Generator_ColumnPropNameInRow="Dest" msprop:Generator_ColumnPropNameInTable="DestColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CargoCapacity" msprop:Generator_UserColumnName="CargoCapacity" msprop:Generator_ColumnVarNameInTable="columnCargoCapacity" msprop:Generator_ColumnPropNameInRow="CargoCapacity" msprop:Generator_ColumnPropNameInTable="CargoCapacityColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UpliftWeight" msprop:Generator_UserColumnName="UpliftWeight" msprop:Generator_ColumnVarNameInTable="columnUpliftWeight" msprop:Generator_ColumnPropNameInRow="UpliftWeight" msprop:Generator_ColumnPropNameInTable="UpliftWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UpliftPerc" msprop:Generator_UserColumnName="UpliftPerc" msprop:Generator_ColumnVarNameInTable="columnUpliftPerc" msprop:Generator_ColumnPropNameInRow="UpliftPerc" msprop:Generator_ColumnPropNameInTable="UpliftPercColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtFlightUtilizationSub" msprop:Generator_UserTableName="dtFlightUtilizationSub" msprop:Generator_RowDeletedName="dtFlightUtilizationSubRowDeleted" msprop:Generator_RowChangedName="dtFlightUtilizationSubRowChanged" msprop:Generator_RowClassName="dtFlightUtilizationSubRow" msprop:Generator_RowChangingName="dtFlightUtilizationSubRowChanging" msprop:Generator_RowEvArgName="dtFlightUtilizationSubRowChangeEvent" msprop:Generator_RowEvHandlerName="dtFlightUtilizationSubRowChangeEventHandler" msprop:Generator_TableClassName="dtFlightUtilizationSubDataTable" msprop:Generator_TableVarName="tabledtFlightUtilizationSub" msprop:Generator_RowDeletingName="dtFlightUtilizationSubRowDeleting" msprop:Generator_TablePropName="dtFlightUtilizationSub">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country" msprop:Generator_UserColumnName="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnPropNameInTable="CountryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Region" msprop:Generator_UserColumnName="Region" msprop:Generator_ColumnVarNameInTable="columnRegion" msprop:Generator_ColumnPropNameInRow="Region" msprop:Generator_ColumnPropNameInTable="RegionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightID" msprop:Generator_UserColumnName="FlightID" msprop:Generator_ColumnVarNameInTable="columnFlightID" msprop:Generator_ColumnPropNameInRow="FlightID" msprop:Generator_ColumnPropNameInTable="FlightIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FromDt" msprop:Generator_UserColumnName="FromDt" msprop:Generator_ColumnVarNameInTable="columnFromDt" msprop:Generator_ColumnPropNameInRow="FromDt" msprop:Generator_ColumnPropNameInTable="FromDtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDt" msprop:Generator_UserColumnName="ToDt" msprop:Generator_ColumnVarNameInTable="columnToDt" msprop:Generator_ColumnPropNameInRow="ToDt" msprop:Generator_ColumnPropNameInTable="ToDtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AircraftType" msprop:Generator_UserColumnName="AircraftType" msprop:Generator_ColumnVarNameInTable="columnAircraftType" msprop:Generator_ColumnPropNameInRow="AircraftType" msprop:Generator_ColumnPropNameInTable="AircraftTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ReportDate" msprop:Generator_UserColumnName="ReportDate" msprop:Generator_ColumnVarNameInTable="columnReportDate" msprop:Generator_ColumnPropNameInRow="ReportDate" msprop:Generator_ColumnPropNameInTable="ReportDateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="Paxmanifestservice" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="Paxmanifestservice" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="Paxmanifestservice">
+      <s:element name="GetManifest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepartureDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DepartureStation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ArrivalStation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlightNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManifestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManifestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PaxManifestHeader" type="tns:PaxManifestHeader" />
+      <s:complexType name="PaxManifestHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="AuthUser" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SecurityKey" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetManifestSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManifest" />
+  </wsdl:message>
+  <wsdl:message name="GetManifestSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManifestResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManifestPaxManifestHeader">
+    <wsdl:part name="PaxManifestHeader" element="tns:PaxManifestHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetManifestHttpGetIn">
+    <wsdl:part name="DepartureDate" type="s:string" />
+    <wsdl:part name="DepartureStation" type="s:string" />
+    <wsdl:part name="ArrivalStation" type="s:string" />
+    <wsdl:part name="FlightNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManifestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManifestHttpPostIn">
+    <wsdl:part name="DepartureDate" type="s:string" />
+    <wsdl:part name="DepartureStation" type="s:string" />
+    <wsdl:part name="ArrivalStation" type="s:string" />
+    <wsdl:part name="FlightNumber" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetManifestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="GetPaxManifestSoap">
+    <wsdl:operation name="GetManifest">
+      <wsdl:input message="tns:GetManifestSoapIn" />
+      <wsdl:output message="tns:GetManifestSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GetPaxManifestHttpGet">
+    <wsdl:operation name="GetManifest">
+      <wsdl:input message="tns:GetManifestHttpGetIn" />
+      <wsdl:output message="tns:GetManifestHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="GetPaxManifestHttpPost">
+    <wsdl:operation name="GetManifest">
+      <wsdl:input message="tns:GetManifestHttpPostIn" />
+      <wsdl:output message="tns:GetManifestHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetPaxManifestSoap" type="tns:GetPaxManifestSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetManifest">
+      <soap:operation soapAction="Paxmanifestservice/GetManifest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetManifestPaxManifestHeader" part="PaxManifestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetPaxManifestSoap12" type="tns:GetPaxManifestSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetManifest">
+      <soap12:operation soapAction="Paxmanifestservice/GetManifest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetManifestPaxManifestHeader" part="PaxManifestHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetPaxManifestHttpGet" type="tns:GetPaxManifestHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetManifest">
+      <http:operation location="/GetManifest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GetPaxManifestHttpPost" type="tns:GetPaxManifestHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetManifest">
+      <http:operation location="/GetManifest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetPaxManifest">
+    <wsdl:port name="GetPaxManifestSoap" binding="tns:GetPaxManifestSoap">
+      <soap:address location="http://5japptest.cebupacificair.com/paxmanifestservice/PaxManifestServ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetPaxManifestSoap12" binding="tns:GetPaxManifestSoap12">
+      <soap12:address location="http://5japptest.cebupacificair.com/paxmanifestservice/PaxManifestServ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetPaxManifestHttpGet" binding="tns:GetPaxManifestHttpGet">
+      <http:address location="http://5japptest.cebupacificair.com/paxmanifestservice/PaxManifestServ.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GetPaxManifestHttpPost" binding="tns:GetPaxManifestHttpPost">
+      <http:address location="http://5japptest.cebupacificair.com/paxmanifestservice/PaxManifestServ.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

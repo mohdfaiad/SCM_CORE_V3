@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>b80cac2e-3492-4371-a670-04896f99ae0b</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>1in</RightMargin>
+  <LeftMargin>1in</LeftMargin>
+  <BottomMargin>1in</BottomMargin>
+  <rd:ReportID>86b026b4-5d12-46c8-aa64-e55201c0e049</rd:ReportID>
+  <DataSets>
+    <DataSet Name="rptSectorWiseRevenue_rptSectorWiseRevenueSummary">
+      <Fields>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PreparedBy">
+          <DataField>PreparedBy</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PreparedOn">
+          <DataField>PreparedOn</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>rptSectorWiseRevenue</rd:DataSetName>
+        <rd:TableName>rptSectorWiseRevenueSummary</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Width>9.375in</Width>
+  <Body>
+    <ReportItems>
+      <Subreport Name="subreport4">
+        <Top>11.74603cm</Top>
+        <ReportName>rptSectorWiseRevenueSubTail</ReportName>
+        <Width>21.5873cm</Width>
+        <ZIndex>9</ZIndex>
+        <Left>0.95238cm</Left>
+        <Height>1.90476cm</Height>
+      </Subreport>
+      <Textbox Name="textbox4">
+        <Top>5.5in</Top>
+        <Width>2.125in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>5.625in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PreparedOn.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox5">
+        <Top>5.5in</Top>
+        <Width>1.125in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>4.5in</Left>
+        <Height>0.25in</Height>
+        <Value>Prepared On:</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <Top>5.5in</Top>
+        <Width>2in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.5in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PreparedBy.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox2">
+        <rd:DefaultName>textbox2</rd:DefaultName>
+        <Top>5.5in</Top>
+        <Width>1in</Width>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.5in</Left>
+        <Height>0.25in</Height>
+        <Value>Prepared By:</Value>
+      </Textbox>
+      <Subreport Name="subreport3">
+        <Top>3.5in</Top>
+        <ReportName>rptSectorWiseRevenueSubDetail</ReportName>
+        <Width>8.5in</Width>
+        <ZIndex>4</ZIndex>
+        <Left>0.375in</Left>
+        <Height>0.75in</Height>
+      </Subreport>
+      <Subreport Name="subreport2">
+        <Top>2.375in</Top>
+        <ReportName>rptSectorWiseRevenueSubSector</ReportName>
+        <Width>8.5in</Width>
+        <ZIndex>3</ZIndex>
+        <Left>0.375in</Left>
+        <Height>0.75in</Height>
+      </Subreport>
+      <Subreport Name="subreport1">
+        <Top>1.25in</Top>
+        <ReportName>rptSectorWiseRevenueSubStation</ReportName>
+        <Width>8.5in</Width>
+        <ZIndex>2</ZIndex>
+        <Left>0.375in</Left>
+        <Height>0.75in</Height>
+      </Subreport>
+      <Image Name="image1">
+        <Sizing>Fit</Sizing>
+        <Width>1.875in</Width>
+        <MIMEType>image/jpeg</MIMEType>
+        <Source>Database</Source>
+        <Style />
+        <ZIndex>1</ZIndex>
+        <Left>7.25in</Left>
+        <Height>0.625in</Height>
+        <Value>=Fields!Logo.Value</Value>
+      </Image>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>0.625in</Top>
+        <Width>7in</Width>
+        <Style>
+          <FontSize>14pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <CanGrow>true</CanGrow>
+        <Left>0.875in</Left>
+        <Height>0.375in</Height>
+        <Value>Cargo Revenue Tracking</Value>
+      </Textbox>
+    </ReportItems>
+    <Height>7.375in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>1in</TopMargin>
+</Report>

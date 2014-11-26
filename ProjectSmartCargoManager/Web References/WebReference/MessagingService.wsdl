@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="checkInternet">
+        <s:complexType />
+      </s:element>
+      <s:element name="checkInternetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="checkInternetResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAccetpedBookings">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAccetpedBookingsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAccetpedBookingsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getAccetpedBookings1">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAccetpedBookings1Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getAccetpedBookings1Result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addBookingFromMsg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="addBookingFromMsgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="addBookingFromMsgResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="encodeFFAForSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsData">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="FromEmailID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToEmailID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="encodeFFAForSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="encodeFFAForSendResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFFRforSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="fromEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFFRforSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EncodeFFRforSendResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFBLForSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="POL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlightNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlightDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromEmailID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toEmailID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFBLForSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EncodeFBLForSendResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFFMForSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepartureAirport" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlightNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlightDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fromEmailID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="toEmailID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFFMForSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EncodeFFMForSendResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFSAForSend">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AirlinePrefix" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AWBNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CarrierCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FlightNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OperType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FromEmailID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ToEmailID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EncodeFSAForSendResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="EncodeFSAForSendResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="checkInternetSoapIn">
+    <wsdl:part name="parameters" element="tns:checkInternet" />
+  </wsdl:message>
+  <wsdl:message name="checkInternetSoapOut">
+    <wsdl:part name="parameters" element="tns:checkInternetResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccetpedBookingsSoapIn">
+    <wsdl:part name="parameters" element="tns:getAccetpedBookings" />
+  </wsdl:message>
+  <wsdl:message name="getAccetpedBookingsSoapOut">
+    <wsdl:part name="parameters" element="tns:getAccetpedBookingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAccetpedBookings1SoapIn">
+    <wsdl:part name="parameters" element="tns:getAccetpedBookings1" />
+  </wsdl:message>
+  <wsdl:message name="getAccetpedBookings1SoapOut">
+    <wsdl:part name="parameters" element="tns:getAccetpedBookings1Response" />
+  </wsdl:message>
+  <wsdl:message name="addBookingFromMsgSoapIn">
+    <wsdl:part name="parameters" element="tns:addBookingFromMsg" />
+  </wsdl:message>
+  <wsdl:message name="addBookingFromMsgSoapOut">
+    <wsdl:part name="parameters" element="tns:addBookingFromMsgResponse" />
+  </wsdl:message>
+  <wsdl:message name="encodeFFAForSendSoapIn">
+    <wsdl:part name="parameters" element="tns:encodeFFAForSend" />
+  </wsdl:message>
+  <wsdl:message name="encodeFFAForSendSoapOut">
+    <wsdl:part name="parameters" element="tns:encodeFFAForSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFFRforSendSoapIn">
+    <wsdl:part name="parameters" element="tns:EncodeFFRforSend" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFFRforSendSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeFFRforSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFBLForSendSoapIn">
+    <wsdl:part name="parameters" element="tns:EncodeFBLForSend" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFBLForSendSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeFBLForSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFFMForSendSoapIn">
+    <wsdl:part name="parameters" element="tns:EncodeFFMForSend" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFFMForSendSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeFFMForSendResponse" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFSAForSendSoapIn">
+    <wsdl:part name="parameters" element="tns:EncodeFSAForSend" />
+  </wsdl:message>
+  <wsdl:message name="EncodeFSAForSendSoapOut">
+    <wsdl:part name="parameters" element="tns:EncodeFSAForSendResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MessagingServiceSoap">
+    <wsdl:operation name="checkInternet">
+      <wsdl:input message="tns:checkInternetSoapIn" />
+      <wsdl:output message="tns:checkInternetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccetpedBookings">
+      <wsdl:input message="tns:getAccetpedBookingsSoapIn" />
+      <wsdl:output message="tns:getAccetpedBookingsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAccetpedBookings1">
+      <wsdl:input message="tns:getAccetpedBookings1SoapIn" />
+      <wsdl:output message="tns:getAccetpedBookings1SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="addBookingFromMsg">
+      <wsdl:input message="tns:addBookingFromMsgSoapIn" />
+      <wsdl:output message="tns:addBookingFromMsgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="encodeFFAForSend">
+      <wsdl:input message="tns:encodeFFAForSendSoapIn" />
+      <wsdl:output message="tns:encodeFFAForSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFFRforSend">
+      <wsdl:input message="tns:EncodeFFRforSendSoapIn" />
+      <wsdl:output message="tns:EncodeFFRforSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFBLForSend">
+      <wsdl:input message="tns:EncodeFBLForSendSoapIn" />
+      <wsdl:output message="tns:EncodeFBLForSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFFMForSend">
+      <wsdl:input message="tns:EncodeFFMForSendSoapIn" />
+      <wsdl:output message="tns:EncodeFFMForSendSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFSAForSend">
+      <wsdl:input message="tns:EncodeFSAForSendSoapIn" />
+      <wsdl:output message="tns:EncodeFSAForSendSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MessagingServiceSoap" type="tns:MessagingServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkInternet">
+      <soap:operation soapAction="http://tempuri.org/checkInternet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccetpedBookings">
+      <soap:operation soapAction="http://tempuri.org/getAccetpedBookings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccetpedBookings1">
+      <soap:operation soapAction="http://tempuri.org/getAccetpedBookings1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBookingFromMsg">
+      <soap:operation soapAction="http://tempuri.org/addBookingFromMsg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encodeFFAForSend">
+      <soap:operation soapAction="http://tempuri.org/encodeFFAForSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFFRforSend">
+      <soap:operation soapAction="http://tempuri.org/EncodeFFRforSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFBLForSend">
+      <soap:operation soapAction="http://tempuri.org/EncodeFBLForSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFFMForSend">
+      <soap:operation soapAction="http://tempuri.org/EncodeFFMForSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFSAForSend">
+      <soap:operation soapAction="http://tempuri.org/EncodeFSAForSend" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MessagingServiceSoap12" type="tns:MessagingServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="checkInternet">
+      <soap12:operation soapAction="http://tempuri.org/checkInternet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccetpedBookings">
+      <soap12:operation soapAction="http://tempuri.org/getAccetpedBookings" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccetpedBookings1">
+      <soap12:operation soapAction="http://tempuri.org/getAccetpedBookings1" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBookingFromMsg">
+      <soap12:operation soapAction="http://tempuri.org/addBookingFromMsg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="encodeFFAForSend">
+      <soap12:operation soapAction="http://tempuri.org/encodeFFAForSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFFRforSend">
+      <soap12:operation soapAction="http://tempuri.org/EncodeFFRforSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFBLForSend">
+      <soap12:operation soapAction="http://tempuri.org/EncodeFBLForSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFFMForSend">
+      <soap12:operation soapAction="http://tempuri.org/EncodeFFMForSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EncodeFSAForSend">
+      <soap12:operation soapAction="http://tempuri.org/EncodeFSAForSend" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MessagingService">
+    <wsdl:port name="MessagingServiceSoap" binding="tns:MessagingServiceSoap">
+      <soap:address location="http://spicejetstaging.cloudapp.net:20000/webservices/MessagingService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MessagingServiceSoap12" binding="tns:MessagingServiceSoap12">
+      <soap12:address location="http://spicejetstaging.cloudapp.net:20000/webservices/MessagingService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

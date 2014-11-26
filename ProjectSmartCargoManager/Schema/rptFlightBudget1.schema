@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="13">
+    <Item id="0" Name="BudgetTonnage" Caption="BudgetTonnage" />
+    <Item id="1" Name="BudgetRevenue" Caption="BudgetRevenue" />
+    <Item id="2" Name="Region" Caption="Region" />
+    <Item id="3" Name="ActualYeild" Caption="ActualYeild" />
+    <Item id="4" Name="Year" Caption="Year" />
+    <Item id="5" Name="ActualTonnage" Caption="ActualTonnage" />
+    <Item id="6" Name="FlightNo" Caption="FlightNo" />
+    <Item id="7" Name="Origin" Caption="Origin" />
+    <Item id="8" Name="Destination" Caption="Destination" />
+    <Item id="9" Name="Month" Caption="Month" />
+    <Item id="10" Name="POS" Caption="POS" />
+    <Item id="11" Name="BudgetYeild" Caption="BudgetYeild" />
+    <Item id="12" Name="ActualRevenue" Caption="ActualRevenue" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>Region</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Region.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Region.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>FlightNo</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FlightNo.Value</Expression>
+          <CaptionExpression>=Fields!FlightNo.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Month.Value</Expression>
+          <CaptionExpression>=Fields!Month.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>Origin</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Origin.Value</Expression>
+          <CaptionExpression>=Fields!Origin.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>Destination</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Destination.Value</Expression>
+          <CaptionExpression>=Fields!Destination.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Year.Value</Expression>
+          <CaptionExpression>=Fields!Year.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>POS</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!POS.Value</Expression>
+          <CaptionExpression>=Fields!POS.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[Region]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="6">
+        <Item id="0">
+          <Name>ActualRevenue</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!ActualRevenue.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>BudgetTonnage</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!BudgetTonnage.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>BudgetYeild</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!BudgetYeild.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>BudgetRevenue</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!BudgetRevenue.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>ActualTonnage</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!ActualTonnage.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="5">
+          <Name>ActualYeild</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!ActualYeild.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

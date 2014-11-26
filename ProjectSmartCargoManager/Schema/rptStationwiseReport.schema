@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="8">
+               <Item id="0" Name="Station" Caption="Station" />
+               <Item id="1" Name="CTonnage" Caption="CTonnage" />
+               <Item id="2" Name="CGrossRevenue" Caption="CGross Revenue" />
+               <Item id="3" Name="CGrossYield" Caption="CGross Yield" />
+               <Item id="4" Name="CNetRevenue" Caption="CNet Revenue" />
+               <Item id="5" Name="CNetYield" Caption="CNet Yield" />
+               <Item id="6" Name="FromDate&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" Caption="From Date&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;">
+                       <Source>FromDate
+
+
+
+
+</Source>
+               </Item>
+               <Item id="7" Name="ToDate" Caption="To Date" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="8">
+                               <Item id="0">
+                                       <Name>Station</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Station.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Station.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>FromDate
+
+
+
+
+</Name>
+                                       <Caption>From Date
+
+
+
+
+</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields.Item("FromDate").Value</Expression>
+                                       <CaptionExpression Type="String">=Fields.Item("FromDate").Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>ToDate</Name>
+                                       <Caption>To Date</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!ToDate.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ToDate.Value</CaptionExpression>
+                               </Item>
+                               <Item id="3">
+                                       <Name>CTonnage</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CTonnage.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CTonnage.Value</CaptionExpression>
+                               </Item>
+                               <Item id="4">
+                                       <Name>CGrossRevenue</Name>
+                                       <Caption>CGross Revenue</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CGrossRevenue.Value</Expression>
+                                        <CaptionExpression Type="String">=Fields!CGrossRevenue.Value</CaptionExpression>
+                               </Item>
+                               <Item id="5">
+                                       <Name>CGrossYield</Name>
+                                       <Caption>CGross Yield</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CGrossYield.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CGrossYield.Value</CaptionExpression>
+                               </Item>
+                               <Item id="6">
+                                       <Name>CNetRevenue</Name>
+                                       <Caption>CNet Revenue</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CNetRevenue.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CNetRevenue.Value</CaptionExpression>
+                               </Item>
+                               <Item id="7">
+                                       <Name>CNetYield</Name>
+                                       <Caption>CNet Yield</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CNetYield.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CNetYield.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[Station]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="5">
+                               <Item id="0">
+                                       <Name>CTonnage</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CTonnage.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="1">
+                                       <Name>CGrossRevenue</Name>
+                                       <Caption>CGross Revenue</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CGrossRevenue.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="2">
+                                       <Name>CGrossYield</Name>
+                                       <Caption>CGross Yield</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CGrossYield.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="3">
+                                       <Name>CNetRevenue</Name>
+                                       <Caption>CNet Revenue</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CNetRevenue.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="4">
+                                       <Name>CNetYield</Name>
+                                       <Caption>CNet Yield</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CNetYield.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

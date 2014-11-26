@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8D69494D-15A4-4D94-8615-711D00F4CD32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BAL</RootNamespace>
+    <AssemblyName>BAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AuthorizeNet, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="clsDataLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ProjectSmartCargoManager\bin\clsDataLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACASBAL.cs" />
+    <Compile Include="AgentBAL.cs" />
+    <Compile Include="AircraftBAL.cs" />
+    <Compile Include="AircraftTonnageMasterBAL.cs" />
+    <Compile Include="AirlineMasterBAL.cs" />
+    <Compile Include="AirlineScheduleBAL.cs" />
+    <Compile Include="AirPrefixBAL.cs" />
+    <Compile Include="AWBMilestonesBAL.cs" />
+    <Compile Include="AWBStockAllocBAL.cs" />
+    <Compile Include="BALAccountTypeMaster.cs" />
+    <Compile Include="BALAdminSupportTask.cs" />
+    <Compile Include="BALAgentCredit.cs" />
+    <Compile Include="BALAgentDeal.cs" />
+    <Compile Include="BALAgentPLI.cs" />
+    <Compile Include="BALAirCargoManifest.cs" />
+    <Compile Include="BALAirportMaster.cs" />
+    <Compile Include="BALAuditTrail.cs" />
+    <Compile Include="BALAutoReportsConfig.cs" />
+    <Compile Include="BALAWBtracking.cs" />
+    <Compile Include="BALAWBTracLDetails.cs" />
+    <Compile Include="BALBreakULD.cs" />
+    <Compile Include="BALCardTransaction.cs" />
+    <Compile Include="BALCategoryMaster.cs" />
+    <Compile Include="BALCCAListing.cs" />
+    <Compile Include="BALCCSFMaster.cs" />
+    <Compile Include="BALClsFillCombo.cs" />
+    <Compile Include="BALCollectionDetails.cs" />
+    <Compile Include="BALCommodityMaster.cs" />
+    <Compile Include="BALCommon.cs" />
+    <Compile Include="BALConfig.cs" />
+    <Compile Include="BALCostCenterMaster.cs">
+    </Compile>
+    <Compile Include="BALCountryMaster.cs" />
+    <Compile Include="BALCurrency.cs" />
+    <Compile Include="BALCustomsAWBInfo.cs" />
+    <Compile Include="BALDashboard.cs" />
+    <Compile Include="BALDCMListing.cs" />
+    <Compile Include="BALDesigMaster.cs" />
+    <Compile Include="BALDiagnostics.cs" />
+    <Compile Include="BALDriverMaster.cs" />
+    <Compile Include="BALEmailID.cs" />
+    <Compile Include="BALEmission.cs" />
+    <Compile Include="BALException.cs" />
+    <Compile Include="BALExchRate.cs" />
+    <Compile Include="BALFlightCapacity.cs" />
+    <Compile Include="BALGenDeclaration.cs" />
+    <Compile Include="BalGHADockAccp.cs" />
+    <Compile Include="BalGLAAcctCode.cs" />
+    <Compile Include="BALHAWBDetails.cs" />
+    <Compile Include="BALHoliday.cs" />
+    <Compile Include="BALIACCode.cs" />
+    <Compile Include="BALInstanceConfiguration.cs" />
+    <Compile Include="BALInterlineInvoiceListing.cs" />
+    <Compile Include="BALInvoiceListing.cs" />
+    <Compile Include="BALIRCodes.cs" />
+    <Compile Include="BALLoadability.cs" />
+    <Compile Include="BALNotifications.cs" />
+    <Compile Include="BALOC.cs" />
+    <Compile Include="BALPaymentReceipt.cs" />
+    <Compile Include="BALPLIMaster.cs" />
+    <Compile Include="BALProcessRates.cs" />
+    <Compile Include="BALProductType.cs" />
+    <Compile Include="BALRegionMaster.cs" />
+    <Compile Include="BALRejectionMemo.cs" />
+    <Compile Include="BALRepairOrder.cs" />
+    <Compile Include="BALRoutes.cs" />
+    <Compile Include="BALShipperMaster.cs" />
+    <Compile Include="BALshowCapacity.cs" />
+    <Compile Include="BALSpotRate.cs" />
+    <Compile Include="BALStockConfig.cs" />
+    <Compile Include="BALSystemConfig.cs" />
+    <Compile Include="BALTaxCode.cs" />
+    <Compile Include="BALUCR.cs" />
+    <Compile Include="BALULDMaster.cs" />
+    <Compile Include="BillingAWBFileInvoiceBAL.cs" />
+    <Compile Include="BillingBAL.cs" />
+    <Compile Include="BillingCASSEncode.cs" />
+    <Compile Include="BillingFileUploadBAL.cs" />
+    <Compile Include="BillingInterlineInvoiceBAL.cs" />
+    <Compile Include="BillingInvoiceMatchingBAL.cs" />
+    <Compile Include="BLArrival.cs" />
+    <Compile Include="BLAssignULD.cs" />
+    <Compile Include="BLawbStockAllocBAL.cs" />
+    <Compile Include="BLBuildULD.cs" />
+    <Compile Include="BLExpManifest.cs" />
+    <Compile Include="BLExpManifestGHA.cs" />
+    <Compile Include="BookingBAL.cs" />
+    <Compile Include="CCABal.cs" />
+    <Compile Include="CCAProcessingBAL.cs" />
+    <Compile Include="ClsImageConversion.cs" />
+    <Compile Include="clsLog.cs" />
+    <Compile Include="CreditBAL.cs" />
+    <Compile Include="CustomsImportBAL.cs" />
+    <Compile Include="DCMGenerateBAL.cs" />
+    <Compile Include="DebitCreditProcessingBAL.cs" />
+    <Compile Include="DGRCargoBAL.cs" />
+    <Compile Include="EMAILOUT.cs" />
+    <Compile Include="EmbargoBAL.cs" />
+    <Compile Include="EpouchBAL.cs" />
+    <Compile Include="excelUpload.cs" />
+    <Compile Include="FTP.cs" />
+    <Compile Include="GHA_BALFlightCapacity.cs" />
+    <Compile Include="GHA_ManifestBAL.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="HandOffFileCASSEncode.cs" />
+    <Compile Include="HomeBL.cs" />
+    <Compile Include="IDECEncode.cs" />
+    <Compile Include="InvoiceMatchingBAL.cs" />
+    <Compile Include="Jquery.cs" />
+    <Compile Include="ListBookingBAL.cs" />
+    <Compile Include="ListDataViewBAL.cs" />
+    <Compile Include="ListDCMBAL.cs" />
+    <Compile Include="ListOtherChargesBAL.cs" />
+    <Compile Include="ListRateCardBAL.cs" />
+    <Compile Include="ListRateLineBAL.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="LoginBL.cs" />
+    <Compile Include="MaintainRatesBAL.cs" />
+    <Compile Include="MasterAuditBAL.cs" />
+    <Compile Include="MasterBAL.cs" />
+    <Compile Include="MessageConfigurationBAL.cs" />
+    <Compile Include="MessagingConsole_BAL.cs" />
+    <Compile Include="OtherChargesBAL.cs" />
+    <Compile Include="PartnerBAL.cs" />
+    <Compile Include="Plotter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProRateBAL.cs" />
+    <Compile Include="RateCardMasterBAL.cs" />
+    <Compile Include="ReportBAL.cs" />
+    <Compile Include="ReportTrackingHistory.cs" />
+    <Compile Include="RoleMasterBAL.cs" />
+    <Compile Include="ScreeningDashboard.cs" />
+    <Compile Include="ShipperBAL.cs" />
+    <Compile Include="ShowFlightsBAL.cs" />
+    <Compile Include="SMS.cs" />
+    <Compile Include="SpecialHandlingCodeMasterBAL.cs" />
+    <Compile Include="SpotRateTransactionBAL.cs" />
+    <Compile Include="StockAllocationBAL.cs" />
+    <Compile Include="UNIDBL.cs" />
+    <Compile Include="UploadMastersBAL.cs" />
+    <Compile Include="UserCreationBAL.cs" />
+    <Compile Include="ViewInfoInGridBAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QID.DataAccess.Win\QID.DataAccess.Win\QID.DataAccess.Win.csproj">
+      <Project>{F6E9FC85-BF47-40D8-BF9A-837E764EDD9A}</Project>
+      <Name>QID.DataAccess.Win</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SCM.Common.Struct\SCM.Common.Struct.csproj">
+      <Project>{119B89A2-AF2A-413B-B2E2-C3E0D4802233}</Project>
+      <Name>SCM.Common.Struct</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuthorizeNet\AuthorizeNet.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

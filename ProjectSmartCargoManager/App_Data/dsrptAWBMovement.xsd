@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrptAWBMovement" targetNamespace="http://tempuri.org/dsrptAWBMovement.xsd" xmlns:mstns="http://tempuri.org/dsrptAWBMovement.xsd" xmlns="http://tempuri.org/dsrptAWBMovement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrptAWBMovement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsrptAWBMovement" msprop:Generator_DataSetName="dsrptAWBMovement" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtrptAWBMovement" msprop:Generator_UserTableName="dtrptAWBMovement" msprop:Generator_RowDeletedName="dtrptAWBMovementRowDeleted" msprop:Generator_RowChangedName="dtrptAWBMovementRowChanged" msprop:Generator_RowClassName="dtrptAWBMovementRow" msprop:Generator_RowChangingName="dtrptAWBMovementRowChanging" msprop:Generator_RowEvArgName="dtrptAWBMovementRowChangeEvent" msprop:Generator_RowEvHandlerName="dtrptAWBMovementRowChangeEventHandler" msprop:Generator_TableClassName="dtrptAWBMovementDataTable" msprop:Generator_TableVarName="tabledtrptAWBMovement" msprop:Generator_RowDeletingName="dtrptAWBMovementRowDeleting" msprop:Generator_TablePropName="dtrptAWBMovement">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightNo" msprop:Generator_UserColumnName="FlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FltDate" msprop:Generator_UserColumnName="FltDate" msprop:Generator_ColumnPropNameInRow="FltDate" msprop:Generator_ColumnVarNameInTable="columnFltDate" msprop:Generator_ColumnPropNameInTable="FltDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumber" msprop:Generator_UserColumnName="AWBNumber" msprop:Generator_ColumnPropNameInRow="AWBNumber" msprop:Generator_ColumnVarNameInTable="columnAWBNumber" msprop:Generator_ColumnPropNameInTable="AWBNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Booked" msprop:Generator_UserColumnName="Booked" msprop:Generator_ColumnPropNameInRow="Booked" msprop:Generator_ColumnVarNameInTable="columnBooked" msprop:Generator_ColumnPropNameInTable="BookedColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="BookedWeight" msprop:Generator_UserColumnName="BookedWeight" msprop:Generator_ColumnPropNameInRow="BookedWeight" msprop:Generator_ColumnVarNameInTable="columnBookedWeight" msprop:Generator_ColumnPropNameInTable="BookedWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Manifested" msprop:Generator_UserColumnName="Manifested" msprop:Generator_ColumnPropNameInRow="Manifested" msprop:Generator_ColumnVarNameInTable="columnManifested" msprop:Generator_ColumnPropNameInTable="ManifestedColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ManifestedWeight" msprop:Generator_UserColumnName="ManifestedWeight" msprop:Generator_ColumnPropNameInRow="ManifestedWeight" msprop:Generator_ColumnVarNameInTable="columnManifestedWeight" msprop:Generator_ColumnPropNameInTable="ManifestedWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Departed" msprop:Generator_UserColumnName="Departed" msprop:Generator_ColumnPropNameInRow="Departed" msprop:Generator_ColumnVarNameInTable="columnDeparted" msprop:Generator_ColumnPropNameInTable="DepartedColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DepartedWeight" msprop:Generator_UserColumnName="DepartedWeight" msprop:Generator_ColumnPropNameInRow="DepartedWeight" msprop:Generator_ColumnVarNameInTable="columnDepartedWeight" msprop:Generator_ColumnPropNameInTable="DepartedWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Arrival" msprop:Generator_UserColumnName="Arrival" msprop:Generator_ColumnPropNameInRow="Arrival" msprop:Generator_ColumnVarNameInTable="columnArrival" msprop:Generator_ColumnPropNameInTable="ArrivalColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ArrivalWeight" msprop:Generator_UserColumnName="ArrivalWeight" msprop:Generator_ColumnPropNameInRow="ArrivalWeight" msprop:Generator_ColumnVarNameInTable="columnArrivalWeight" msprop:Generator_ColumnPropNameInTable="ArrivalWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Delivered" msprop:Generator_UserColumnName="Delivered" msprop:Generator_ColumnPropNameInRow="Delivered" msprop:Generator_ColumnVarNameInTable="columnDelivered" msprop:Generator_ColumnPropNameInTable="DeliveredColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DeliveredWeight" msprop:Generator_UserColumnName="DeliveredWeight" msprop:Generator_ColumnPropNameInRow="DeliveredWeight" msprop:Generator_ColumnVarNameInTable="columnDeliveredWeight" msprop:Generator_ColumnPropNameInTable="DeliveredWeightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="FlightOrigin" msprop:Generator_UserColumnName="FlightOrigin" msprop:Generator_ColumnPropNameInRow="FlightOrigin" msprop:Generator_ColumnVarNameInTable="columnFlightOrigin" msprop:Generator_ColumnPropNameInTable="FlightOriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightDestination" msprop:Generator_UserColumnName="FlightDestination" msprop:Generator_ColumnPropNameInRow="FlightDestination" msprop:Generator_ColumnVarNameInTable="columnFlightDestination" msprop:Generator_ColumnPropNameInTable="FlightDestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AcceptedPcs" msprop:Generator_UserColumnName="AcceptedPcs" msprop:Generator_ColumnPropNameInRow="AcceptedPcs" msprop:Generator_ColumnVarNameInTable="columnAcceptedPcs" msprop:Generator_ColumnPropNameInTable="AcceptedPcsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AcceptedWgt" msprop:Generator_UserColumnName="AcceptedWgt" msprop:Generator_ColumnPropNameInRow="AcceptedWgt" msprop:Generator_ColumnVarNameInTable="columnAcceptedWgt" msprop:Generator_ColumnPropNameInTable="AcceptedWgtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IsVoid" msprop:Generator_UserColumnName="IsVoid" msprop:Generator_ColumnPropNameInRow="IsVoid" msprop:Generator_ColumnVarNameInTable="columnIsVoid" msprop:Generator_ColumnPropNameInTable="IsVoidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CommodityDesc" msprop:Generator_UserColumnName="CommodityDesc" msprop:Generator_ColumnPropNameInRow="CommodityDesc" msprop:Generator_ColumnVarNameInTable="columnCommodityDesc" msprop:Generator_ColumnPropNameInTable="CommodityDescColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ExecutedBy" msprop:Generator_UserColumnName="ExecutedBy" msprop:Generator_ColumnPropNameInRow="ExecutedBy" msprop:Generator_ColumnVarNameInTable="columnExecutedBy" msprop:Generator_ColumnPropNameInTable="ExecutedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DlvrDate" msprop:Generator_UserColumnName="DlvrDate" msprop:Generator_ColumnPropNameInRow="DlvrDate" msprop:Generator_ColumnVarNameInTable="columnDlvrDate" msprop:Generator_ColumnPropNameInTable="DlvrDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DlvrTime" msprop:Generator_UserColumnName="DlvrTime" msprop:Generator_ColumnPropNameInRow="DlvrTime" msprop:Generator_ColumnVarNameInTable="columnDlvrTime" msprop:Generator_ColumnPropNameInTable="DlvrTimeColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtrptAWBMovementSUB" msprop:Generator_UserTableName="dtrptAWBMovementSUB" msprop:Generator_RowDeletedName="dtrptAWBMovementSUBRowDeleted" msprop:Generator_RowChangedName="dtrptAWBMovementSUBRowChanged" msprop:Generator_RowClassName="dtrptAWBMovementSUBRow" msprop:Generator_RowChangingName="dtrptAWBMovementSUBRowChanging" msprop:Generator_RowEvArgName="dtrptAWBMovementSUBRowChangeEvent" msprop:Generator_RowEvHandlerName="dtrptAWBMovementSUBRowChangeEventHandler" msprop:Generator_TableClassName="dtrptAWBMovementSUBDataTable" msprop:Generator_TableVarName="tabledtrptAWBMovementSUB" msprop:Generator_RowDeletingName="dtrptAWBMovementSUBRowDeleting" msprop:Generator_TablePropName="dtrptAWBMovementSUB">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Country" msprop:Generator_UserColumnName="Country" msprop:Generator_ColumnPropNameInRow="Country" msprop:Generator_ColumnVarNameInTable="columnCountry" msprop:Generator_ColumnPropNameInTable="CountryColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FromDt" msprop:Generator_UserColumnName="FromDt" msprop:Generator_ColumnPropNameInRow="FromDt" msprop:Generator_ColumnVarNameInTable="columnFromDt" msprop:Generator_ColumnPropNameInTable="FromDtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDt" msprop:Generator_UserColumnName="ToDt" msprop:Generator_ColumnPropNameInRow="ToDt" msprop:Generator_ColumnVarNameInTable="columnToDt" msprop:Generator_ColumnPropNameInTable="ToDtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Region" msprop:Generator_UserColumnName="Region" msprop:Generator_ColumnPropNameInRow="Region" msprop:Generator_ColumnVarNameInTable="columnRegion" msprop:Generator_ColumnPropNameInTable="RegionColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNo" msprop:Generator_UserColumnName="AWBNo" msprop:Generator_ColumnPropNameInRow="AWBNo" msprop:Generator_ColumnVarNameInTable="columnAWBNo" msprop:Generator_ColumnPropNameInTable="AWBNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightID" msprop:Generator_UserColumnName="FlightID" msprop:Generator_ColumnPropNameInRow="FlightID" msprop:Generator_ColumnVarNameInTable="columnFlightID" msprop:Generator_ColumnPropNameInTable="FlightIDColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

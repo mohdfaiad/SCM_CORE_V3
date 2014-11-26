@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="26">
+    <Item id="0" Name="SerialNo" Caption="Serial No" />
+    <Item id="1" Name="AWBNumber" Caption="AWBNumber" />
+    <Item id="2" Name="FullName" Caption="Full Name" />
+    <Item id="3" Name="Address" Caption="Address" />
+    <Item id="4" Name="Phone" Caption="Phone" />
+    <Item id="5" Name="Mobile" Caption="Mobile" />
+    <Item id="6" Name="Fax" Caption="Fax" />
+    <Item id="7" Name="Email" Caption="Email" />
+    <Item id="8" Name="ClaimType" Caption="Claim Type" />
+    <Item id="9" Name="ClaimDetails" Caption="Claim Details" />
+    <Item id="10" Name="TotalWgt" Caption="Total Wgt" />
+    <Item id="11" Name="TotalPcs" Caption="Total Pcs" />
+    <Item id="12" Name="MishandledWgt" Caption="Mishandled Wgt" />
+    <Item id="13" Name="MishandledPcs" Caption="Mishandled Pcs" />
+    <Item id="14" Name="Commodity" Caption="Commodity" />
+    <Item id="15" Name="ClaimAmt" Caption="Claim Amt" />
+    <Item id="16" Name="ApprovalAmt" Caption="Approval Amt" />
+    <Item id="17" Name="PayMode" Caption="Pay Mode" />
+    <Item id="18" Name="DisbursedAmt" Caption="Disbursed Amt" />
+    <Item id="19" Name="DisbursmentDetails" Caption="Disbursment Details" />
+    <Item id="20" Name="ClaimStation" Caption="Claim Station" />
+    <Item id="21" Name="Status" Caption="Status" />
+    <Item id="22" Name="HandledBy" Caption="Handled By" />
+    <Item id="23" Name="ClaimDate" Caption="Claim Date" />
+    <Item id="24" Name="Currency" Caption="Currency" />
+    <Item id="25" Name="AWBPrefix" Caption="AWBPrefix" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="18">
+        <Item id="0">
+          <Name>AWBNumber</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBNumber.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>FullName</Name>
+          <Caption>Full Name</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!FullName.Value</Expression>
+          <CaptionExpression Type="String">=Fields!FullName.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>Address</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Address.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Address.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>Phone</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Phone.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Phone.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>Mobile</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Mobile.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Mobile.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>Fax</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Fax.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Fax.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>Email</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Email.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Email.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>ClaimType</Name>
+          <Caption>Claim Type</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ClaimType.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ClaimType.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>ClaimDetails</Name>
+          <Caption>Claim Details</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ClaimDetails.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ClaimDetails.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>Commodity</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Commodity.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Commodity.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>PayMode</Name>
+          <Caption>Pay Mode</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!PayMode.Value</Expression>
+          <CaptionExpression Type="String">=Fields!PayMode.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>DisbursmentDetails</Name>
+          <Caption>Disbursment Details</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!DisbursmentDetails.Value</Expression>
+          <CaptionExpression Type="String">=Fields!DisbursmentDetails.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>ClaimStation</Name>
+          <Caption>Claim Station</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ClaimStation.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ClaimStation.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>Status</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Status.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Status.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>HandledBy</Name>
+          <Caption>Handled By</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!HandledBy.Value</Expression>
+          <CaptionExpression Type="String">=Fields!HandledBy.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>ClaimDate</Name>
+          <Caption>Claim Date</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ClaimDate.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ClaimDate.Value</CaptionExpression>
+        </Item>
+        <Item id="16">
+          <Name>Currency</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Currency.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Currency.Value</CaptionExpression>
+        </Item>
+        <Item id="17">
+          <Name>AWBPrefix</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBPrefix.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBPrefix.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AWBNumber]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="8">
+        <Item id="0">
+          <Name>SerialNo</Name>
+          <Caption>Serial No</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!SerialNo.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>TotalWgt</Name>
+          <Caption>Total Wgt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!TotalWgt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>TotalPcs</Name>
+          <Caption>Total Pcs</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!TotalPcs.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>MishandledWgt</Name>
+          <Caption>Mishandled Wgt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!MishandledWgt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>MishandledPcs</Name>
+          <Caption>Mishandled Pcs</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!MishandledPcs.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="5">
+          <Name>ClaimAmt</Name>
+          <Caption>Claim Amt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!ClaimAmt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="6">
+          <Name>ApprovalAmt</Name>
+          <Caption>Approval Amt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!ApprovalAmt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="7">
+          <Name>DisbursedAmt</Name>
+          <Caption>Disbursed Amt</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!DisbursedAmt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsARPaymentSummary" targetNamespace="http://tempuri.org/dsARPaymentSummary.xsd" xmlns:mstns="http://tempuri.org/dsARPaymentSummary.xsd" xmlns="http://tempuri.org/dsARPaymentSummary.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsARPaymentSummary" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsARPaymentSummary" msprop:Generator_UserDSName="dsARPaymentSummary" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtPaymentSummary" msprop:Generator_UserTableName="dtPaymentSummary" msprop:Generator_RowDeletedName="dtPaymentSummaryRowDeleted" msprop:Generator_TableClassName="dtPaymentSummaryDataTable" msprop:Generator_RowChangedName="dtPaymentSummaryRowChanged" msprop:Generator_RowClassName="dtPaymentSummaryRow" msprop:Generator_RowChangingName="dtPaymentSummaryRowChanging" msprop:Generator_RowEvArgName="dtPaymentSummaryRowChangeEvent" msprop:Generator_RowEvHandlerName="dtPaymentSummaryRowChangeEventHandler" msprop:Generator_TablePropName="dtPaymentSummary" msprop:Generator_TableVarName="tabledtPaymentSummary" msprop:Generator_RowDeletingName="dtPaymentSummaryRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AgentCode" msprop:Generator_UserColumnName="AgentCode" msprop:Generator_ColumnPropNameInRow="AgentCode" msprop:Generator_ColumnVarNameInTable="columnAgentCode" msprop:Generator_ColumnPropNameInTable="AgentCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AmtPaid" msprop:Generator_UserColumnName="AmtPaid" msprop:Generator_ColumnPropNameInRow="AmtPaid" msprop:Generator_ColumnVarNameInTable="columnAmtPaid" msprop:Generator_ColumnPropNameInTable="AmtPaidColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AmtDeposited" msprop:Generator_UserColumnName="AmtDeposited" msprop:Generator_ColumnPropNameInRow="AmtDeposited" msprop:Generator_ColumnVarNameInTable="columnAmtDeposited" msprop:Generator_ColumnPropNameInTable="AmtDepositedColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="TAXWithHeld" msprop:Generator_UserColumnName="TAXWithHeld" msprop:Generator_ColumnPropNameInRow="TAXWithHeld" msprop:Generator_ColumnVarNameInTable="columnTAXWithHeld" msprop:Generator_ColumnPropNameInTable="TAXWithHeldColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VATWithHeld" msprop:Generator_UserColumnName="VATWithHeld" msprop:Generator_ColumnPropNameInRow="VATWithHeld" msprop:Generator_ColumnVarNameInTable="columnVATWithHeld" msprop:Generator_ColumnPropNameInTable="VATWithHeldColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTH" msprop:Generator_UserColumnName="MONTH" msprop:Generator_ColumnPropNameInRow="MONTH" msprop:Generator_ColumnVarNameInTable="columnMONTH" msprop:Generator_ColumnPropNameInTable="MONTHColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="YEAR" msprop:Generator_UserColumnName="YEAR" msprop:Generator_ColumnPropNameInRow="YEAR" msprop:Generator_ColumnVarNameInTable="columnYEAR" msprop:Generator_ColumnPropNameInTable="YEARColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Agent1" msprop:Generator_UserColumnName="Agent1" msprop:Generator_ColumnPropNameInRow="Agent1" msprop:Generator_ColumnVarNameInTable="columnAgent1" msprop:Generator_ColumnPropNameInTable="Agent1Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

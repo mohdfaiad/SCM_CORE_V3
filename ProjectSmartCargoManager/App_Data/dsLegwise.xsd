@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsLegwise" targetNamespace="http://tempuri.org/dsLegwise.xsd" xmlns:mstns="http://tempuri.org/dsLegwise.xsd" xmlns="http://tempuri.org/dsLegwise.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsLegwise" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsLegwise" msprop:Generator_DataSetName="dsLegwise" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtLegwise" msprop:Generator_UserTableName="dtLegwise" msprop:Generator_RowDeletedName="dtLegwiseRowDeleted" msprop:Generator_RowChangedName="dtLegwiseRowChanged" msprop:Generator_RowClassName="dtLegwiseRow" msprop:Generator_RowChangingName="dtLegwiseRowChanging" msprop:Generator_RowEvArgName="dtLegwiseRowChangeEvent" msprop:Generator_RowEvHandlerName="dtLegwiseRowChangeEventHandler" msprop:Generator_TableClassName="dtLegwiseDataTable" msprop:Generator_TableVarName="tabledtLegwise" msprop:Generator_RowDeletingName="dtLegwiseRowDeleting" msprop:Generator_TablePropName="dtLegwise">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumber" msprop:Generator_UserColumnName="AWBNumber" msprop:Generator_ColumnVarNameInTable="columnAWBNumber" msprop:Generator_ColumnPropNameInRow="AWBNumber" msprop:Generator_ColumnPropNameInTable="AWBNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightNo" msprop:Generator_UserColumnName="FlightNo" msprop:Generator_ColumnVarNameInTable="columnFlightNo" msprop:Generator_ColumnPropNameInRow="FlightNo" msprop:Generator_ColumnPropNameInTable="FlightNoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FlightDate" msprop:Generator_UserColumnName="FlightDate" msprop:Generator_ColumnVarNameInTable="columnFlightDate" msprop:Generator_ColumnPropNameInRow="FlightDate" msprop:Generator_ColumnPropNameInTable="FlightDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Freight" msprop:Generator_UserColumnName="Freight" msprop:Generator_ColumnVarNameInTable="columnFreight" msprop:Generator_ColumnPropNameInRow="Freight" msprop:Generator_ColumnPropNameInTable="FreightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Proration" msprop:Generator_UserColumnName="Proration" msprop:Generator_ColumnVarNameInTable="columnProration" msprop:Generator_ColumnPropNameInRow="Proration" msprop:Generator_ColumnPropNameInTable="ProrationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CostType" msprop:Generator_UserColumnName="CostType" msprop:Generator_ColumnVarNameInTable="columnCostType" msprop:Generator_ColumnPropNameInRow="CostType" msprop:Generator_ColumnPropNameInTable="CostTypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtLegwiseSub" msprop:Generator_UserTableName="dtLegwiseSub" msprop:Generator_RowDeletedName="dtLegwiseSubRowDeleted" msprop:Generator_RowChangedName="dtLegwiseSubRowChanged" msprop:Generator_RowClassName="dtLegwiseSubRow" msprop:Generator_RowChangingName="dtLegwiseSubRowChanging" msprop:Generator_RowEvArgName="dtLegwiseSubRowChangeEvent" msprop:Generator_RowEvHandlerName="dtLegwiseSubRowChangeEventHandler" msprop:Generator_TableClassName="dtLegwiseSubDataTable" msprop:Generator_TableVarName="tabledtLegwiseSub" msprop:Generator_RowDeletingName="dtLegwiseSubRowDeleting" msprop:Generator_TablePropName="dtLegwiseSub">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FromDate" msprop:Generator_UserColumnName="FromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDate" msprop:Generator_UserColumnName="ToDate" msprop:Generator_ColumnPropNameInRow="ToDate" msprop:Generator_ColumnVarNameInTable="columnToDate" msprop:Generator_ColumnPropNameInTable="ToDateColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="rptGSARevenueInterline" targetNamespace="http://tempuri.org/rptGSARevenueInterline.xsd" xmlns:mstns="http://tempuri.org/rptGSARevenueInterline.xsd" xmlns="http://tempuri.org/rptGSARevenueInterline.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="rptGSARevenueInterline" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="rptGSARevenueInterline" msprop:Generator_DataSetName="rptGSARevenueInterline" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable2" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowClassName="DataTable2Row" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_TablePropName="DataTable2">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssuedDate" msprop:Generator_UserColumnName="IssuedDate" msprop:Generator_ColumnPropNameInRow="IssuedDate" msprop:Generator_ColumnVarNameInTable="columnIssuedDate" msprop:Generator_ColumnPropNameInTable="IssuedDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBPrefix" msprop:Generator_UserColumnName="AWBPrefix" msprop:Generator_ColumnPropNameInRow="AWBPrefix" msprop:Generator_ColumnVarNameInTable="columnAWBPrefix" msprop:Generator_ColumnPropNameInTable="AWBPrefixColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNumber" msprop:Generator_UserColumnName="AWBNumber" msprop:Generator_ColumnPropNameInRow="AWBNumber" msprop:Generator_ColumnVarNameInTable="columnAWBNumber" msprop:Generator_ColumnPropNameInTable="AWBNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GrossWt" msprop:Generator_UserColumnName="GrossWt" msprop:Generator_ColumnPropNameInRow="GrossWt" msprop:Generator_ColumnVarNameInTable="columnGrossWt" msprop:Generator_ColumnPropNameInTable="GrossWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ChargeableWt" msprop:Generator_UserColumnName="ChargeableWt" msprop:Generator_ColumnPropNameInRow="ChargeableWt" msprop:Generator_ColumnVarNameInTable="columnChargeableWt" msprop:Generator_ColumnPropNameInTable="ChargeableWtColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsignmentFrom" msprop:Generator_UserColumnName="ConsignmentFrom" msprop:Generator_ColumnPropNameInRow="ConsignmentFrom" msprop:Generator_ColumnVarNameInTable="columnConsignmentFrom" msprop:Generator_ColumnPropNameInTable="ConsignmentFromColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ConsignmentTo" msprop:Generator_UserColumnName="ConsignmentTo" msprop:Generator_ColumnPropNameInRow="ConsignmentTo" msprop:Generator_ColumnVarNameInTable="columnConsignmentTo" msprop:Generator_ColumnPropNameInTable="ConsignmentToColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CarriageFrom" msprop:Generator_UserColumnName="CarriageFrom" msprop:Generator_ColumnPropNameInRow="CarriageFrom" msprop:Generator_ColumnVarNameInTable="columnCarriageFrom" msprop:Generator_ColumnPropNameInTable="CarriageFromColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CarriageTo" msprop:Generator_UserColumnName="CarriageTo" msprop:Generator_ColumnPropNameInRow="CarriageTo" msprop:Generator_ColumnVarNameInTable="columnCarriageTo" msprop:Generator_ColumnPropNameInTable="CarriageToColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Remarks" msprop:Generator_UserColumnName="Remarks" msprop:Generator_ColumnPropNameInRow="Remarks" msprop:Generator_ColumnVarNameInTable="columnRemarks" msprop:Generator_ColumnPropNameInTable="RemarksColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GSACode" msprop:Generator_UserColumnName="GSACode" msprop:Generator_ColumnPropNameInRow="GSACode" msprop:Generator_ColumnVarNameInTable="columnGSACode" msprop:Generator_ColumnPropNameInTable="GSACodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GSAName" msprop:Generator_UserColumnName="GSAName" msprop:Generator_ColumnPropNameInRow="GSAName" msprop:Generator_ColumnVarNameInTable="columnGSAName" msprop:Generator_ColumnPropNameInTable="GSANameColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientName" msprop:Generator_UserColumnName="ClientName" msprop:Generator_ColumnVarNameInTable="columnClientName" msprop:Generator_ColumnPropNameInRow="ClientName" msprop:Generator_ColumnPropNameInTable="ClientNameColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

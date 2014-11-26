@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsfrmULDMovementHistory" targetNamespace="http://tempuri.org/dsfrmULDMovementHistory.xsd" xmlns:mstns="http://tempuri.org/dsfrmULDMovementHistory.xsd" xmlns="http://tempuri.org/dsfrmULDMovementHistory.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsfrmULDMovementHistory" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsfrmULDMovementHistory" msprop:Generator_DataSetName="dsfrmULDMovementHistory" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtfrmULDMovementHistory" msprop:Generator_UserTableName="dtfrmULDMovementHistory" msprop:Generator_RowDeletedName="dtfrmULDMovementHistoryRowDeleted" msprop:Generator_RowChangedName="dtfrmULDMovementHistoryRowChanged" msprop:Generator_RowClassName="dtfrmULDMovementHistoryRow" msprop:Generator_RowChangingName="dtfrmULDMovementHistoryRowChanging" msprop:Generator_RowEvArgName="dtfrmULDMovementHistoryRowChangeEvent" msprop:Generator_RowEvHandlerName="dtfrmULDMovementHistoryRowChangeEventHandler" msprop:Generator_TableClassName="dtfrmULDMovementHistoryDataTable" msprop:Generator_TableVarName="tabledtfrmULDMovementHistory" msprop:Generator_RowDeletingName="dtfrmULDMovementHistoryRowDeleting" msprop:Generator_TablePropName="dtfrmULDMovementHistory">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ULDNumber" msprop:Generator_UserColumnName="ULDNumber" msprop:Generator_ColumnVarNameInTable="columnULDNumber" msprop:Generator_ColumnPropNameInRow="ULDNumber" msprop:Generator_ColumnPropNameInTable="ULDNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Origin" msprop:Generator_UserColumnName="Origin" msprop:Generator_ColumnVarNameInTable="columnOrigin" msprop:Generator_ColumnPropNameInRow="Origin" msprop:Generator_ColumnPropNameInTable="OriginColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Destination" msprop:Generator_UserColumnName="Destination" msprop:Generator_ColumnVarNameInTable="columnDestination" msprop:Generator_ColumnPropNameInRow="Destination" msprop:Generator_ColumnPropNameInTable="DestinationColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Flight" msprop:Generator_UserColumnName="Flight" msprop:Generator_ColumnVarNameInTable="columnFlight" msprop:Generator_ColumnPropNameInRow="Flight" msprop:Generator_ColumnPropNameInTable="FlightColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Status" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="MovedOn" msprop:Generator_UserColumnName="MovedOn" msprop:Generator_ColumnVarNameInTable="columnMovedOn" msprop:Generator_ColumnPropNameInRow="MovedOn" msprop:Generator_ColumnPropNameInTable="MovedOnColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Type" msprop:Generator_UserColumnName="Type" msprop:Generator_ColumnVarNameInTable="columnType" msprop:Generator_ColumnPropNameInRow="Type" msprop:Generator_ColumnPropNameInTable="TypeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UpdatedBy" msprop:Generator_UserColumnName="UpdatedBy" msprop:Generator_ColumnVarNameInTable="columnUpdatedBy" msprop:Generator_ColumnPropNameInRow="UpdatedBy" msprop:Generator_ColumnPropNameInTable="UpdatedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="OpsStatus" msprop:Generator_UserColumnName="OpsStatus" msprop:Generator_ColumnPropNameInRow="OpsStatus" msprop:Generator_ColumnVarNameInTable="columnOpsStatus" msprop:Generator_ColumnPropNameInTable="OpsStatusColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

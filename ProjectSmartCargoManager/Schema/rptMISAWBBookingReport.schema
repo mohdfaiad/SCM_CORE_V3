@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="20">
+               <Item id="0" Name="AWBNumber" Caption="AWBNumber" />
+               <Item id="1" Name="Pieces" Caption="Pieces" />
+               <Item id="2" Name="GrossWeight" Caption="Gross Weight" />
+               <Item id="3" Name="ChargedWeight" Caption="Charged Weight" />
+               <Item id="4" Name="OriginCode" Caption="Origin Code" />
+               <Item id="5" Name="DestinationCode" Caption="Destination Code" />
+               <Item id="6" Name="AgentCode" Caption="Agent Code" />
+               <Item id="7" Name="AgentName" Caption="Agent Name" />
+               <Item id="8" Name="FrtIATA" Caption="Frt IATA" />
+               <Item id="9" Name="OCDueCar" Caption="OCDue Car" />
+               <Item id="10" Name="OCDueAgent" Caption="OCDue Agent" />
+               <Item id="11" Name="ServTax" Caption="Serv Tax" />
+               <Item id="12" Name="Total" Caption="Total" />
+               <Item id="13" Name="Date" Caption="Date" />
+               <Item id="14" Name="FlightDetails" Caption="Flight Details" />
+               <Item id="15" Name="Status" Caption="Status" />
+               <Item id="16" Name="CommodityCode" Caption="Commodity Code" />
+               <Item id="17" Name="FltNumber" Caption="Flt Number" />
+               <Item id="18" Name="FltDate" Caption="Flt Date" />
+               <Item id="19" Name="ControllingLocatorCode" Caption="Controlling Locator Code" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="12">
+                               <Item id="0">
+                                       <Name>AWBNumber</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AWBNumber.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AWBNumber.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>OriginCode</Name>
+                                       <Caption>Origin Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!OriginCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!OriginCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>DestinationCode</Name>
+                                       <Caption>Destination Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!DestinationCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!DestinationCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="3">
+                                       <Name>AgentCode</Name>
+                                       <Caption>Agent Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AgentCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AgentCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="4">
+                                       <Name>AgentName</Name>
+                                       <Caption>Agent Name</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AgentName.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AgentName.Value</CaptionExpression>
+                               </Item>
+                               <Item id="5">
+                                       <Name>Date</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Date.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Date.Value</CaptionExpression>
+                               </Item>
+                               <Item id="6">
+                                       <Name>FlightDetails</Name>
+                                       <Caption>Flight Details</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!FlightDetails.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FlightDetails.Value</CaptionExpression>
+                               </Item>
+                               <Item id="7">
+                                       <Name>Status</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Status.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Status.Value</CaptionExpression>
+                               </Item>
+                               <Item id="8">
+                                       <Name>CommodityCode</Name>
+                                       <Caption>Commodity Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!CommodityCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CommodityCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="9">
+                                       <Name>FltNumber</Name>
+                                       <Caption>Flt Number</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!FltNumber.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FltNumber.Value</CaptionExpression>
+                               </Item>
+                               <Item id="10">
+                                       <Name>FltDate</Name>
+                                       <Caption>Flt Date</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!FltDate.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FltDate.Value</CaptionExpression>
+                               </Item>
+                               <Item id="11">
+                                       <Name>ControllingLocatorCode</Name>
+                                       <Caption>Controlling Locator Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!ControllingLocatorCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ControllingLocatorCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="12">
+                                       <Name>Pieces</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!Pieces.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Pieces.Value</CaptionExpression>
+                               </Item>
+                               <Item id="13">
+                                       <Name>GrossWeight</Name>
+                                       <Caption>Gross Weight</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!GrossWeight.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!GrossWeight.Value</CaptionExpression>
+                               </Item>
+                               <Item id="14">
+                                       <Name>ChargedWeight</Name>
+                                       <Caption>Charged Weight</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!ChargedWeight.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ChargedWeight.Value</CaptionExpression>
+                               </Item>
+                               <Item id="15">
+                                       <Name>FrtIATA</Name>
+                                       <Caption>Frt IATA</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!FrtIATA.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FrtIATA.Value</CaptionExpression>
+                               </Item>
+                               <Item id="16">
+                                       <Name>OCDueCar</Name>
+                                       <Caption>OCDue Car</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!OCDueCar.Value</Expression>
+                                        <CaptionExpression Type="String">=Fields!OCDueCar.Value</CaptionExpression>
+                               </Item>
+                               <Item id="17">
+                                       <Name>OCDueAgent</Name>
+                                       <Caption>OCDue Agent</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!OCDueAgent.Value</Expression>
+                                        <CaptionExpression Type="String">=Fields!OCDueAgent.Value</CaptionExpression>
+                               </Item>
+                               <Item id="18">
+                                       <Name>ServTax</Name>
+                                       <Caption>Serv Tax</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!ServTax.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ServTax.Value</CaptionExpression>
+                               </Item>
+                               <Item id="19">
+                                       <Name>Total</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!Total.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Total.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[AWBNumber]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="8">
+                               <Item id="0">
+                                       <Name>Pieces</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!Pieces.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="1">
+                                       <Name>GrossWeight</Name>
+                                       <Caption>Gross Weight</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!GrossWeight.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="2">
+                                       <Name>ChargedWeight</Name>
+                                       <Caption>Charged Weight</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!ChargedWeight.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="3">
+                                       <Name>FrtIATA</Name>
+                                       <Caption>Frt IATA</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!FrtIATA.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="4">
+                                       <Name>OCDueCar</Name>
+                                       <Caption>OCDue Car</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!OCDueCar.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="5">
+                                       <Name>OCDueAgent</Name>
+                                       <Caption>OCDue Agent</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!OCDueAgent.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="6">
+                                       <Name>ServTax</Name>
+                                       <Caption>Serv Tax</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!ServTax.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="7">
+                                       <Name>Total</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!Total.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

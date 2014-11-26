@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="3">
+               <Item id="0" Name="Origin" Caption="Origin" />
+               <Item id="1" Name="Destination" Caption="Destination" />
+               <Item id="2" Name="CTonnage" Caption="CTonnage" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="3">
+                               <Item id="0">
+                                       <Name>Origin</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Origin.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Origin.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>Destination</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Destination.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Destination.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>CTonnage</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CTonnage.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CTonnage.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[Origin]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="1">
+                               <Item id="0">
+                                       <Name>CTonnage</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CTonnage.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

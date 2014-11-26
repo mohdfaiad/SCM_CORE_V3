@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://Flyware.net/eLS/2008/10" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="CargoControlService" targetNamespace="http://Flyware.net/eLS/2008/10" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="qualified" targetNamespace="http://Flyware.net/eLS/2008/10" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.datacontract.org/2004/07/Flyware.eLSEntities.ExtServices.ExtCargo" />
+      <xs:element name="UploadCargo">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="cargoRequestSimple" nillable="true" type="tns:CargoRequestSimple" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="CargoRequestSimple">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:CargoRequestBase">
+            <xs:sequence>
+              <xs:element name="CargoItems" nillable="true" type="tns:ArrayOfCargo" />
+              <xs:element name="Password" nillable="true" type="xs:string" />
+              <xs:element name="User" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="CargoRequestSimple" nillable="true" type="tns:CargoRequestSimple" />
+      <xs:complexType name="CargoRequestBase">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:RequestBase">
+            <xs:sequence>
+              <xs:element name="Arrival" nillable="true" type="xs:string" />
+              <xs:element name="Departure" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="CargoRequestBase" nillable="true" type="tns:CargoRequestBase" />
+      <xs:complexType name="RequestBase">
+        <xs:sequence>
+          <xs:element name="AirlineIdentifier" nillable="true" type="xs:string" />
+          <xs:element name="FlightNumber" nillable="true" type="xs:string" />
+          <xs:element name="STD" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="RequestBase" nillable="true" type="tns:RequestBase" />
+      <xs:complexType name="ArrayOfCargo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="Cargo" nillable="true" type="tns:Cargo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="ArrayOfCargo" nillable="true" type="tns:ArrayOfCargo" />
+      <xs:complexType name="Cargo">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Flyware.eLSEntities.ExtServices.ExtCargo" name="CargoType" type="q1:CargoType" />
+          <xs:element name="CheckWeight" type="xs:int" />
+          <xs:element name="Destination" nillable="true" type="xs:string" />
+          <xs:element name="Identifier" nillable="true" type="xs:string" />
+          <xs:element name="LoadInfoCode" nillable="true" type="xs:string" />
+          <xs:element name="NrUnits" type="xs:int" />
+          <xs:element name="Origin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SpecialInfoCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TareWeight" type="xs:int" />
+          <xs:element name="TypeCode" nillable="true" type="xs:string" />
+          <xs:element name="ULDNumber" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="Cargo" nillable="true" type="tns:Cargo" />
+      <xs:element name="UploadCargoResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="UploadCargoResult" nillable="true" type="tns:CargoResponseSimple" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:complexType name="CargoResponseSimple">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:CargoRequestBase">
+            <xs:sequence>
+              <xs:element name="ErrorCode" nillable="true" type="xs:string" />
+              <xs:element name="ErrorMessage" nillable="true" type="xs:string" />
+              <xs:element name="ResponseStatus" type="tns:CargoResponseStatus" />
+              <xs:element minOccurs="0" name="UploadMessage" nillable="true" type="xs:string" />
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="CargoResponseSimple" nillable="true" type="tns:CargoResponseSimple" />
+      <xs:simpleType name="CargoResponseStatus">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Success" />
+          <xs:enumeration value="Error" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="CargoResponseStatus" nillable="true" type="tns:CargoResponseStatus" />
+      <xs:complexType name="SystemFault">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:FaultContractBase">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="SystemFault" nillable="true" type="tns:SystemFault" />
+      <xs:complexType name="FaultContractBase">
+        <xs:sequence>
+          <xs:element name="ErrorCode" nillable="true" type="xs:string" />
+          <xs:element name="ErrorType" nillable="true" type="xs:string" />
+          <xs:element name="InnerMessage" nillable="true" type="xs:string" />
+          <xs:element name="Message" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="FaultContractBase" nillable="true" type="tns:FaultContractBase" />
+      <xs:complexType name="LogicFault">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:FaultContractBase">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="LogicFault" nillable="true" type="tns:LogicFault" />
+      <xs:complexType name="SecurityFault">
+        <xs:complexContent mixed="false">
+          <xs:extension base="tns:FaultContractBase">
+            <xs:sequence />
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:element name="SecurityFault" nillable="true" type="tns:SecurityFault" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.microsoft.com/2003/10/Serialization/" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="anyType" nillable="true" type="xs:anyType" />
+      <xs:element name="anyURI" nillable="true" type="xs:anyURI" />
+      <xs:element name="base64Binary" nillable="true" type="xs:base64Binary" />
+      <xs:element name="boolean" nillable="true" type="xs:boolean" />
+      <xs:element name="byte" nillable="true" type="xs:byte" />
+      <xs:element name="dateTime" nillable="true" type="xs:dateTime" />
+      <xs:element name="decimal" nillable="true" type="xs:decimal" />
+      <xs:element name="double" nillable="true" type="xs:double" />
+      <xs:element name="float" nillable="true" type="xs:float" />
+      <xs:element name="int" nillable="true" type="xs:int" />
+      <xs:element name="long" nillable="true" type="xs:long" />
+      <xs:element name="QName" nillable="true" type="xs:QName" />
+      <xs:element name="short" nillable="true" type="xs:short" />
+      <xs:element name="string" nillable="true" type="xs:string" />
+      <xs:element name="unsignedByte" nillable="true" type="xs:unsignedByte" />
+      <xs:element name="unsignedInt" nillable="true" type="xs:unsignedInt" />
+      <xs:element name="unsignedLong" nillable="true" type="xs:unsignedLong" />
+      <xs:element name="unsignedShort" nillable="true" type="xs:unsignedShort" />
+      <xs:element name="char" nillable="true" type="tns:char" />
+      <xs:simpleType name="char">
+        <xs:restriction base="xs:int" />
+      </xs:simpleType>
+      <xs:element name="duration" nillable="true" type="tns:duration" />
+      <xs:simpleType name="duration">
+        <xs:restriction base="xs:duration">
+          <xs:pattern value="\-?P(\d*D)?(T(\d*H)?(\d*M)?(\d*(\.\d*)?S)?)?" />
+          <xs:minInclusive value="-P10675199DT2H48M5.4775808S" />
+          <xs:maxInclusive value="P10675199DT2H48M5.4775807S" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="guid" nillable="true" type="tns:guid" />
+      <xs:simpleType name="guid">
+        <xs:restriction base="xs:string">
+          <xs:pattern value="[\da-fA-F]{8}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{4}-[\da-fA-F]{12}" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:attribute name="FactoryType" type="xs:QName" />
+      <xs:attribute name="Id" type="xs:ID" />
+      <xs:attribute name="Ref" type="xs:IDREF" />
+    </xs:schema>
+    <xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Flyware.eLSEntities.ExtServices.ExtCargo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Flyware.eLSEntities.ExtServices.ExtCargo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="CargoType">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="Pallet" />
+          <xs:enumeration value="Container" />
+          <xs:enumeration value="LooseUnit" />
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="CargoType" nillable="true" type="tns:CargoType" />
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ICargoControlService_UploadCargo_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadCargo" />
+  </wsdl:message>
+  <wsdl:message name="ICargoControlService_UploadCargo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadCargoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICargoControlService_UploadCargo_SystemFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:SystemFault" />
+  </wsdl:message>
+  <wsdl:message name="ICargoControlService_UploadCargo_LogicFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:LogicFault" />
+  </wsdl:message>
+  <wsdl:message name="ICargoControlService_UploadCargo_SecurityFaultFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:SecurityFault" />
+  </wsdl:message>
+  <wsdl:portType name="ICargoControlService">
+    <wsdl:operation name="UploadCargo">
+      <wsdl:input wsaw:Action="http://Flyware.net/eLS/2008/10/ICargoControlService/UploadCargo" message="tns:ICargoControlService_UploadCargo_InputMessage" />
+      <wsdl:output wsaw:Action="http://Flyware.net/eLS/2008/10/ICargoControlService/UploadCargoResponse" message="tns:ICargoControlService_UploadCargo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://Flyware.net/eLS/2008/10/ICargoControlService/UploadCargoSystemFaultFault" name="SystemFaultFault" message="tns:ICargoControlService_UploadCargo_SystemFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://Flyware.net/eLS/2008/10/ICargoControlService/UploadCargoLogicFaultFault" name="LogicFaultFault" message="tns:ICargoControlService_UploadCargo_LogicFaultFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://Flyware.net/eLS/2008/10/ICargoControlService/UploadCargoSecurityFaultFault" name="SecurityFaultFault" message="tns:ICargoControlService_UploadCargo_SecurityFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ICargoControlService" type="tns:ICargoControlService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UploadCargo">
+      <soap:operation soapAction="http://Flyware.net/eLS/2008/10/ICargoControlService/UploadCargo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SystemFaultFault">
+        <soap:fault use="literal" name="SystemFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="LogicFaultFault">
+        <soap:fault use="literal" name="LogicFaultFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="SecurityFaultFault">
+        <soap:fault use="literal" name="SecurityFaultFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CargoControlService">
+    <wsdl:port name="BasicHttpBinding_ICargoControlService" binding="tns:BasicHttpBinding_ICargoControlService">
+      <soap:address location="http://eloadsheet.flyware.net/CargoServices-test/CargoControlService.svc/basic" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

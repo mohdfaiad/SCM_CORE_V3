@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsrptDailyCollection" targetNamespace="http://tempuri.org/dsrptDailyCollection.xsd" xmlns:mstns="http://tempuri.org/dsrptDailyCollection.xsd" xmlns="http://tempuri.org/dsrptDailyCollection.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsrptDailyCollection" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsrptDailyCollection" msprop:Generator_UserDSName="dsrptDailyCollection" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dsrptDailyCollection" msprop:Generator_UserTableName="dsrptDailyCollection" msprop:Generator_RowDeletedName="dsrptDailyCollectionRowDeleted" msprop:Generator_TableClassName="dsrptDailyCollectionDataTable" msprop:Generator_RowChangedName="dsrptDailyCollectionRowChanged" msprop:Generator_RowClassName="dsrptDailyCollectionRow" msprop:Generator_RowChangingName="dsrptDailyCollectionRowChanging" msprop:Generator_RowEvArgName="dsrptDailyCollectionRowChangeEvent" msprop:Generator_RowEvHandlerName="dsrptDailyCollectionRowChangeEventHandler" msprop:Generator_TablePropName="_dsrptDailyCollection" msprop:Generator_TableVarName="tabledsrptDailyCollection" msprop:Generator_RowDeletingName="dsrptDailyCollectionRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PreparedBy" msprop:Generator_UserColumnName="PreparedBy" msprop:Generator_ColumnPropNameInRow="PreparedBy" msprop:Generator_ColumnVarNameInTable="columnPreparedBy" msprop:Generator_ColumnPropNameInTable="PreparedByColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PreparedOn" msprop:Generator_UserColumnName="PreparedOn" msprop:Generator_ColumnPropNameInRow="PreparedOn" msprop:Generator_ColumnVarNameInTable="columnPreparedOn" msprop:Generator_ColumnPropNameInTable="PreparedOnColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsrptDailyCollectionSubSales" msprop:Generator_UserTableName="dsrptDailyCollectionSubSales" msprop:Generator_RowDeletedName="dsrptDailyCollectionSubSalesRowDeleted" msprop:Generator_TableClassName="dsrptDailyCollectionSubSalesDataTable" msprop:Generator_RowChangedName="dsrptDailyCollectionSubSalesRowChanged" msprop:Generator_RowClassName="dsrptDailyCollectionSubSalesRow" msprop:Generator_RowChangingName="dsrptDailyCollectionSubSalesRowChanging" msprop:Generator_RowEvArgName="dsrptDailyCollectionSubSalesRowChangeEvent" msprop:Generator_RowEvHandlerName="dsrptDailyCollectionSubSalesRowChangeEventHandler" msprop:Generator_TablePropName="dsrptDailyCollectionSubSales" msprop:Generator_TableVarName="tabledsrptDailyCollectionSubSales" msprop:Generator_RowDeletingName="dsrptDailyCollectionSubSalesRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PPCash" msprop:Generator_UserColumnName="PPCash" msprop:Generator_ColumnPropNameInRow="PPCash" msprop:Generator_ColumnVarNameInTable="columnPPCash" msprop:Generator_ColumnPropNameInTable="PPCashColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PPCheck" msprop:Generator_UserColumnName="PPCheck" msprop:Generator_ColumnPropNameInRow="PPCheck" msprop:Generator_ColumnVarNameInTable="columnPPCheck" msprop:Generator_ColumnPropNameInTable="PPCheckColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CC" msprop:Generator_UserColumnName="CC" msprop:Generator_ColumnPropNameInRow="CC" msprop:Generator_ColumnVarNameInTable="columnCC" msprop:Generator_ColumnPropNameInTable="CCColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PXCredit" msprop:Generator_UserColumnName="PXCredit" msprop:Generator_ColumnPropNameInRow="PXCredit" msprop:Generator_ColumnVarNameInTable="columnPXCredit" msprop:Generator_ColumnPropNameInTable="PXCreditColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dsrptDailyCollectionSubCollections" msprop:Generator_UserTableName="dsrptDailyCollectionSubCollections" msprop:Generator_RowDeletedName="dsrptDailyCollectionSubCollectionsRowDeleted" msprop:Generator_TableClassName="dsrptDailyCollectionSubCollectionsDataTable" msprop:Generator_RowChangedName="dsrptDailyCollectionSubCollectionsRowChanged" msprop:Generator_RowClassName="dsrptDailyCollectionSubCollectionsRow" msprop:Generator_RowChangingName="dsrptDailyCollectionSubCollectionsRowChanging" msprop:Generator_RowEvArgName="dsrptDailyCollectionSubCollectionsRowChangeEvent" msprop:Generator_RowEvHandlerName="dsrptDailyCollectionSubCollectionsRowChangeEventHandler" msprop:Generator_TablePropName="dsrptDailyCollectionSubCollections" msprop:Generator_TableVarName="tabledsrptDailyCollectionSubCollections" msprop:Generator_RowDeletingName="dsrptDailyCollectionSubCollectionsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NetCashSales" msprop:Generator_UserColumnName="NetCashSales" msprop:Generator_ColumnPropNameInRow="NetCashSales" msprop:Generator_ColumnVarNameInTable="columnNetCashSales" msprop:Generator_ColumnPropNameInTable="NetCashSalesColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CODCollections" msprop:Generator_UserColumnName="CODCollections" msprop:Generator_ColumnPropNameInRow="CODCollections" msprop:Generator_ColumnVarNameInTable="columnCODCollections" msprop:Generator_ColumnPropNameInTable="CODCollectionsColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COICheck" msprop:Generator_UserColumnName="COICheck" msprop:Generator_ColumnPropNameInRow="COICheck" msprop:Generator_ColumnVarNameInTable="columnCOICheck" msprop:Generator_ColumnPropNameInTable="COICheckColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="COICash" msprop:Generator_UserColumnName="COICash" msprop:Generator_ColumnPropNameInRow="COICash" msprop:Generator_ColumnVarNameInTable="columnCOICash" msprop:Generator_ColumnPropNameInTable="COICashColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CashAvailableDeposit" msprop:Generator_UserColumnName="CashAvailableDeposit" msprop:Generator_ColumnPropNameInRow="CashAvailableDeposit" msprop:Generator_ColumnVarNameInTable="columnCashAvailableDeposit" msprop:Generator_ColumnPropNameInTable="CashAvailableDepositColumn" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

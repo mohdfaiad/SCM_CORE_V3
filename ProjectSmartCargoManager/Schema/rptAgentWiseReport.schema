@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+	<QueryFields listcount="8">
+		<Item id="0" Name="AgentName" Caption="Agent Name" />
+		<Item id="1" Name="CTonnage" Caption="CTonnage" />
+		<Item id="2" Name="CGrossRevenue" Caption="CGross Revenue" />
+		<Item id="3" Name="GrossYield" Caption="Gross Yield" />
+		<Item id="4" Name="CNetRevenue" Caption="CNet Revenue" />
+		<Item id="5" Name="NetYield" Caption="Net Yield" />
+		<Item id="6" Name="FromDate" Caption="From Date" />
+		<Item id="7" Name="ToDate" Caption="To Date" />
+	</QueryFields>
+	<Dimensions listcount="2">
+		<Item id="0">
+			<Name>Attributes</Name>
+			<Fields listcount="3">
+				<Item id="0">
+					<Name>AgentName</Name>
+					<Caption>Agent Name</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!AgentName.Value</Expression>
+					<CaptionExpression Type="String">=Fields!AgentName.Value</CaptionExpression>
+				</Item>
+				<Item id="1">
+					<Name>FromDate</Name>
+					<Caption>From Date</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!FromDate.Value</Expression>
+					<CaptionExpression Type="String">=Fields!FromDate.Value</CaptionExpression>
+				</Item>
+				<Item id="2">
+					<Name>ToDate</Name>
+					<Caption>To Date</Caption>
+					<Type>Attribute</Type>
+					<Expression Type="String">=Fields!ToDate.Value</Expression>
+					<CaptionExpression Type="String">=Fields!ToDate.Value</CaptionExpression>
+				</Item>
+			</Fields>
+			<Type>Attributes</Type>
+			<DefField>[Attributes].[AgentName]</DefField>
+		</Item>
+		<Item id="1">
+			<Name>Measures</Name>
+			<Fields listcount="5">
+				<Item id="0">
+					<Name>CTonnage</Name>
+					<Type>Measure</Type>
+					<Expression Type="Float">=Fields!CTonnage.Value</Expression>
+					<AggregateFunction>Sum</AggregateFunction>
+					<BackColor></BackColor>
+					<ForeColor></ForeColor>
+					<DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+					<FontFlags>0</FontFlags>
+				</Item>
+				<Item id="1">
+					<Name>CGrossRevenue</Name>
+					<Caption>CGross Revenue</Caption>
+					<Type>Measure</Type>
+					<Expression Type="Float">=Fields!CGrossRevenue.Value</Expression>
+					<AggregateFunction>Sum</AggregateFunction>
+					<BackColor></BackColor>
+					<ForeColor></ForeColor>
+					<DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+					<FontFlags>0</FontFlags>
+				</Item>
+				<Item id="2">
+					<Name>GrossYield</Name>
+					<Caption>Gross Yield</Caption>
+					<Type>Measure</Type>
+					<Expression Type="Float">=Fields!GrossYield.Value</Expression>
+					<AggregateFunction>Sum</AggregateFunction>
+					<BackColor></BackColor>
+					<ForeColor></ForeColor>
+					<DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+					<FontFlags>0</FontFlags>
+				</Item>
+				<Item id="3">
+					<Name>CNetRevenue</Name>
+					<Caption>CNet Revenue</Caption>
+					<Type>Measure</Type>
+					<Expression Type="Float">=Fields!CNetRevenue.Value</Expression>
+					<AggregateFunction>Sum</AggregateFunction>
+					<BackColor></BackColor>
+					<ForeColor></ForeColor>
+					<DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+					<FontFlags>0</FontFlags>
+				</Item>
+				<Item id="4">
+					<Name>NetYield</Name>
+					<Caption>Net Yield</Caption>
+					<Type>Measure</Type>
+					<Expression Type="Float">=Fields!NetYield.Value</Expression>
+					<AggregateFunction>Sum</AggregateFunction>
+					<BackColor></BackColor>
+					<ForeColor></ForeColor>
+					<DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+					<FontFlags>0</FontFlags>
+				</Item>
+			</Fields>
+			<Type>Measures</Type>
+		</Item>
+	</Dimensions>
+	<Fields listcount="2">
+		<Item id="0">[Measure Names]</Item>
+		<Item id="1">[Measure Values]</Item>
+	</Fields>
+</relationalSchema>

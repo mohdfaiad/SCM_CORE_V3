@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSources>
+    <DataSource Name="DummyDataSource">
+      <rd:DataSourceID>e385a4c7-e40b-44de-9add-fc64889ce015</rd:DataSourceID>
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+    </DataSource>
+  </DataSources>
+  <InteractiveHeight>11in</InteractiveHeight>
+  <rd:DrawGrid>true</rd:DrawGrid>
+  <InteractiveWidth>8.5in</InteractiveWidth>
+  <rd:SnapToGrid>true</rd:SnapToGrid>
+  <RightMargin>0.1in</RightMargin>
+  <LeftMargin>0.1in</LeftMargin>
+  <BottomMargin>0.1in</BottomMargin>
+  <rd:ReportID>6ced7e66-0b4c-4de8-b4d6-d23cf7912587</rd:ReportID>
+  <DataSets>
+    <DataSet Name="dsOfficialReceipt_dtOfficialReceipt">
+      <Fields>
+        <Field Name="VATRegTIN">
+          <DataField>VATRegTIN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ORRecieptNo">
+          <DataField>ORRecieptNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESS">
+          <DataField>ADDRESS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PermitNo">
+          <DataField>PermitNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ApprovedNo">
+          <DataField>ApprovedNo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DateIssued">
+          <DataField>DateIssued</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Logo">
+          <DataField>Logo</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DomesticAWBNotation">
+          <DataField>DomesticAWBNotation</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DummyDataSource</DataSourceName>
+        <CommandText />
+        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+      </Query>
+      <rd:DataSetInfo>
+        <rd:DataSetName>dsOfficialReceipt</rd:DataSetName>
+        <rd:TableName>dtOfficialReceipt</rd:TableName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
+  <Code />
+  <Width>8in</Width>
+  <Body>
+    <ReportItems>
+      <Textbox Name="textbox2">
+        <Top>5.875in</Top>
+        <Width>6in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>21</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>0.75in</Left>
+        <Value>=First(Fields!DomesticAWBNotation.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox60">
+        <rd:DefaultName>textbox60</rd:DefaultName>
+        <Top>5.5in</Top>
+        <Width>3.75in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>20</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>1.375in</Left>
+        <Height>0.25in</Height>
+        <Value>***THIS IS SYSTEM GENERATED RECEIPT***</Value>
+      </Textbox>
+      <Line Name="line3">
+        <Top>5.375in</Top>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>19</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="textbox57">
+        <Top>3.75in</Top>
+        <Width>0.125in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>18</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.875in</Left>
+        <Height>0.25in</Height>
+        <Value>:</Value>
+      </Textbox>
+      <Textbox Name="textbox58">
+        <Top>3.75in</Top>
+        <Width>2.5in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>17</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!PermitNo.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox59">
+        <Top>3.75in</Top>
+        <Width>2.875in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>16</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Permit No.</Value>
+      </Textbox>
+      <Textbox Name="textbox54">
+        <Top>4.25in</Top>
+        <Width>0.125in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>15</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.875in</Left>
+        <Height>0.25in</Height>
+        <Value>:</Value>
+      </Textbox>
+      <Textbox Name="textbox55">
+        <Top>4.25in</Top>
+        <Width>2.625in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>14</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ApprovedNo.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox56">
+        <Top>4.25in</Top>
+        <Width>2.875in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>13</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Range of Approved Numbers</Value>
+      </Textbox>
+      <Textbox Name="textbox42">
+        <Top>4.75in</Top>
+        <Width>0.125in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <FontWeight>700</FontWeight>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>12</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.875in</Left>
+        <Height>0.25in</Height>
+        <Value>:</Value>
+      </Textbox>
+      <Textbox Name="textbox43">
+        <Top>4.75in</Top>
+        <Width>2.625in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>11</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!DateIssued.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox44">
+        <Top>4.75in</Top>
+        <Width>2.875in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Left</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>10</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Height>0.25in</Height>
+        <Value>Date Issued</Value>
+      </Textbox>
+      <Subreport Name="subreport1">
+        <Top>2.75in</Top>
+        <ReportName>rptOfficialReceipt_Sub</ReportName>
+        <ZIndex>9</ZIndex>
+        <Height>1in</Height>
+      </Subreport>
+      <Textbox Name="ORRecieptNo_1">
+        <rd:DefaultName>ORRecieptNo_1</rd:DefaultName>
+        <Top>2.125in</Top>
+        <Width>1.875in</Width>
+        <Style>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>8</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.625in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!ORRecieptNo.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox4">
+        <rd:DefaultName>textbox4</rd:DefaultName>
+        <Top>2.125in</Top>
+        <Width>0.75in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>7</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.875in</Left>
+        <Height>0.25in</Height>
+        <Value>OR No.:</Value>
+      </Textbox>
+      <Textbox Name="textbox3">
+        <rd:DefaultName>textbox3</rd:DefaultName>
+        <Top>1.875in</Top>
+        <Width>2.5in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <TextAlign>Center</TextAlign>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>6</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2.875in</Left>
+        <Height>0.25in</Height>
+        <Value>OFFICIAL RECEIPT</Value>
+      </Textbox>
+      <Line Name="line2">
+        <Top>2.5in</Top>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>5</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="VATRegTIN_1">
+        <rd:DefaultName>VATRegTIN_1</rd:DefaultName>
+        <Top>1.375in</Top>
+        <Width>1.875in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>4</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>3.25in</Left>
+        <Height>0.25in</Height>
+        <Value>=First(Fields!VATRegTIN.Value)</Value>
+      </Textbox>
+      <Textbox Name="textbox1">
+        <rd:DefaultName>textbox1</rd:DefaultName>
+        <Top>1.375in</Top>
+        <Width>1.25in</Width>
+        <Style>
+          <FontFamily>Verdana</FontFamily>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>3</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2in</Left>
+        <Height>0.25in</Height>
+        <Value>VAT REG.TIN :</Value>
+      </Textbox>
+      <Line Name="line1">
+        <Top>1.75in</Top>
+        <Style>
+          <BorderStyle>
+            <Default>Solid</Default>
+          </BorderStyle>
+        </Style>
+        <ZIndex>2</ZIndex>
+        <Height>0in</Height>
+      </Line>
+      <Textbox Name="txtAddress">
+        <Top>0.875in</Top>
+        <Width>3.875in</Width>
+        <Style>
+          <FontSize>11pt</FontSize>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+        <ZIndex>1</ZIndex>
+        <CanGrow>true</CanGrow>
+        <Left>2in</Left>
+        <Height>0.375in</Height>
+        <Value>=First(Fields!ADDRESS.Value)</Value>
+      </Textbox>
+      <Image Name="image1">
+        <Sizing>AutoSize</Sizing>
+        <Top>0.25in</Top>
+        <Width>2.25in</Width>
+        <MIMEType>image/png</MIMEType>
+        <Source>Database</Source>
+        <Style />
+        <Left>2in</Left>
+        <Height>0.625in</Height>
+        <Value>=Fields!Logo.Value</Value>
+      </Image>
+    </ReportItems>
+    <Height>6.125in</Height>
+  </Body>
+  <Language>en-US</Language>
+  <TopMargin>0.1in</TopMargin>
+</Report>

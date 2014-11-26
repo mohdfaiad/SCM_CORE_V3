@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Web
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSmartCargoManager", "ProjectSmartCargoManager\ProjectSmartCargoManager.csproj", "{8458DABE-39E6-47DF-9E19-869CC5B18BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QID.DataAccess.Win", "QID.DataAccess.Win\QID.DataAccess.Win\QID.DataAccess.Win.csproj", "{F6E9FC85-BF47-40D8-BF9A-837E764EDD9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{8D69494D-15A4-4D94-8615-711D00F4CD32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrintAWBLabels", "PrintAWBLabels\PrintAWBLabels.csproj", "{54FB750E-81B8-4BC3-8B1E-02BC6B79A547}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM.Common.Struct", "SCM.Common.Struct\SCM.Common.Struct.csproj", "{119B89A2-AF2A-413B-B2E2-C3E0D4802233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCM_ReportGeneration", "SCM Automailer\QID_SCM_Alert_winSrcModified\SCM_ReportGeneration.csproj", "{B511B90B-1B62-481E-8047-5CD8670C59D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clsDataLib", "SCM Automailer\clsDataLib\clsDataLib.csproj", "{4A08BD7D-1EA8-433B-BA8F-5E750F6CBAE2}"
+EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "SKM_CORE_CLOUD", "SKM_CORE_CLOUD\SKM_CORE_CLOUD.ccproj", "{A9D668B8-757A-4862-92BE-979C5C797428}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8458DABE-39E6-47DF-9E19-869CC5B18BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8458DABE-39E6-47DF-9E19-869CC5B18BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8458DABE-39E6-47DF-9E19-869CC5B18BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8458DABE-39E6-47DF-9E19-869CC5B18BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E9FC85-BF47-40D8-BF9A-837E764EDD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E9FC85-BF47-40D8-BF9A-837E764EDD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E9FC85-BF47-40D8-BF9A-837E764EDD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D69494D-15A4-4D94-8615-711D00F4CD32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D69494D-15A4-4D94-8615-711D00F4CD32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D69494D-15A4-4D94-8615-711D00F4CD32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D69494D-15A4-4D94-8615-711D00F4CD32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54FB750E-81B8-4BC3-8B1E-02BC6B79A547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FB750E-81B8-4BC3-8B1E-02BC6B79A547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FB750E-81B8-4BC3-8B1E-02BC6B79A547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{119B89A2-AF2A-413B-B2E2-C3E0D4802233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{119B89A2-AF2A-413B-B2E2-C3E0D4802233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{119B89A2-AF2A-413B-B2E2-C3E0D4802233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{119B89A2-AF2A-413B-B2E2-C3E0D4802233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B511B90B-1B62-481E-8047-5CD8670C59D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B511B90B-1B62-481E-8047-5CD8670C59D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B511B90B-1B62-481E-8047-5CD8670C59D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A08BD7D-1EA8-433B-BA8F-5E750F6CBAE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A08BD7D-1EA8-433B-BA8F-5E750F6CBAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A08BD7D-1EA8-433B-BA8F-5E750F6CBAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9D668B8-757A-4862-92BE-979C5C797428}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9D668B8-757A-4862-92BE-979C5C797428}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9D668B8-757A-4862-92BE-979C5C797428}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9D668B8-757A-4862-92BE-979C5C797428}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 12
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BAL\\BAL.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = BAL\\
+		SccProjectUniqueName2 = PrintAWBLabels\\PrintAWBLabels.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = PrintAWBLabels\\
+		SccProjectUniqueName3 = ProjectSmartCargoManager\\ProjectSmartCargoManager.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = ProjectSmartCargoManager\\
+		SccProjectUniqueName4 = QID.DataAccess.Win\\QID.DataAccess.Win\\QID.DataAccess.Win.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = QID.DataAccess.Win\\QID.DataAccess.Win\\
+		SccProjectUniqueName5 = SCM_CORE_Cloud\\SCM_CORE_Cloud.ccproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = SCM_CORE_Cloud\\
+		SccProjectUniqueName6 = SCM_Core_DB\\SCM_Core_DB.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = SCM_Core_DB\\
+		SccProjectUniqueName7 = MessageService\u0020-\u0020CoreMsgInstance\\MessageService.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = MessageService\u0020-\u0020CoreMsgInstance\\
+		SccProjectUniqueName8 = ServiceTestAPP\\ServiceTestAPP.csproj
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = ServiceTestAPP\\
+		SccProjectUniqueName9 = SCM.Common.Struct\\SCM.Common.Struct.csproj
+		SccLocalPath9 = .
+		SccProjectFilePathRelativizedFromConnection9 = SCM.Common.Struct\\
+		SccProjectUniqueName10 = SCM\u0020Automailer\\QID_SCM_Alert_winSrcModified\\SCM_ReportGeneration.csproj
+		SccLocalPath10 = .
+		SccProjectFilePathRelativizedFromConnection10 = SCM\u0020Automailer\\QID_SCM_Alert_winSrcModified\\
+		SccProjectUniqueName11 = SCM\u0020Automailer\\clsDataLib\\clsDataLib.csproj
+		SccLocalPath11 = .
+		SccProjectFilePathRelativizedFromConnection11 = SCM\u0020Automailer\\clsDataLib\\
+	EndGlobalSection
+EndGlobal

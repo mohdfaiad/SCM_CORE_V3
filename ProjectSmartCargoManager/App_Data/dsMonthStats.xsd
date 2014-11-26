@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsMonthStats" targetNamespace="http://tempuri.org/dsMonthStats.xsd" xmlns:mstns="http://tempuri.org/dsMonthStats.xsd" xmlns="http://tempuri.org/dsMonthStats.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsMonthStats" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="dsMonthStats" msprop:Generator_UserDSName="dsMonthStats" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtMonthStats" msprop:Generator_UserTableName="dtMonthStats" msprop:Generator_RowDeletedName="dtMonthStatsRowDeleted" msprop:Generator_TableClassName="dtMonthStatsDataTable" msprop:Generator_RowChangedName="dtMonthStatsRowChanged" msprop:Generator_RowClassName="dtMonthStatsRow" msprop:Generator_RowChangingName="dtMonthStatsRowChanging" msprop:Generator_RowEvArgName="dtMonthStatsRowChangeEvent" msprop:Generator_RowEvHandlerName="dtMonthStatsRowChangeEventHandler" msprop:Generator_TablePropName="dtMonthStats" msprop:Generator_TableVarName="tabledtMonthStats" msprop:Generator_RowDeletingName="dtMonthStatsRowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ARLCOD" msprop:Generator_UserColumnName="ARLCOD" msprop:Generator_ColumnPropNameInRow="ARLCOD" msprop:Generator_ColumnVarNameInTable="columnARLCOD" msprop:Generator_ColumnPropNameInTable="ARLCODColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBPFX" msprop:Generator_UserColumnName="AWBPFX" msprop:Generator_ColumnPropNameInRow="AWBPFX" msprop:Generator_ColumnVarNameInTable="columnAWBPFX" msprop:Generator_ColumnPropNameInTable="AWBPFXColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AWBNUM" msprop:Generator_UserColumnName="AWBNUM" msprop:Generator_ColumnPropNameInRow="AWBNUM" msprop:Generator_ColumnVarNameInTable="columnAWBNUM" msprop:Generator_ColumnPropNameInTable="AWBNUMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ORG" msprop:Generator_UserColumnName="ORG" msprop:Generator_ColumnPropNameInRow="ORG" msprop:Generator_ColumnVarNameInTable="columnORG" msprop:Generator_ColumnPropNameInTable="ORGColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DEST" msprop:Generator_UserColumnName="DEST" msprop:Generator_ColumnPropNameInRow="DEST" msprop:Generator_ColumnVarNameInTable="columnDEST" msprop:Generator_ColumnPropNameInTable="DESTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PKGS" msprop:Generator_UserColumnName="PKGS" msprop:Generator_ColumnPropNameInRow="PKGS" msprop:Generator_ColumnVarNameInTable="columnPKGS" msprop:Generator_ColumnPropNameInTable="PKGSColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="GROSSWT" msprop:Generator_UserColumnName="GROSSWT" msprop:Generator_ColumnPropNameInRow="GROSSWT" msprop:Generator_ColumnVarNameInTable="columnGROSSWT" msprop:Generator_ColumnPropNameInTable="GROSSWTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="CHWT" msprop:Generator_UserColumnName="CHWT" msprop:Generator_ColumnPropNameInRow="CHWT" msprop:Generator_ColumnVarNameInTable="columnCHWT" msprop:Generator_ColumnPropNameInTable="CHWTColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="AIRLINES" msprop:Generator_UserColumnName="AIRLINES" msprop:Generator_ColumnPropNameInRow="AIRLINES" msprop:Generator_ColumnVarNameInTable="columnAIRLINES" msprop:Generator_ColumnPropNameInTable="AIRLINESColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FLTNUM" msprop:Generator_UserColumnName="FLTNUM" msprop:Generator_ColumnPropNameInRow="FLTNUM" msprop:Generator_ColumnVarNameInTable="columnFLTNUM" msprop:Generator_ColumnPropNameInTable="FLTNUMColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="FLTDAT" msprop:Generator_UserColumnName="FLTDAT" msprop:Generator_ColumnPropNameInRow="FLTDAT" msprop:Generator_ColumnVarNameInTable="columnFLTDAT" msprop:Generator_ColumnPropNameInTable="FLTDATColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="DISCHARGED" msprop:Generator_UserColumnName="DISCHARGED" msprop:Generator_ColumnPropNameInRow="DISCHARGED" msprop:Generator_ColumnVarNameInTable="columnDISCHARGED" msprop:Generator_ColumnPropNameInTable="DISCHARGEDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMP_TRANSIT" msprop:Generator_UserColumnName="IMP_TRANSIT" msprop:Generator_ColumnPropNameInRow="IMP_TRANSIT" msprop:Generator_ColumnVarNameInTable="columnIMP_TRANSIT" msprop:Generator_ColumnPropNameInTable="IMP_TRANSITColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="IMP_BUP" msprop:Generator_UserColumnName="IMP_BUP" msprop:Generator_ColumnPropNameInRow="IMP_BUP" msprop:Generator_ColumnVarNameInTable="columnIMP_BUP" msprop:Generator_ColumnPropNameInTable="IMP_BUPColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="UPLIFTED" msprop:Generator_UserColumnName="UPLIFTED" msprop:Generator_ColumnPropNameInRow="UPLIFTED" msprop:Generator_ColumnVarNameInTable="columnUPLIFTED" msprop:Generator_ColumnPropNameInTable="UPLIFTEDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EXP_TRANSIT" msprop:Generator_UserColumnName="EXP_TRANSIT" msprop:Generator_ColumnPropNameInRow="EXP_TRANSIT" msprop:Generator_ColumnVarNameInTable="columnEXP_TRANSIT" msprop:Generator_ColumnPropNameInTable="EXP_TRANSITColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="EXP_BUP" msprop:Generator_UserColumnName="EXP_BUP" msprop:Generator_ColumnPropNameInRow="EXP_BUP" msprop:Generator_ColumnVarNameInTable="columnEXP_BUP" msprop:Generator_ColumnPropNameInTable="EXP_BUPColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

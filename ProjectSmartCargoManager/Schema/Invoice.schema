@@ -1,0 +1,948 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="69">
+    <Item id="0" Name="SrNo" Caption="Sr No" />
+    <Item id="1" Name="InvoiceNumber" Caption="Invoice Number" />
+    <Item id="2" Name="InvoiceDate" Caption="Invoice Date" />
+    <Item id="3" Name="InvoiceDate_Year" Caption="Invoice Date_ Year">
+      <Expression Type="Integer">=Year(Fields!InvoiceDate.Value)</Expression>
+    </Item>
+    <Item id="4" Name="InvoiceDate_Quarter" Caption="Invoice Date_ Quarter">
+      <Expression Type="Integer">=DatePart(DateInterval.Quarter, Fields!InvoiceDate.Value)</Expression>
+    </Item>
+    <Item id="5" Name="InvoiceDate_Month" Caption="Invoice Date_ Month">
+      <Expression Type="Integer">=Month(Fields!InvoiceDate.Value)</Expression>
+    </Item>
+    <Item id="6" Name="InvoiceDate_Week" Caption="Invoice Date_ Week">
+      <Expression Type="Integer">=DatePart("ww",Fields!InvoiceDate.Value)</Expression>
+    </Item>
+    <Item id="7" Name="InvoiceDate_Day" Caption="Invoice Date_ Day">
+      <Expression Type="Integer">=Day(Fields!InvoiceDate.Value)</Expression>
+    </Item>
+    <Item id="8" Name="InvoiceDate_WeekDay" Caption="Invoice Date_ Week Day">
+      <Expression Type="Integer">=Weekday(Fields!InvoiceDate.Value)</Expression>
+    </Item>
+    <Item id="9" Name="InvoiceAmount" Caption="Invoice Amount" />
+    <Item id="10" Name="CollectedAmount" Caption="Collected Amount" />
+    <Item id="11" Name="PendingAmount" Caption="Pending Amount" />
+    <Item id="12" Name="Amt194C" Caption="Amt194 C" />
+    <Item id="13" Name="RateLineCurrency" Caption="Rate Line Currency" />
+    <Item id="14" Name="BillingAgentCurrency" Caption="Billing Agent Currency" />
+    <Item id="15" Name="BillingBaseCurrency" Caption="Billing Base Currency" />
+    <Item id="16" Name="BillingConversionFactor" Caption="Billing Conversion Factor" />
+    <Item id="17" Name="PaymentType" Caption="Payment Type" />
+    <Item id="18" Name="ChequeDdNumber" Caption="Cheque Dd Number" />
+    <Item id="19" Name="PaymentDate" Caption="Payment Date" />
+    <Item id="20" Name="PaymentDate_Year" Caption="Payment Date_ Year">
+      <Expression Type="Integer">=Year(Fields!PaymentDate.Value)</Expression>
+    </Item>
+    <Item id="21" Name="PaymentDate_Quarter" Caption="Payment Date_ Quarter">
+      <Expression Type="Integer">=DatePart(DateInterval.Quarter, Fields!PaymentDate.Value)</Expression>
+    </Item>
+    <Item id="22" Name="PaymentDate_Month" Caption="Payment Date_ Month">
+      <Expression Type="Integer">=Month(Fields!PaymentDate.Value)</Expression>
+    </Item>
+    <Item id="23" Name="PaymentDate_Week" Caption="Payment Date_ Week">
+      <Expression Type="Integer">=DatePart("ww",Fields!PaymentDate.Value)</Expression>
+    </Item>
+    <Item id="24" Name="PaymentDate_Day" Caption="Payment Date_ Day">
+      <Expression Type="Integer">=Day(Fields!PaymentDate.Value)</Expression>
+    </Item>
+    <Item id="25" Name="PaymentDate_WeekDay" Caption="Payment Date_ Week Day">
+      <Expression Type="Integer">=Weekday(Fields!PaymentDate.Value)</Expression>
+    </Item>
+    <Item id="26" Name="AddedBy" Caption="Added By" />
+    <Item id="27" Name="UpdatedBy" Caption="Updated By" />
+    <Item id="28" Name="UpdatedDate" Caption="Updated Date" />
+    <Item id="29" Name="UpdatedDate_Year" Caption="Updated Date_ Year">
+      <Expression Type="Integer">=Year(Fields!UpdatedDate.Value)</Expression>
+    </Item>
+    <Item id="30" Name="UpdatedDate_Quarter" Caption="Updated Date_ Quarter">
+      <Expression Type="Integer">=DatePart(DateInterval.Quarter, Fields!UpdatedDate.Value)</Expression>
+    </Item>
+    <Item id="31" Name="UpdatedDate_Month" Caption="Updated Date_ Month">
+      <Expression Type="Integer">=Month(Fields!UpdatedDate.Value)</Expression>
+    </Item>
+    <Item id="32" Name="UpdatedDate_Week" Caption="Updated Date_ Week">
+      <Expression Type="Integer">=DatePart("ww",Fields!UpdatedDate.Value)</Expression>
+    </Item>
+    <Item id="33" Name="UpdatedDate_Day" Caption="Updated Date_ Day">
+      <Expression Type="Integer">=Day(Fields!UpdatedDate.Value)</Expression>
+    </Item>
+    <Item id="34" Name="UpdatedDate_WeekDay" Caption="Updated Date_ Week Day">
+      <Expression Type="Integer">=Weekday(Fields!UpdatedDate.Value)</Expression>
+    </Item>
+    <Item id="35" Name="IsActive" Caption="Is Active" />
+    <Item id="36" Name="TDS" Caption="TDS" />
+    <Item id="37" Name="ChequeDate" Caption="Cheque Date" />
+    <Item id="38" Name="ChequeDate_Year" Caption="Cheque Date_ Year">
+      <Expression Type="Integer">=Year(Fields!ChequeDate.Value)</Expression>
+    </Item>
+    <Item id="39" Name="ChequeDate_Quarter" Caption="Cheque Date_ Quarter">
+      <Expression Type="Integer">=DatePart(DateInterval.Quarter, Fields!ChequeDate.Value)</Expression>
+    </Item>
+    <Item id="40" Name="ChequeDate_Month" Caption="Cheque Date_ Month">
+      <Expression Type="Integer">=Month(Fields!ChequeDate.Value)</Expression>
+    </Item>
+    <Item id="41" Name="ChequeDate_Week" Caption="Cheque Date_ Week">
+      <Expression Type="Integer">=DatePart("ww",Fields!ChequeDate.Value)</Expression>
+    </Item>
+    <Item id="42" Name="ChequeDate_Day" Caption="Cheque Date_ Day">
+      <Expression Type="Integer">=Day(Fields!ChequeDate.Value)</Expression>
+    </Item>
+    <Item id="43" Name="ChequeDate_WeekDay" Caption="Cheque Date_ Week Day">
+      <Expression Type="Integer">=Weekday(Fields!ChequeDate.Value)</Expression>
+    </Item>
+    <Item id="44" Name="BankName" Caption="Bank Name" />
+    <Item id="45" Name="DCMAmount" Caption="DCMAmount" />
+    <Item id="46" Name="DCMType" Caption="DCMType" />
+    <Item id="47" Name="Reason" Caption="Reason" />
+    <Item id="48" Name="PPRemarks" Caption="PPRemarks" />
+    <Item id="49" Name="TransactionId" Caption="Transaction Id" />
+    <Item id="50" Name="ORRecieptNo" Caption="ORReciept No" />
+    <Item id="51" Name="IsPosted" Caption="Is Posted" />
+    <Item id="52" Name="PostedBy" Caption="Posted By" />
+    <Item id="53" Name="PostedOn" Caption="Posted On" />
+    <Item id="54" Name="PostedOn_Year" Caption="Posted On_ Year">
+      <Expression Type="Integer">=Year(Fields!PostedOn.Value)</Expression>
+    </Item>
+    <Item id="55" Name="PostedOn_Quarter" Caption="Posted On_ Quarter">
+      <Expression Type="Integer">=DatePart(DateInterval.Quarter, Fields!PostedOn.Value)</Expression>
+    </Item>
+    <Item id="56" Name="PostedOn_Month" Caption="Posted On_ Month">
+      <Expression Type="Integer">=Month(Fields!PostedOn.Value)</Expression>
+    </Item>
+    <Item id="57" Name="PostedOn_Week" Caption="Posted On_ Week">
+      <Expression Type="Integer">=DatePart("ww",Fields!PostedOn.Value)</Expression>
+    </Item>
+    <Item id="58" Name="PostedOn_Day" Caption="Posted On_ Day">
+      <Expression Type="Integer">=Day(Fields!PostedOn.Value)</Expression>
+    </Item>
+    <Item id="59" Name="PostedOn_WeekDay" Caption="Posted On_ Week Day">
+      <Expression Type="Integer">=Weekday(Fields!PostedOn.Value)</Expression>
+    </Item>
+    <Item id="60" Name="Amount194C" Caption="Amount194 C" />
+    <Item id="61" Name="DepositDate" Caption="Deposit Date" />
+    <Item id="62" Name="DepositDate_Year" Caption="Deposit Date_ Year">
+      <Expression Type="Integer">=Year(Fields!DepositDate.Value)</Expression>
+    </Item>
+    <Item id="63" Name="DepositDate_Quarter" Caption="Deposit Date_ Quarter">
+      <Expression Type="Integer">=DatePart(DateInterval.Quarter, Fields!DepositDate.Value)</Expression>
+    </Item>
+    <Item id="64" Name="DepositDate_Month" Caption="Deposit Date_ Month">
+      <Expression Type="Integer">=Month(Fields!DepositDate.Value)</Expression>
+    </Item>
+    <Item id="65" Name="DepositDate_Week" Caption="Deposit Date_ Week">
+      <Expression Type="Integer">=DatePart("ww",Fields!DepositDate.Value)</Expression>
+    </Item>
+    <Item id="66" Name="DepositDate_Day" Caption="Deposit Date_ Day">
+      <Expression Type="Integer">=Day(Fields!DepositDate.Value)</Expression>
+    </Item>
+    <Item id="67" Name="DepositDate_WeekDay" Caption="Deposit Date_ Week Day">
+      <Expression Type="Integer">=Weekday(Fields!DepositDate.Value)</Expression>
+    </Item>
+    <Item id="68" Name="VAT" Caption="VAT" />
+  </QueryFields>
+  <Dimensions listcount="8">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="16">
+        <Item id="0">
+          <Name>InvoiceNumber</Name>
+          <Caption>Invoice Number</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!InvoiceNumber.Value</Expression>
+          <CaptionExpression Type="String">=Fields!InvoiceNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>RateLineCurrency</Name>
+          <Caption>Rate Line Currency</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!RateLineCurrency.Value</Expression>
+          <CaptionExpression Type="String">=Fields!RateLineCurrency.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>BillingAgentCurrency</Name>
+          <Caption>Billing Agent Currency</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!BillingAgentCurrency.Value</Expression>
+          <CaptionExpression Type="String">=Fields!BillingAgentCurrency.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>BillingBaseCurrency</Name>
+          <Caption>Billing Base Currency</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!BillingBaseCurrency.Value</Expression>
+          <CaptionExpression Type="String">=Fields!BillingBaseCurrency.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>PaymentType</Name>
+          <Caption>Payment Type</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!PaymentType.Value</Expression>
+          <CaptionExpression Type="String">=Fields!PaymentType.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>ChequeDdNumber</Name>
+          <Caption>Cheque Dd Number</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ChequeDdNumber.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ChequeDdNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>AddedBy</Name>
+          <Caption>Added By</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AddedBy.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AddedBy.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>UpdatedBy</Name>
+          <Caption>Updated By</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!UpdatedBy.Value</Expression>
+          <CaptionExpression Type="String">=Fields!UpdatedBy.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>IsActive</Name>
+          <Caption>Is Active</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="Boolean">=Fields!IsActive.Value</Expression>
+          <CaptionExpression Type="Boolean">=Fields!IsActive.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>BankName</Name>
+          <Caption>Bank Name</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!BankName.Value</Expression>
+          <CaptionExpression Type="String">=Fields!BankName.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>Reason</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!Reason.Value</Expression>
+          <CaptionExpression Type="String">=Fields!Reason.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>PPRemarks</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!PPRemarks.Value</Expression>
+          <CaptionExpression Type="String">=Fields!PPRemarks.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>TransactionId</Name>
+          <Caption>Transaction Id</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!TransactionId.Value</Expression>
+          <CaptionExpression Type="String">=Fields!TransactionId.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>ORRecieptNo</Name>
+          <Caption>ORReciept No</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!ORRecieptNo.Value</Expression>
+          <CaptionExpression Type="String">=Fields!ORRecieptNo.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>IsPosted</Name>
+          <Caption>Is Posted</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="Boolean">=Fields!IsPosted.Value</Expression>
+          <CaptionExpression Type="Boolean">=Fields!IsPosted.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>PostedBy</Name>
+          <Caption>Posted By</Caption>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!PostedBy.Value</Expression>
+          <CaptionExpression Type="String">=Fields!PostedBy.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[InvoiceNumber]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="11">
+        <Item id="0">
+          <Name>SrNo</Name>
+          <Caption>Sr No</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!SrNo.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>InvoiceAmount</Name>
+          <Caption>Invoice Amount</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!InvoiceAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>CollectedAmount</Name>
+          <Caption>Collected Amount</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!CollectedAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>PendingAmount</Name>
+          <Caption>Pending Amount</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!PendingAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>Amt194C</Name>
+          <Caption>Amt194 C</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!Amt194C.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="5">
+          <Name>BillingConversionFactor</Name>
+          <Caption>Billing Conversion Factor</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!BillingConversionFactor.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="6">
+          <Name>TDS</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!TDS.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="7">
+          <Name>DCMAmount</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!DCMAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="8">
+          <Name>DCMType</Name>
+          <Type>Measure</Type>
+          <Expression Type="Integer">=Fields!DCMType.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="9">
+          <Name>Amount194C</Name>
+          <Caption>Amount194 C</Caption>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!Amount194C.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="10">
+          <Name>VAT</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!VAT.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+    <Item id="2">
+      <Name>InvoiceDate</Name>
+      <Caption>Invoice Date</Caption>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>InvoiceDate</Name>
+          <Caption>Invoice Date</Caption>
+          <Type>Hierarchy</Type>
+          <kind>Date</kind>
+          <levels listcount="4">
+            <Item id="0">
+              <Name>Year</Name>
+              <Expression Type="Integer">=Fields!InvoiceDate_Year.Value</Expression>
+              <CaptionExpression Type="String">=Fields!InvoiceDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+            </Item>
+            <Item id="1">
+              <Name>Quarter</Name>
+              <Expression Type="Integer">=Fields!InvoiceDate_Quarter.Value</Expression>
+              <CaptionExpression Type="String">="Q" &amp; Fields!InvoiceDate_Quarter.Value &amp; " " &amp; Fields!InvoiceDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+            </Item>
+            <Item id="2">
+              <Name>Month</Name>
+              <Expression Type="Integer">=Fields!InvoiceDate_Month.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!InvoiceDate_Month.Value) &amp; ", " &amp; Fields!InvoiceDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+            </Item>
+            <Item id="3">
+              <Name>Day</Name>
+              <Expression Type="Integer">=Fields!InvoiceDate_Day.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!InvoiceDate_Month.Value) &amp; " " &amp; Fields!InvoiceDate_Day.Value &amp; ", " &amp; Fields!InvoiceDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+            </Item>
+          </levels>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="DateTime">=Fields!InvoiceDate.Value</Expression>
+          <CaptionExpression Type="DateTime">=Fields!InvoiceDate.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+        </Item>
+        <Item id="2">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!InvoiceDate_Year.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!InvoiceDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+        </Item>
+        <Item id="3">
+          <Name>Quarter</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!InvoiceDate_Quarter.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!InvoiceDate_Quarter.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+        </Item>
+        <Item id="4">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!InvoiceDate_Month.Value</Expression>
+          <CaptionExpression Type="String">=MonthName(Fields!InvoiceDate_Month.Value) &amp; ", " &amp; Fields!InvoiceDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+        </Item>
+        <Item id="5">
+          <Name>Week</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!InvoiceDate_Week.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!InvoiceDate_Week.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+        </Item>
+        <Item id="6">
+          <Name>WeekDay</Name>
+          <Caption>Week Day</Caption>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!InvoiceDate_WeekDay.Value</Expression>
+          <CaptionExpression Type="String">=WeekdayName(Fields!InvoiceDate_WeekDay.Value)</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!InvoiceDate.Value</ValueExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[InvoiceDate].[InvoiceDate]</DefField>
+    </Item>
+    <Item id="3">
+      <Name>PaymentDate</Name>
+      <Caption>Payment Date</Caption>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>PaymentDate</Name>
+          <Caption>Payment Date</Caption>
+          <Type>Hierarchy</Type>
+          <kind>Date</kind>
+          <levels listcount="4">
+            <Item id="0">
+              <Name>Year</Name>
+              <Expression Type="Integer">=Fields!PaymentDate_Year.Value</Expression>
+              <CaptionExpression Type="String">=Fields!PaymentDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+            </Item>
+            <Item id="1">
+              <Name>Quarter</Name>
+              <Expression Type="Integer">=Fields!PaymentDate_Quarter.Value</Expression>
+              <CaptionExpression Type="String">="Q" &amp; Fields!PaymentDate_Quarter.Value &amp; " " &amp; Fields!PaymentDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+            </Item>
+            <Item id="2">
+              <Name>Month</Name>
+              <Expression Type="Integer">=Fields!PaymentDate_Month.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!PaymentDate_Month.Value) &amp; ", " &amp; Fields!PaymentDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+            </Item>
+            <Item id="3">
+              <Name>Day</Name>
+              <Expression Type="Integer">=Fields!PaymentDate_Day.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!PaymentDate_Month.Value) &amp; " " &amp; Fields!PaymentDate_Day.Value &amp; ", " &amp; Fields!PaymentDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+            </Item>
+          </levels>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="DateTime">=Fields!PaymentDate.Value</Expression>
+          <CaptionExpression Type="DateTime">=Fields!PaymentDate.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+        </Item>
+        <Item id="2">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PaymentDate_Year.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!PaymentDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+        </Item>
+        <Item id="3">
+          <Name>Quarter</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PaymentDate_Quarter.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!PaymentDate_Quarter.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+        </Item>
+        <Item id="4">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PaymentDate_Month.Value</Expression>
+          <CaptionExpression Type="String">=MonthName(Fields!PaymentDate_Month.Value) &amp; ", " &amp; Fields!PaymentDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+        </Item>
+        <Item id="5">
+          <Name>Week</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PaymentDate_Week.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!PaymentDate_Week.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+        </Item>
+        <Item id="6">
+          <Name>WeekDay</Name>
+          <Caption>Week Day</Caption>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PaymentDate_WeekDay.Value</Expression>
+          <CaptionExpression Type="String">=WeekdayName(Fields!PaymentDate_WeekDay.Value)</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PaymentDate.Value</ValueExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[PaymentDate].[PaymentDate]</DefField>
+    </Item>
+    <Item id="4">
+      <Name>UpdatedDate</Name>
+      <Caption>Updated Date</Caption>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>UpdatedDate</Name>
+          <Caption>Updated Date</Caption>
+          <Type>Hierarchy</Type>
+          <kind>Date</kind>
+          <levels listcount="4">
+            <Item id="0">
+              <Name>Year</Name>
+              <Expression Type="Integer">=Fields!UpdatedDate_Year.Value</Expression>
+              <CaptionExpression Type="String">=Fields!UpdatedDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+            </Item>
+            <Item id="1">
+              <Name>Quarter</Name>
+              <Expression Type="Integer">=Fields!UpdatedDate_Quarter.Value</Expression>
+              <CaptionExpression Type="String">="Q" &amp; Fields!UpdatedDate_Quarter.Value &amp; " " &amp; Fields!UpdatedDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+            </Item>
+            <Item id="2">
+              <Name>Month</Name>
+              <Expression Type="Integer">=Fields!UpdatedDate_Month.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!UpdatedDate_Month.Value) &amp; ", " &amp; Fields!UpdatedDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+            </Item>
+            <Item id="3">
+              <Name>Day</Name>
+              <Expression Type="Integer">=Fields!UpdatedDate_Day.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!UpdatedDate_Month.Value) &amp; " " &amp; Fields!UpdatedDate_Day.Value &amp; ", " &amp; Fields!UpdatedDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+            </Item>
+          </levels>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="DateTime">=Fields!UpdatedDate.Value</Expression>
+          <CaptionExpression Type="DateTime">=Fields!UpdatedDate.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+        </Item>
+        <Item id="2">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!UpdatedDate_Year.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!UpdatedDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+        </Item>
+        <Item id="3">
+          <Name>Quarter</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!UpdatedDate_Quarter.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!UpdatedDate_Quarter.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+        </Item>
+        <Item id="4">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!UpdatedDate_Month.Value</Expression>
+          <CaptionExpression Type="String">=MonthName(Fields!UpdatedDate_Month.Value) &amp; ", " &amp; Fields!UpdatedDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+        </Item>
+        <Item id="5">
+          <Name>Week</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!UpdatedDate_Week.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!UpdatedDate_Week.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+        </Item>
+        <Item id="6">
+          <Name>WeekDay</Name>
+          <Caption>Week Day</Caption>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!UpdatedDate_WeekDay.Value</Expression>
+          <CaptionExpression Type="String">=WeekdayName(Fields!UpdatedDate_WeekDay.Value)</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!UpdatedDate.Value</ValueExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[UpdatedDate].[UpdatedDate]</DefField>
+    </Item>
+    <Item id="5">
+      <Name>ChequeDate</Name>
+      <Caption>Cheque Date</Caption>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>ChequeDate</Name>
+          <Caption>Cheque Date</Caption>
+          <Type>Hierarchy</Type>
+          <kind>Date</kind>
+          <levels listcount="4">
+            <Item id="0">
+              <Name>Year</Name>
+              <Expression Type="Integer">=Fields!ChequeDate_Year.Value</Expression>
+              <CaptionExpression Type="String">=Fields!ChequeDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+            </Item>
+            <Item id="1">
+              <Name>Quarter</Name>
+              <Expression Type="Integer">=Fields!ChequeDate_Quarter.Value</Expression>
+              <CaptionExpression Type="String">="Q" &amp; Fields!ChequeDate_Quarter.Value &amp; " " &amp; Fields!ChequeDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+            </Item>
+            <Item id="2">
+              <Name>Month</Name>
+              <Expression Type="Integer">=Fields!ChequeDate_Month.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!ChequeDate_Month.Value) &amp; ", " &amp; Fields!ChequeDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+            </Item>
+            <Item id="3">
+              <Name>Day</Name>
+              <Expression Type="Integer">=Fields!ChequeDate_Day.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!ChequeDate_Month.Value) &amp; " " &amp; Fields!ChequeDate_Day.Value &amp; ", " &amp; Fields!ChequeDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+            </Item>
+          </levels>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="DateTime">=Fields!ChequeDate.Value</Expression>
+          <CaptionExpression Type="DateTime">=Fields!ChequeDate.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+        </Item>
+        <Item id="2">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!ChequeDate_Year.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!ChequeDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+        </Item>
+        <Item id="3">
+          <Name>Quarter</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!ChequeDate_Quarter.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!ChequeDate_Quarter.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+        </Item>
+        <Item id="4">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!ChequeDate_Month.Value</Expression>
+          <CaptionExpression Type="String">=MonthName(Fields!ChequeDate_Month.Value) &amp; ", " &amp; Fields!ChequeDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+        </Item>
+        <Item id="5">
+          <Name>Week</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!ChequeDate_Week.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!ChequeDate_Week.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+        </Item>
+        <Item id="6">
+          <Name>WeekDay</Name>
+          <Caption>Week Day</Caption>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!ChequeDate_WeekDay.Value</Expression>
+          <CaptionExpression Type="String">=WeekdayName(Fields!ChequeDate_WeekDay.Value)</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!ChequeDate.Value</ValueExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[ChequeDate].[ChequeDate]</DefField>
+    </Item>
+    <Item id="6">
+      <Name>PostedOn</Name>
+      <Caption>Posted On</Caption>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>PostedOn</Name>
+          <Caption>Posted On</Caption>
+          <Type>Hierarchy</Type>
+          <kind>Date</kind>
+          <levels listcount="4">
+            <Item id="0">
+              <Name>Year</Name>
+              <Expression Type="Integer">=Fields!PostedOn_Year.Value</Expression>
+              <CaptionExpression Type="String">=Fields!PostedOn_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+            </Item>
+            <Item id="1">
+              <Name>Quarter</Name>
+              <Expression Type="Integer">=Fields!PostedOn_Quarter.Value</Expression>
+              <CaptionExpression Type="String">="Q" &amp; Fields!PostedOn_Quarter.Value &amp; " " &amp; Fields!PostedOn_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+            </Item>
+            <Item id="2">
+              <Name>Month</Name>
+              <Expression Type="Integer">=Fields!PostedOn_Month.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!PostedOn_Month.Value) &amp; ", " &amp; Fields!PostedOn_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+            </Item>
+            <Item id="3">
+              <Name>Day</Name>
+              <Expression Type="Integer">=Fields!PostedOn_Day.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!PostedOn_Month.Value) &amp; " " &amp; Fields!PostedOn_Day.Value &amp; ", " &amp; Fields!PostedOn_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+            </Item>
+          </levels>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="DateTime">=Fields!PostedOn.Value</Expression>
+          <CaptionExpression Type="DateTime">=Fields!PostedOn.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+        </Item>
+        <Item id="2">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PostedOn_Year.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!PostedOn_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+        </Item>
+        <Item id="3">
+          <Name>Quarter</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PostedOn_Quarter.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!PostedOn_Quarter.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+        </Item>
+        <Item id="4">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PostedOn_Month.Value</Expression>
+          <CaptionExpression Type="String">=MonthName(Fields!PostedOn_Month.Value) &amp; ", " &amp; Fields!PostedOn_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+        </Item>
+        <Item id="5">
+          <Name>Week</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PostedOn_Week.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!PostedOn_Week.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+        </Item>
+        <Item id="6">
+          <Name>WeekDay</Name>
+          <Caption>Week Day</Caption>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!PostedOn_WeekDay.Value</Expression>
+          <CaptionExpression Type="String">=WeekdayName(Fields!PostedOn_WeekDay.Value)</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!PostedOn.Value</ValueExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[PostedOn].[PostedOn]</DefField>
+    </Item>
+    <Item id="7">
+      <Name>DepositDate</Name>
+      <Caption>Deposit Date</Caption>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>DepositDate</Name>
+          <Caption>Deposit Date</Caption>
+          <Type>Hierarchy</Type>
+          <kind>Date</kind>
+          <levels listcount="4">
+            <Item id="0">
+              <Name>Year</Name>
+              <Expression Type="Integer">=Fields!DepositDate_Year.Value</Expression>
+              <CaptionExpression Type="String">=Fields!DepositDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+            </Item>
+            <Item id="1">
+              <Name>Quarter</Name>
+              <Expression Type="Integer">=Fields!DepositDate_Quarter.Value</Expression>
+              <CaptionExpression Type="String">="Q" &amp; Fields!DepositDate_Quarter.Value &amp; " " &amp; Fields!DepositDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+            </Item>
+            <Item id="2">
+              <Name>Month</Name>
+              <Expression Type="Integer">=Fields!DepositDate_Month.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!DepositDate_Month.Value) &amp; ", " &amp; Fields!DepositDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+            </Item>
+            <Item id="3">
+              <Name>Day</Name>
+              <Expression Type="Integer">=Fields!DepositDate_Day.Value</Expression>
+              <CaptionExpression Type="String">=MonthName(Fields!DepositDate_Month.Value) &amp; " " &amp; Fields!DepositDate_Day.Value &amp; ", " &amp; Fields!DepositDate_Year.Value</CaptionExpression>
+              <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+            </Item>
+          </levels>
+        </Item>
+        <Item id="1">
+          <Name>Date</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="DateTime">=Fields!DepositDate.Value</Expression>
+          <CaptionExpression Type="DateTime">=Fields!DepositDate.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+        </Item>
+        <Item id="2">
+          <Name>Year</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!DepositDate_Year.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!DepositDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+        </Item>
+        <Item id="3">
+          <Name>Quarter</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!DepositDate_Quarter.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!DepositDate_Quarter.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+        </Item>
+        <Item id="4">
+          <Name>Month</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!DepositDate_Month.Value</Expression>
+          <CaptionExpression Type="String">=MonthName(Fields!DepositDate_Month.Value) &amp; ", " &amp; Fields!DepositDate_Year.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+        </Item>
+        <Item id="5">
+          <Name>Week</Name>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!DepositDate_Week.Value</Expression>
+          <CaptionExpression Type="Integer">=Fields!DepositDate_Week.Value</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+        </Item>
+        <Item id="6">
+          <Name>WeekDay</Name>
+          <Caption>Week Day</Caption>
+          <Type>Attribute</Type>
+          <kind>Date</kind>
+          <Expression Type="Integer">=Fields!DepositDate_WeekDay.Value</Expression>
+          <CaptionExpression Type="String">=WeekdayName(Fields!DepositDate_WeekDay.Value)</CaptionExpression>
+          <ValueExpression Type="DateTime">=Fields!DepositDate.Value</ValueExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[DepositDate].[DepositDate]</DefField>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

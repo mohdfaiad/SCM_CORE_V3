@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="17">
+    <Item id="0" Name="AWBNumber" Caption="AWBNumber" />
+    <Item id="1" Name="Manifested" Caption="Manifested" />
+    <Item id="2" Name="Booked" Caption="Booked" />
+    <Item id="3" Name="Accepted" Caption="Accepted" />
+    <Item id="4" Name="Departed" Caption="Departed" />
+    <Item id="5" Name="Arrival" Caption="Arrival" />
+    <Item id="6" Name="Delivered" Caption="Delivered" />
+    <Item id="7" Name="FlightNo" Caption="FlightNo" />
+    <Item id="8" Name="FlightDate" Caption="FlightDate" />
+    <Item id="9" Name="Origin" Caption="Origin" />
+    <Item id="10" Name="Destination" Caption="Destination" />
+    <Item id="11" Name="DeliveredOn" Caption="DeliveredOn" />
+    <Item id="12" Name="DeliveryTime" Caption="DeliveryTime" />
+    <Item id="13" Name="AWBPcs" Caption="AWBPcs" />
+    <Item id="14" Name="IsVoid" Caption="IsVoid" />
+    <Item id="15" Name="BookedBy" Caption="BookedBy" />
+    <Item id="16" Name="CommodityDescription" Caption="CommodityDescription" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="17">
+        <Item id="0">
+          <Name>AWBNumber</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AWBNumber.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AWBNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>FlightNo</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FlightNo.Value</Expression>
+          <CaptionExpression>=Fields!FlightNo.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>FlightDate</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!FlightDate.Value</Expression>
+          <CaptionExpression>=Fields!FlightDate.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>Origin</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Origin.Value</Expression>
+          <CaptionExpression>=Fields!Origin.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>Destination</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Destination.Value</Expression>
+          <CaptionExpression>=Fields!Destination.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>DeliveredOn</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DeliveredOn.Value</Expression>
+          <CaptionExpression>=Fields!DeliveredOn.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>DeliveryTime</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DeliveryTime.Value</Expression>
+          <CaptionExpression>=Fields!DeliveryTime.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>IsVoid</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!IsVoid.Value</Expression>
+          <CaptionExpression>=Fields!IsVoid.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>BookedBy</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!BookedBy.Value</Expression>
+          <CaptionExpression>=Fields!BookedBy.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>CommodityDescription</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CommodityDescription.Value</Expression>
+          <CaptionExpression>=Fields!CommodityDescription.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>Manifested</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Manifested.Value</Expression>
+          <CaptionExpression>=Fields!Manifested.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>Booked</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Booked.Value</Expression>
+          <CaptionExpression>=Fields!Booked.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>Departed</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Departed.Value</Expression>
+          <CaptionExpression>=Fields!Departed.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>Accepted</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Accepted.Value</Expression>
+          <CaptionExpression>=Fields!Accepted.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>Arrival</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Arrival.Value</Expression>
+          <CaptionExpression>=Fields!Arrival.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>Delivered</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Delivered.Value</Expression>
+          <CaptionExpression>=Fields!Delivered.Value</CaptionExpression>
+        </Item>
+        <Item id="16">
+          <Name>AWBPcs</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBPcs.Value</Expression>
+          <CaptionExpression>=Fields!AWBPcs.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AWBNumber]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="7">
+        <Item id="0">
+          <Name>Manifested</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!Manifested.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>Booked</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!Booked.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>Departed</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!Departed.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>Accepted</Name>
+          <Type>Measure</Type>
+          <Expression Type="Float">=Fields!Accepted.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>Arrival</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Arrival.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="5">
+          <Name>Delivered</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!Delivered.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="6">
+          <Name>AWBPcs</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!AWBPcs.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

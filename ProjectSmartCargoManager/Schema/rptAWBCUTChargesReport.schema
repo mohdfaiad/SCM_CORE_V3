@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="8">
+               <Item id="0" Name="AWBNumber" Caption="AWBNumber" />
+               <Item id="1" Name="OriginCode" Caption="Origin Code" />
+               <Item id="2" Name="DestinationCode" Caption="Destination Code" />
+               <Item id="3" Name="AgentCode" Caption="Agent Code" />
+               <Item id="4" Name="FrtIATA" Caption="Frt IATA" />
+               <Item id="5" Name="OCDueCar" Caption="OCDue Car" />
+               <Item id="6" Name="OCDueAgent" Caption="OCDue Agent" />
+               <Item id="7" Name="CUTTotal" Caption="CUTTotal" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="8">
+                               <Item id="0">
+                                       <Name>AWBNumber</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AWBNumber.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AWBNumber.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>OriginCode</Name>
+                                       <Caption>Origin Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!OriginCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!OriginCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>DestinationCode</Name>
+                                       <Caption>Destination Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!DestinationCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!DestinationCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="3">
+                                       <Name>AgentCode</Name>
+                                       <Caption>Agent Code</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AgentCode.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AgentCode.Value</CaptionExpression>
+                               </Item>
+                               <Item id="4">
+                                       <Name>FrtIATA</Name>
+                                       <Caption>Frt IATA</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!FrtIATA.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FrtIATA.Value</CaptionExpression>
+                               </Item>
+                               <Item id="5">
+                                       <Name>OCDueCar</Name>
+                                       <Caption>OCDue Car</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!OCDueCar.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!OCDueCar.Value</CaptionExpression>
+                               </Item>
+                               <Item id="6">
+                                       <Name>OCDueAgent</Name>
+                                       <Caption>OCDue Agent</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!OCDueAgent.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!OCDueAgent.Value</CaptionExpression>
+                               </Item>
+                               <Item id="7">
+                                       <Name>CUTTotal</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CUTTotal.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!CUTTotal.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[AWBNumber]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="4">
+                               <Item id="0">
+                                       <Name>FrtIATA</Name>
+                                       <Caption>Frt IATA</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!FrtIATA.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="1">
+                                       <Name>OCDueCar</Name>
+                                       <Caption>OCDue Car</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!OCDueCar.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="2">
+                                       <Name>OCDueAgent</Name>
+                                       <Caption>OCDue Agent</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!OCDueAgent.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="3">
+                                       <Name>CUTTotal</Name>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CUTTotal.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

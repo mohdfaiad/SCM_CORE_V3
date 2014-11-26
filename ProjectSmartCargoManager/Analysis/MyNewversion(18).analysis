@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PivotView>
+	<DataSource>
+		<DataSourceType>Relational</DataSourceType>
+		<Settings>
+			<ConnectionType>Sql</ConnectionType>
+			<ConnectionString>Data Source=j7o0vkgih2.database.windows.net;Initial Catalog=SCM_CEBU_TESTING;User ID=qidadmin;Password=Init#server123;Max Pool Size=2000;</ConnectionString>
+			<Query>Select b.AWBPrefix, a.AWBNumber as AWBNumber,a.Pieces,a.GrossWeight,a.ChargedWeight,b.OriginCode,b.DestinationCode,b.AgentCode,b.AgentName,                           
+a.FrtIATA ,a.OCDueCar,a.OCDueAgent,a.ServTax,a.Total,convert(varchar, convert(datetime,b.ExecutionDate,103),103) as Date,                    
+(SELECT DISTINCT STUFF((SELECT  FltNumber +  ''  + '-' + FltDate + '   '                     
+ FROM AWBRouteMaster                     
+ WHERE AWBNumber  = a.AWBNumber                    
+ FOR XML PATH('')),1,0,'')) AS FlightDetails,                          
+case AWBStatus when 'B' then 'Booked' when 'E' then 'Executed' when 'R' then 'Reopened' when 'V' then 'Void' end as Status,a.CommodityCode,        
+(SELECT DISTINCT STUFF((SELECT ( ', ' + FltNumber) FROM AWBRouteMaster Ro WHERE a.AWBNumber = Ro.AWBNumber ORDER BY Ro.SerialNumber FOR XML PATH('')), 1, 1,'')) FltNumber,        
+(SELECT DISTINCT STUFF((SELECT ( ', ' + FltDate) FROM AWBRouteMaster Ro WHERE a.AWBNumber = Ro.AWBNumber ORDER BY Ro.SerialNumber FOR XML PATH('')), 1, 1,'')) FltDate,  
+CASE WHEN C.ControllingLocatorCode='' OR  C.ControllingLocatorCode is null THEN 'NA' ELSE C.ControllingLocatorCode END AS ControllingLocatorCode,b.AWBShipmentType                         
+from AWBRateMaster  a inner join AWBSummaryMaster  b on a.AWBNumber=b.AWBNumber  join AgentMaster c on b.AgentCode=c.AgentCode                           
+join AirportMaster d on b.OriginCode=d.AirportCode  WHERE PayMode!='FOC' and CONVERT(DATETIME,b.ExecutionDate,103) between '2014-07-23 00:00:00' and  '2014-07-23 00:00:00' order by convert(varchar, convert(datetime,b.ExecutionDate,103),103)</Query>
+			<SchemaFile>F:\sitesroot\0\Schema\rptMISAWBBookingReport1.schema</SchemaFile>
+		</Settings>
+	</DataSource>
+	<Fields>
+		<Field>
+			<Field>
+				<Name>FltNumber</Name>
+				<Caption>Flt Number</Caption>
+				<Type>Attribute</Type>
+				<Expression Type="String">=Fields!FltNumber.Value</Expression>
+				<CaptionExpression Type="String">=Fields!FltNumber.Value</CaptionExpression>
+				<BackColor></BackColor>
+				<ForeColor></ForeColor>
+			</Field>
+			<Type>Attribute</Type>
+			<Dimension>[Attributes]</Dimension>
+		</Field>
+		<Field>
+			<Field>
+				<Name>Date</Name>
+				<Type>Attribute</Type>
+				<Expression Type="String">=Fields!Date.Value</Expression>
+				<CaptionExpression Type="String">=Fields!Date.Value</CaptionExpression>
+				<BackColor></BackColor>
+				<ForeColor></ForeColor>
+			</Field>
+			<Type>Attribute</Type>
+			<Dimension>[Attributes]</Dimension>
+		</Field>
+		<Field>
+			<Field>
+				<Name>OCDueAgent</Name>
+				<Caption>OCDue Agent</Caption>
+				<Type>Measure</Type>
+				<Expression Type="Float">=Fields!OCDueAgent.Value</Expression>
+				<AggregateFunction>Sum</AggregateFunction>
+				<BackColor></BackColor>
+				<ForeColor></ForeColor>
+				<DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+				<FontFlags>0</FontFlags>
+			</Field>
+			<Type>Measure</Type>
+			<Dimension>[Measures]</Dimension>
+		</Field>
+	</Fields>
+	<ViewDefinition Version="2">
+		<ColumnShelf listcount="1">
+			<Item id="0">
+				<UniqueName>[Measures].[OCDueAgent]</UniqueName>
+				<Type>Measure</Type>
+				<PercentageType>None</PercentageType>
+			</Item>
+		</ColumnShelf>
+		<RowShelf listcount="2">
+			<Item id="0">
+				<UniqueName>[Attributes].[FltNumber]</UniqueName>
+				<Type>Attribute</Type>
+				<ExpandedLevelCount>0</ExpandedLevelCount>
+				<Levels listcount="1">
+					<Item id="0" />
+				</Levels>
+			</Item>
+			<Item id="1">
+				<UniqueName>[Attributes].[Date]</UniqueName>
+				<Type>Attribute</Type>
+				<ExpandedLevelCount>0</ExpandedLevelCount>
+				<Levels listcount="1">
+					<Item id="0" />
+				</Levels>
+			</Item>
+		</RowShelf>
+		<PageShelf listcount="0" />
+		<Data listcount="0" />
+		<FiltersDescription listcount="0" />
+		<Description>OCDue Agent for each Flt Number and Date.</Description>
+	</ViewDefinition>
+	<ViewSettings>
+		<Grid>
+			<GridHeadersStyle>Block</GridHeadersStyle>
+			<TotalsPlacement>Default</TotalsPlacement>
+			<ExpandGlyphs>Default</ExpandGlyphs>
+			<ColumnWidths listcount="0" />
+			<RowHeights listcount="0" />
+		</Grid>
+		<Encoding>
+			<Palette>Default</Palette>
+		</Encoding>
+		<MarkingType Automatic="True">Bar</MarkingType>
+		<Title></Title>
+		<Fields listcount="0" />
+		<TitleFormat />
+		<Trend>
+			<DisplayTrendLines>False</DisplayTrendLines>
+			<TrendType>Polynomial</TrendType>
+			<PolynomDegree>1</PolynomDegree>
+		</Trend>
+	</ViewSettings>
+	<SchemaView>
+		<ExtendedFields>
+			<Fields />
+			<UniqueNames />
+		</ExtendedFields>
+		<HiddenFields>
+			<UniqueNames />
+		</HiddenFields>
+	</SchemaView>
+</PivotView>

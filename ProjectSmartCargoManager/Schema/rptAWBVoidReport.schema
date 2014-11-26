@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="8">
+               <Item id="0" Name="AWBNo" Caption="AWBNo" />
+               <Item id="1" Name="ORG" Caption="ORG" />
+               <Item id="2" Name="DEST" Caption="DEST" />
+               <Item id="3" Name="FlightDetails" Caption="Flight Details" />
+               <Item id="4" Name="BookedBy" Caption="Booked By" />
+               <Item id="5" Name="VoidCharge" Caption="Void Charge" />
+               <Item id="6" Name="VoidBy" Caption="Void By" />
+               <Item id="7" Name="VoidedOn" Caption="Voided On" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="7">
+                               <Item id="0">
+                                       <Name>AWBNo</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AWBNo.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AWBNo.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>ORG</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!ORG.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!ORG.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>DEST</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!DEST.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!DEST.Value</CaptionExpression>
+                               </Item>
+                               <Item id="3">
+                                       <Name>FlightDetails</Name>
+                                       <Caption>Flight Details</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!FlightDetails.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FlightDetails.Value</CaptionExpression>
+                               </Item>
+                               <Item id="4">
+                                       <Name>BookedBy</Name>
+                                       <Caption>Booked By</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!BookedBy.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!BookedBy.Value</CaptionExpression>
+                               </Item>
+                               <Item id="5">
+                                       <Name>VoidBy</Name>
+                                       <Caption>Void By</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!VoidBy.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!VoidBy.Value</CaptionExpression>
+                               </Item>
+                               <Item id="6">
+                                       <Name>VoidedOn</Name>
+                                       <Caption>Voided On</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!VoidedOn.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!VoidedOn.Value</CaptionExpression>
+                               </Item>
+                               <Item id="7">
+                                       <Name>VoidCharge</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!VoidCharge.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!VoidCharge.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[AWBNo]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="1">
+                               <Item id="0">
+                                       <Name>VoidCharge</Name>
+                                       <Caption>Void Charge</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!VoidCharge.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

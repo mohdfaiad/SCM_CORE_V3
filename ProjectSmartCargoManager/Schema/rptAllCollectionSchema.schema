@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+  <QueryFields listcount="24">
+    <Item id="0" Name="AgentName" Caption="AgentName" />
+    <Item id="1" Name="InvoiceNumber" Caption="InvoiceNumber" />
+    <Item id="2" Name="InvoiceAmount" Caption="InvoiceAmount" />
+    <Item id="3" Name="Station" Caption="Station" />
+    <Item id="4" Name="AWBNumber" Caption="AWBNumber" />
+    <Item id="5" Name="CentralAgent" Caption="CentralAgent" />
+    <Item id="6" Name="CollectedAmount" Caption="CollectedAmount" />
+    <Item id="7" Name="TDSAmount" Caption="TDSAmount" />
+    <Item id="8" Name="VATAmount" Caption="VATAmount" />
+    <Item id="9" Name="PaymentType" Caption="PaymentType" />
+    <Item id="10" Name="DCMAmount" Caption="DCMAmount" />
+    <Item id="11" Name="DCMType" Caption="DCMType" />
+    <Item id="12" Name="ChequeDdNo" Caption="ChequeDdNo" />
+    <Item id="13" Name="ChequeDate" Caption="ChequeDate" />
+    <Item id="14" Name="DepositDate" Caption="DepositDate" />
+    <Item id="15" Name="BankName" Caption="BankName" />
+    <Item id="16" Name="PaymentDate" Caption="PaymentDate" />
+    <Item id="17" Name="PendingAmount" Caption="PendingAmount" />
+    <Item id="18" Name="IsActive" Caption="IsActive" />
+    <Item id="19" Name="BillType" Caption="BillType" />
+    <Item id="20" Name="Aging" Caption="Aging" />
+    <Item id="21" Name="AMT194C" Caption="AMT194C" />
+    <Item id="22" Name="ORRecieptNo" Caption="ORRecieptNo" />
+    <Item id="23" Name="RateLineCurrency" Caption="RateLineCurrency" />
+  </QueryFields>
+  <Dimensions listcount="2">
+    <Item id="0">
+      <Name>Attributes</Name>
+      <Fields listcount="18">
+        <Item id="0">
+          <Name>AgentName</Name>
+          <Type>Attribute</Type>
+          <Expression Type="String">=Fields!AgentName.Value</Expression>
+          <CaptionExpression Type="String">=Fields!AgentName.Value</CaptionExpression>
+        </Item>
+        <Item id="1">
+          <Name>Aging</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Aging.Value</Expression>
+          <CaptionExpression>=Fields!Aging.Value</CaptionExpression>
+        </Item>
+        <Item id="2">
+          <Name>AMT194C</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AMT194C.Value</Expression>
+          <CaptionExpression>=Fields!AMT194C.Value</CaptionExpression>
+        </Item>
+        <Item id="3">
+          <Name>AWBNumber</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!AWBNumber.Value</Expression>
+          <CaptionExpression>=Fields!AWBNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="4">
+          <Name>BankName</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!BankName.Value</Expression>
+          <CaptionExpression>=Fields!BankName.Value</CaptionExpression>
+        </Item>
+        <Item id="5">
+          <Name>BillType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!BillType.Value</Expression>
+          <CaptionExpression>=Fields!BillType.Value</CaptionExpression>
+        </Item>
+        <Item id="6">
+          <Name>ChequeDate</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ChequeDate.Value</Expression>
+          <CaptionExpression>=Fields!ChequeDate.Value</CaptionExpression>
+        </Item>
+        <Item id="7">
+          <Name>CentralAgent</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!CentralAgent.Value</Expression>
+          <CaptionExpression>=Fields!CentralAgent.Value</CaptionExpression>
+        </Item>
+        <Item id="8">
+          <Name>ChequeDdNo</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ChequeDdNo.Value</Expression>
+          <CaptionExpression>=Fields!ChequeDdNo.Value</CaptionExpression>
+        </Item>
+        <Item id="9">
+          <Name>Station</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!Station.Value</Expression>
+          <CaptionExpression>=Fields!Station.Value</CaptionExpression>
+        </Item>
+        <Item id="10">
+          <Name>DCMType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DCMType.Value</Expression>
+          <CaptionExpression>=Fields!DCMType.Value</CaptionExpression>
+        </Item>
+        <Item id="11">
+          <Name>DepositDate</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!DepositDate.Value</Expression>
+          <CaptionExpression>=Fields!DepositDate.Value</CaptionExpression>
+        </Item>
+        <Item id="12">
+          <Name>InvoiceNumber</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!InvoiceNumber.Value</Expression>
+          <CaptionExpression>=Fields!InvoiceNumber.Value</CaptionExpression>
+        </Item>
+        <Item id="13">
+          <Name>IsActive</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!IsActive.Value</Expression>
+          <CaptionExpression>=Fields!IsActive.Value</CaptionExpression>
+        </Item>
+        <Item id="14">
+          <Name>ORRecieptNo</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!ORRecieptNo.Value</Expression>
+          <CaptionExpression>=Fields!ORRecieptNo.Value</CaptionExpression>
+        </Item>
+        <Item id="15">
+          <Name>PaymentDate</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!PaymentDate.Value</Expression>
+          <CaptionExpression>=Fields!PaymentDate.Value</CaptionExpression>
+        </Item>
+        <Item id="16">
+          <Name>PaymentType</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!PaymentType.Value</Expression>
+          <CaptionExpression>=Fields!PaymentType.Value</CaptionExpression>
+        </Item>
+        <Item id="17">
+          <Name>RateLineCurrency</Name>
+          <Type>Attribute</Type>
+          <Expression>=Fields!RateLineCurrency.Value</Expression>
+          <CaptionExpression>=Fields!RateLineCurrency.Value</CaptionExpression>
+        </Item>
+      </Fields>
+      <Type>Attributes</Type>
+      <DefField>[Attributes].[AgentName]</DefField>
+    </Item>
+    <Item id="1">
+      <Name>Measures</Name>
+      <Fields listcount="6">
+        <Item id="0">
+          <Name>InvoiceAmount</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!InvoiceAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="1">
+          <Name>CollectedAmount</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!CollectedAmountt.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="2">
+          <Name>TDSAmount</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!TDSAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="3">
+          <Name>VATAmount</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!VATAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="4">
+          <Name>DCMAmount</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!DCMAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+        <Item id="5">
+          <Name>PendingAmount</Name>
+          <Type>Measure</Type>
+          <Expression>=Fields!PendingAmount.Value</Expression>
+          <AggregateFunction>Sum</AggregateFunction>
+          <BackColor>
+          </BackColor>
+          <ForeColor>
+          </ForeColor>
+          <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+          <FontFlags>0</FontFlags>
+        </Item>
+      </Fields>
+      <Type>Measures</Type>
+    </Item>
+  </Dimensions>
+  <Fields listcount="2">
+    <Item id="0">[Measure Names]</Item>
+    <Item id="1">[Measure Values]</Item>
+  </Fields>
+</relationalSchema>

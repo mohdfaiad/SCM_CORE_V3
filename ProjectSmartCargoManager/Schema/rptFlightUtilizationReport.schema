@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<relationalSchema>
+       <QueryFields listcount="10">
+               <Item id="0" Name="SerialNumber" Caption="Serial Number" />
+               <Item id="1" Name="FltNo" Caption="Flt No" />
+               <Item id="2" Name="Createdon" Caption="Createdon" />
+               <Item id="3" Name="StatedWgt" Caption="Stated Wgt" />
+               <Item id="4" Name="POL" Caption="POL" />
+               <Item id="5" Name="Org" Caption="Org" />
+               <Item id="6" Name="Dest" Caption="Dest" />
+               <Item id="7" Name="AircraftType" Caption="Aircraft Type" />
+               <Item id="8" Name="CargoCapacity" Caption="Cargo Capacity" />
+               <Item id="9" Name="UpliftPerc" Caption="Uplift Perc" />
+       </QueryFields>
+       <Dimensions listcount="2">
+               <Item id="0">
+                       <Name>Attributes</Name>
+                       <Fields listcount="6">
+                               <Item id="0">
+                                       <Name>FltNo</Name>
+                                       <Caption>Flt No</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!FltNo.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!FltNo.Value</CaptionExpression>
+                               </Item>
+                               <Item id="1">
+                                       <Name>Createdon</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Createdon.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Createdon.Value</CaptionExpression>
+                               </Item>
+                               <Item id="2">
+                                       <Name>POL</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!POL.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!POL.Value</CaptionExpression>
+                               </Item>
+                               <Item id="3">
+                                       <Name>Org</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Org.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Org.Value</CaptionExpression>
+                               </Item>
+                               <Item id="4">
+                                       <Name>Dest</Name>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!Dest.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!Dest.Value</CaptionExpression>
+                               </Item>
+                               <Item id="5">
+                                       <Name>AircraftType</Name>
+                                       <Caption>Aircraft Type</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression Type="String">=Fields!AircraftType.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!AircraftType.Value</CaptionExpression>
+                               </Item>
+                               <Item id="6">
+                                       <Name>SerialNumber</Name>
+                                       <Caption>Serial Number</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!SerialNumber.Value</Expression>
+                                        <CaptionExpression Type="String">=Fields!SerialNumber.Value</CaptionExpression>
+                               </Item>
+                               <Item id="7">
+                                       <Name>StatedWgt</Name>
+                                       <Caption>Stated Wgt</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!StatedWgt.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!StatedWgt.Value</CaptionExpression>
+                               </Item>
+                               <Item id="8">
+                                       <Name>CargoCapacity</Name>
+                                       <Caption>Cargo Capacity</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!CargoCapacity.Value</Expression>
+                                      <CaptionExpression Type="String">=Fields!CargoCapacity.Value</CaptionExpression>
+                               </Item>
+                               <Item id="9">
+                                       <Name>UpliftPerc</Name>
+                                       <Caption>Uplift Perc</Caption>
+                                       <Type>Attribute</Type>
+                                       <Expression>=Fields!UpliftPerc.Value</Expression>
+                                       <CaptionExpression Type="String">=Fields!UpliftPerc.Value</CaptionExpression>
+                               </Item>
+                       </Fields>
+                       <Type>Attributes</Type>
+                       <DefField>[Attributes].[FltNo]</DefField>
+               </Item>
+               <Item id="1">
+                       <Name>Measures</Name>
+                       <Fields listcount="4">
+                               <Item id="0">
+                                       <Name>SerialNumber</Name>
+                                       <Caption>Serial Number</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Integer">=Fields!SerialNumber.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="1">
+                                       <Name>StatedWgt</Name>
+                                       <Caption>Stated Wgt</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!StatedWgt.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="2">
+                                       <Name>CargoCapacity</Name>
+                                       <Caption>Cargo Capacity</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!CargoCapacity.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                               <Item id="3">
+                                       <Name>UpliftPerc</Name>
+                                       <Caption>Uplift Perc</Caption>
+                                       <Type>Measure</Type>
+                                       <Expression Type="Float">=Fields!UpliftPerc.Value</Expression>
+                                       <AggregateFunction>Sum</AggregateFunction>
+                                       <BackColor></BackColor>
+                                       <ForeColor></ForeColor>
+                                       <DefaultFormat>#,##0.00;(#,##0.00)</DefaultFormat>
+                                       <FontFlags>0</FontFlags>
+                               </Item>
+                       </Fields>
+                       <Type>Measures</Type>
+               </Item>
+       </Dimensions>
+       <Fields listcount="2">
+               <Item id="0">[Measure Names]</Item>
+               <Item id="1">[Measure Values]</Item>
+       </Fields>
+</relationalSchema>

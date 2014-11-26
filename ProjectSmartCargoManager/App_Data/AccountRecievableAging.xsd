@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AccountRecievableAging" targetNamespace="http://tempuri.org/AccountRecievableAging.xsd" xmlns:mstns="http://tempuri.org/AccountRecievableAging.xsd" xmlns="http://tempuri.org/AccountRecievableAging.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AccountRecievableAging" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="AccountRecievableAging" msprop:Generator_DataSetName="AccountRecievableAging" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ARAging" msprop:Generator_UserTableName="ARAging" msprop:Generator_RowDeletedName="ARAgingRowDeleted" msprop:Generator_RowChangedName="ARAgingRowChanged" msprop:Generator_RowClassName="ARAgingRow" msprop:Generator_RowChangingName="ARAgingRowChanging" msprop:Generator_RowEvArgName="ARAgingRowChangeEvent" msprop:Generator_RowEvHandlerName="ARAgingRowChangeEventHandler" msprop:Generator_TableClassName="ARAgingDataTable" msprop:Generator_TableVarName="tableARAging" msprop:Generator_RowDeletingName="ARAgingRowDeleting" msprop:Generator_TablePropName="ARAging">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AgentCode" msprop:Generator_UserColumnName="AgentCode" msprop:Generator_ColumnPropNameInRow="AgentCode" msprop:Generator_ColumnVarNameInTable="columnAgentCode" msprop:Generator_ColumnPropNameInTable="AgentCodeColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="InvoiceNumber" msprop:Generator_UserColumnName="InvoiceNumber" msprop:Generator_ColumnPropNameInRow="InvoiceNumber" msprop:Generator_ColumnVarNameInTable="columnInvoiceNumber" msprop:Generator_ColumnPropNameInTable="InvoiceNumberColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PendingAmount_x0020_Between_x0020_0-15" msprop:Generator_UserColumnName="PendingAmount Between 0-15" msprop:Generator_ColumnPropNameInRow="_PendingAmount_Between_0_15" msprop:Generator_ColumnVarNameInTable="_columnPendingAmount_Between_0_15" msprop:Generator_ColumnPropNameInTable="_PendingAmount_Between_0_15Column" type="xs:string" minOccurs="0" />
+              <xs:element name="PendingAmount_x0020_Between_x0020_16-30" msprop:Generator_UserColumnName="PendingAmount Between 16-30" msprop:Generator_ColumnPropNameInRow="_PendingAmount_Between_16_30" msprop:Generator_ColumnVarNameInTable="_columnPendingAmount_Between_16_30" msprop:Generator_ColumnPropNameInTable="_PendingAmount_Between_16_30Column" type="xs:string" minOccurs="0" />
+              <xs:element name="PendingAmount_x0020_Between_x0020_31-45" msprop:Generator_UserColumnName="PendingAmount Between 31-45" msprop:Generator_ColumnPropNameInRow="_PendingAmount_Between_31_45" msprop:Generator_ColumnVarNameInTable="_columnPendingAmount_Between_31_45" msprop:Generator_ColumnPropNameInTable="_PendingAmount_Between_31_45Column" type="xs:string" minOccurs="0" />
+              <xs:element name="InvoiceDate" msprop:Generator_UserColumnName="InvoiceDate" msprop:Generator_ColumnPropNameInRow="InvoiceDate" msprop:Generator_ColumnVarNameInTable="columnInvoiceDate" msprop:Generator_ColumnPropNameInTable="InvoiceDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="InvoiceDueDays" msprop:Generator_UserColumnName="InvoiceDueDays" msprop:Generator_ColumnPropNameInRow="InvoiceDueDays" msprop:Generator_ColumnVarNameInTable="columnInvoiceDueDays" msprop:Generator_ColumnPropNameInTable="InvoiceDueDaysColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="Logo" msprop:Generator_UserColumnName="Logo" msprop:Generator_ColumnPropNameInRow="Logo" msprop:Generator_ColumnVarNameInTable="columnLogo" msprop:Generator_ColumnPropNameInTable="LogoColumn" type="xs:base64Binary" minOccurs="0" />
+              <xs:element name="Agent1" msprop:Generator_UserColumnName="Agent1" msprop:Generator_ColumnVarNameInTable="columnAgent1" msprop:Generator_ColumnPropNameInRow="Agent1" msprop:Generator_ColumnPropNameInTable="Agent1Column" type="xs:string" minOccurs="0" />
+              <xs:element name="FromDate" msprop:Generator_UserColumnName="FromDate" msprop:Generator_ColumnVarNameInTable="columnFromDate" msprop:Generator_ColumnPropNameInRow="FromDate" msprop:Generator_ColumnPropNameInTable="FromDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="ToDate" msprop:Generator_UserColumnName="ToDate" msprop:Generator_ColumnVarNameInTable="columnToDate" msprop:Generator_ColumnPropNameInRow="ToDate" msprop:Generator_ColumnPropNameInTable="ToDateColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="PendingAmount_x0020_Between_x0020_46-60" msprop:Generator_UserColumnName="PendingAmount Between 46-60" msprop:Generator_ColumnPropNameInRow="_PendingAmount_Between_46_60" msprop:Generator_ColumnVarNameInTable="_columnPendingAmount_Between_46_60" msprop:Generator_ColumnPropNameInTable="_PendingAmount_Between_46_60Column" type="xs:string" minOccurs="0" />
+              <xs:element name="Above_x0020_60" msprop:Generator_UserColumnName="Above 60" msprop:Generator_ColumnPropNameInRow="Above_60" msprop:Generator_ColumnVarNameInTable="columnAbove_60" msprop:Generator_ColumnPropNameInTable="Above_60Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
