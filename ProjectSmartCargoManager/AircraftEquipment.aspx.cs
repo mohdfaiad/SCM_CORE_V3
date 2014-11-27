@@ -11,6 +11,7 @@ using System.Collections;
 //25-7-2012
 namespace ProjectSmartCargoManager
 {
+    //Test
     public partial class AircraftEquipment : System.Web.UI.Page
     {
         AircraftBAL objBAL = new AircraftBAL();
